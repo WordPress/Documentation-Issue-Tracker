@@ -10,7 +10,6 @@ At the top of this GitHub repository is an Issues tab, click on that tab. The ne
 
 Thank you for taking the time to report an issue.
 
-
 **How can I help manage issues?**
 
 We need help reviewing existing issues to make sure they are relevant and actionable. This practice is often referred to as "triage" and is an important contribution. The steps for triage are:
@@ -19,7 +18,6 @@ We need help reviewing existing issues to make sure they are relevant and action
 - Categorize - assign the proper lables for project or area
 - Prioritize - set a priority level for the issue
 
-
 **How can I contribute to documentation?**
 
 Great, we welcome all contributors and documentation is a great way to get staretd helping build WordPress.  This repository is an issue tracker to contribute documentation you will need to go directly to one of the sub-projects.
@@ -27,4 +25,8 @@ Great, we welcome all contributors and documentation is a great way to get stare
 - [Documentation Contributor Handbook](https://make.wordpress.org/docs/handbook/)
 - [Block Editor Documentation Contributor Guide](https://developer.wordpress.org/block-editor/contributors/documentation/)
 - [Learn WordPress Contributor Guide](https://learn.wordpress.org/contribute/)
+
+**Where to find us?**
+
+You can join the documentation team on Slack in #docs channel. See the [Documentation Team P2](https://make.wordpress.org/docs/) for additional information, project updates, and weekly meeting times.
 
