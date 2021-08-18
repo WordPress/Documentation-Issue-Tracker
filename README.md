@@ -1,6 +1,6 @@
 # WordPress Documentation Issue Tracker
 
-Welcome to the WordPress project documentation issue tracker. We're glad you are here to help make the WordPress documentation better.
+Welcome to the WordPress project documentation issue tracker. We're glad you're here to help make WordPress documentation better.
 
 ## How to report an issue?
 
