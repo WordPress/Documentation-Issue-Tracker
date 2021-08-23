@@ -14,7 +14,6 @@ Great, we welcome all contributors and documentation is a great way to get stare
 
 - [Documentation Contributor Handbook](https://make.wordpress.org/docs/handbook/)
 - [Block Editor Documentation Contributor Guide](https://developer.wordpress.org/block-editor/contributors/documentation/)
-- [Learn WordPress Contributor Guide](https://learn.wordpress.org/contribute/)
 
 ## Where to find the Documentation Team
 
