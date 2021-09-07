@@ -2,23 +2,52 @@
 
 Welcome to the WordPress project documentation issue tracker. We're glad you're here to help make WordPress documentation better.
 
+## Coverage
+
+Please report issues here if your suggestion is related to the following
+
+1. Our development documentation located at https://developer.wordpress.org/ (Code named DevHub)
+2. Our end-user documentation located at https://wordpress.org/support/ (Code named HelpHub)
+3. The Documentation Team's handbook located at https://make.wordpress.org/docs/handbook/
+
+If you would like to contribute to Gutenberg specific documentation, please proceed [here](https://github.com/WordPress/gutenberg)
+
+All other Make / WordPress team handbooks are maintained by internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
+
 ## How to report an issue?
 
 At the top of this GitHub repository is an Issues tab, click on that tab. The next page will show a green button for "New issue" in the top right, click there to start an issue filling out the template as complete as possible. See [GitHub's official documentation for issues](https://docs.github.com/en/issues).
 
 Thank you for taking the time to report an issue.
 
-## How to contribute documentation?
+## Using this Repository
 
-Great, we welcome all contributors and documentation is a great way to get staretd helping build WordPress.  This repository is an issue tracker to contribute documentation you will need to go directly to one of the sub-projects.
+1. We take all comments, suggestions or contributions directly via our [Issues Tracker](https://github.com/WordPress/Documentation-Issue-Tracker/issues)
+2. Follow the issue template's guidelines and provide as much information as possible
+3. Work with the documentation team to get the issues resolved!
 
-- [Documentation Contributor Handbook](https://make.wordpress.org/docs/handbook/)
-- [Block Editor Documentation Contributor Guide](https://developer.wordpress.org/block-editor/contributors/documentation/)
-- [Learn WordPress Contributor Guide](https://learn.wordpress.org/contribute/)
+## Resolving Issues
+
+Any documentation team member is able to pick up issues opened by contributors. 
+
+Whether you pick up an issue to work on or are simply implementing the changes suggested by someone else, please make sure you do the following
+
+1. Label the issues accordingly
+2. Assign yourself so that people know that the issue is being picked up
+3. Close the issue when the implementation has been finished.
+
+If you do not have the permission to assign issues to yourself, please ask in the issue and we'll do the assignment as necessary.
 
 ## Where to find the Documentation Team
 
 You can join the documentation team on Slack in **#docs** channel. See the [Documentation Team P2](https://make.wordpress.org/docs/) for additional information, project updates, and weekly meeting times.
+
+## Getting Recognition
+
+We want to make sure people know that you've contributed. We would be happy to acknowledge your contribution.
+
+Please add your details to our [Google Sheet](https://docs.google.com/spreadsheets/d/1hAPORz_yl4UTerPo8Tl5j_Xznfpm_NItrNftoXwBqvA/edit#gid=1730522902) - we assign badges monthly.
+
 
 ## About this repository
 
