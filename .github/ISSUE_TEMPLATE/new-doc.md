@@ -1,7 +1,7 @@
 ---
 name: New Doc Request
 about: Propose a new page in the WordPress documentation.
-
+labels: new document
 ---
 
 ## What is the new page you are requesting?
