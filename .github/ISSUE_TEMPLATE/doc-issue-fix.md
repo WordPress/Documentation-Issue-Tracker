@@ -3,8 +3,6 @@ name: Fix Doc Issue Report
 about: Report an issue in the exisiting WordPress documentation and help us improve the documentation.
 labels: tracking issue, needs triage
 ---
-
----
 <!--
 Please fill out the following sections with as many details as you can.
 We can't work on fixing an issue unless we have all the details. 
