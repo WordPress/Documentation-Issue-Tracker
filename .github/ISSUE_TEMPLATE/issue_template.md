@@ -3,8 +3,6 @@ name: Issue report
 about: Report an issue in the WordPress documentation and help us improve the documentation.
 labels: tracking issue, needs triage
 ---
-
----
 <!--
 Please fill out ALL required sections. Issue reports with missing information will
 be closed.
