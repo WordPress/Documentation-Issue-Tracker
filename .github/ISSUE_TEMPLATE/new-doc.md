@@ -6,7 +6,7 @@ labels: new document
 
 ## What is the new page you are requesting?
 <!--
-Please describe what the new page is, that you are requesting.
+Please describe the new page that you are requesting.
 -->
 
 ## How will this new page help you?
