@@ -1,6 +1,6 @@
 ---
 name: Fix Doc Issue Report
-about: Report an issue in the exisiting WordPress documentation and help us improve the documentation.
+about: Report an issue in the existing WordPress documentation and help us improve the documentation.
 labels: tracking issue, needs triage
 ---
 <!--
