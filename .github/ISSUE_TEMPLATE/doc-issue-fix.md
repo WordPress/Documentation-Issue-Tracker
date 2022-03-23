@@ -11,19 +11,19 @@ So please be sure your submission is complete; if it's not, it will be marked as
 -->
 
 ## Issue Description
-<!-- Please write a brief description of the issue. -->
-
+it's a typo
 ## URL of the Page with the Issue
-<!--
-Please provide a link to the documentation where the issue is.-->
+https://developer.wordpress.org/themes/functionality/administration-menus/
 
 ## Section of Page with the issue
-<!-- Please describe which section of the page is showing the issue. -->
+Determining Location for New Menus > Example
 
 ## Why is this a problem?
-<!-- Please describe why this is a problem. -->
+the example code isn't working
 
 ## Suggested Fix
-<!--
-If possible, please suggest how we can correct this issue. 
--->
+...
+function register_my_theme_more_settings_menu() {
+    add_submenu_page(
+        "my-themes-settings-menu",  >>>  "my-theme-settings-menu",
+        ...
