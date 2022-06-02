@@ -8,6 +8,8 @@
 
 Any documentation team member is able to pick up issues opened by contributors. 
 
+Is this your first time here to contribute? Great! We're so glad you are here! You can find a list of "good first issues" [here](https://github.com/WordPress/Documentation-Issue-Tracker/labels/good%20first%20issue).
+
 Whether you pick up an issue to work on or are simply implementing the changes suggested by someone else, please make sure you do the following
 
 1. Label the issues accordingly
