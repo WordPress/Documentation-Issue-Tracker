@@ -1,0 +1,23 @@
+name: Add Docs handbook issues to Docs handbook project
+
+on:
+  issues:
+    types:
+      - labeled
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # https://github.com/marketplace/actions/add-to-github-projects
+          project-url: https://github.com/orgs/WordPress/projects/43/views/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: contributor documentation
+          # In case there is more than one label, use operators
+          # label-operator: OR
