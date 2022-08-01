@@ -1,0 +1,22 @@
+name: Notify team based on issue labels
+
+on:
+  issues:
+      types: [labeled]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+        # https://github.com/marketplace/actions/issue-label-notifier
+        - uses: jenschelkopf/issue-label-notification-action@1.3
+          with:
+             recipients: |
+                  block editor=@zzap @femkreations
+                  has-screenshots=@femkreations @atachibana
+                  user documentation=@femkreations @atachibana
+                  plugins=@theMikeD
+                  themes=@kafleg @carolinan @TeBenachi
+                  code reference=@zzap @lucprincen
+                  external links=@zzap
+                  apis=@zzap
