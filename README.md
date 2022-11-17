@@ -7,6 +7,10 @@ Welcome to the WordPress project documentation issue tracker. We're glad you're 
 Please report issues here if your suggestion is related to the following
 
 1. Our development documentation located at https://developer.wordpress.org/ (Code named DevHub)
+   * The Description/Parameters/Return/Hooks sections of a Code Reference page are parsed and generated from the source code after each WordPress release. To make a change, please file a ticket on Core trac.
+	https://core.trac.wordpress.org
+   * The page layout/formatting of the Code Reference pages are handled by the Meta team. To make a change, please file a ticket on Meta trac.
+	https://meta.trac.wordpress.org
 2. Our end-user documentation located at https://wordpress.org/support/ (Code named HelpHub)
 3. The Documentation Team's handbook located at https://make.wordpress.org/docs/handbook/
 
