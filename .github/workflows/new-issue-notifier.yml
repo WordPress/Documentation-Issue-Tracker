@@ -1,0 +1,15 @@
+name: New issue notifier
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: ben-z/actions-comment-on-issue@1.0.2
+      with:
+        message: "Heads up @WordPress/docs-issues-coordinators, we have a new issue open. Time to use 'em labels."
+        GITHUB_TOKEN: ${{ ADD_TO_PROJECT_PAT }}
