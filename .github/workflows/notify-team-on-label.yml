@@ -12,12 +12,12 @@ jobs:
         - uses: jenschelkopf/issue-label-notification-action@1.3
           with:
              recipients: |
-                  block editor=@zzap @femkreations
+                  block editor=@femkreations
                   has-screenshots=@femkreations @atachibana
                   user documentation=@femkreations @atachibana
                   plugins=@theMikeD
                   themes=@kafleg @carolinan @TeBenachi
-                  code reference=@zzap @lucprincen
+                  code reference=@zzap
                   external links=@zzap
                   apis=@zzap
                   advanced administration=@lucprincen @javiercasares
