@@ -1,9 +1,8 @@
 ---
-name: Fix Doc Issue Report
-about: Report an issue in the existing WordPress documentation and help us improve
-  the documentation.
-title: ''
-labels: tracking issue
+name: HelpHub Feedback reports
+about: Issues reported via HelpHub feedback form.
+title: "[HelpHub] Feedback on"
+labels: HelpHub feedback
 assignees: ''
 
 ---
