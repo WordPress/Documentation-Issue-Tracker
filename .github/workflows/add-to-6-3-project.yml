@@ -1,0 +1,20 @@
+name: Add WP 6.3 Issue(s) to WP 6.3 Documentation project
+
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  add-to-project:
+    name: Add Issue(s) to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        # https://github.com/marketplace/actions/add-to-github-projects
+        with:
+          project-url: https://github.com/orgs/WordPress/projects/108
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: 6.3
+          # In case there is more than one label, use operators
+          # label-operator: OR
