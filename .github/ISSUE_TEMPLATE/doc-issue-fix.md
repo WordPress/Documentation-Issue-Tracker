@@ -1,7 +1,6 @@
 ---
 name: Fix Doc Issue Report
-about: Report an issue in the existing WordPress documentation and help us improve
-  the documentation.
+about: Report an issue in the existing WordPress documentation and help us improve the documentation.
 title: ''
 labels: [Status] To do
 assignees: ''
