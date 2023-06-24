@@ -15,6 +15,7 @@ jobs:
         with:
           script: console.log(context)
       - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] To do') 
         with:
           script: |
             github.rest.issues.addLabels({
