@@ -18,6 +18,6 @@ jobs:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/43/views/1
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          labeled: contributor documentation, [Status] To do
+          labeled: contributor documentation
           # In case there is more than one label, use operators
-          label-operator: AND
+          # label-operator: AND
