@@ -1,0 +1,31 @@
+# https://github.com/marketplace/actions/github-script
+
+name: Labeler
+on: 
+  issues:
+    types: [closed]
+
+jobs:
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: console.log(context)
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["[Status] Done"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] To do", "[Status] In progress", "[Status] Review"]
+            })
