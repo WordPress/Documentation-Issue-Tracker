@@ -15,6 +15,6 @@ jobs:
         with:
           project-url: https://github.com/orgs/WordPress/projects/108
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          labeled: 6.3, [Status] To do
+          labeled: 6.3
           # In case there is more than one label, use operators
-          label-operator: AND
+          # label-operator: AND
