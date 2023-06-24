@@ -2,7 +2,7 @@
 name: New Doc Request
 about: Propose a new page in the WordPress documentation.
 title: ''
-labels: new document
+labels: new document, [Status] To do
 assignees: ''
 
 ---
