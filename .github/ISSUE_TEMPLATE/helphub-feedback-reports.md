@@ -2,7 +2,7 @@
 name: HelpHub Feedback reports
 about: Issues reported via HelpHub feedback form.
 title: "[HelpHub] Feedback on"
-labels: HelpHub feedback
+labels: HelpHub feedback, , [Status] To do
 assignees: ''
 
 ---
