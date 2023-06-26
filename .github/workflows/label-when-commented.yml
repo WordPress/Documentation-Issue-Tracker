@@ -1,0 +1,33 @@
+# https://github.com/marketplace/actions/github-script
+
+name: Labeler
+on: 
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  label_issues:
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: console.log(context)
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] In progress') && contains(github.event.comment.body, '/review')   # check the comment if it contains the keywords
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["[Status] Review"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] In progress"]
+            })
