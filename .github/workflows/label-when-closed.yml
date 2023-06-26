@@ -1,6 +1,6 @@
 # https://github.com/marketplace/actions/github-script
 
-name: Labeler
+name: Labele issue when closed
 on: 
   issues:
     types: [closed]
