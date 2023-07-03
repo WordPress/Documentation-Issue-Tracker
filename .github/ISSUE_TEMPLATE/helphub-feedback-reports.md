@@ -14,12 +14,14 @@ So please be sure your submission is complete; if it's not, it will be marked as
 
 -->
 
-## Issue Description
-<!-- Please write a brief description of the issue. -->
-
 ## URL of the Page with the Issue
-<!--
-Please provide a link to the documentation where the issue is.-->
+<!-- Please provide a link to the documentation where the issue is.-->
+
+## Originally reported by
+<!-- Please provide a link to reporter's wp.org profile. -->
+
+## Report content (issue description)
+<!-- Please provide content of submitted feedback. -->
 
 ## Section of Page with the issue
 <!-- Please describe which section of the page is showing the issue. -->
