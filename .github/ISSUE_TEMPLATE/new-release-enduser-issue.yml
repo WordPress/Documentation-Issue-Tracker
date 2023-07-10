@@ -3,18 +3,22 @@ description: Create a new issue for WordPress release end-user docs.
 title: "[HelpHub]: "
 labels: ["user documentation (HelpHub)", "[Status] To do"]
 body:
-- type: textarea
+- type: input
   attributes:
     label: Article URL
     description: "What is the article URL (if one exists)?"
-    value: "Article: <https://wordpress.org/documentation/article/...>"
-    render: markdown
-- type: textarea
+    placeholder: "Article: <https://wordpress.org/documentation/article/...>"
+    value: "Article:"
+- type: dropdown
   attributes:
     label: Version update
     description: "Which version is this update for?"
-    value: "## Update for 6.X"
-    render: markdown
+    options: 
+      - 6.4
+      - 6.3
+      - 6.2
+      - 6.1
+      - 6.0
 - type: textarea
   attributes:
     label: Version updates
@@ -25,26 +29,22 @@ body:
       - [ ] 
       ...
     render: markdown
-- type: textarea
+- type: checkboxes
   attributes:
     label: General updates
     description: "General updates."
-    value: |
-      ## General
-      - [ ] Make sure all screenshots are relevant to the latest version
-      - [ ] Make sure videos, if any, are up to date
-      - [ ] Add ALT tags for the images
-      - [ ] Make sure the headings are in sentence case
-      - [ ] Convert all reusable blocks to a ‘regular block’.
-      - [ ] Update the changelog at the end of the article
+    options: 
+      - label: Make sure all screenshots are relevant to the latest version
+      - label: Make sure videos, if any, are up to date
+      - label: Add ALT tags for the images
+      - label: Make sure the headings are in sentence case
+      - label: Convert all reusable blocks to a ‘regular block’.
+      - label: Update the changelog at the end of the article
     render: markdown
-- type: textarea
+- type: markdown
   attributes:
-    label: Notes
-    description: "Notes"
     value: |
       ## Notes
       1. We are not adding detailed updates for the Block settings - Typography, Color, Layout, Dimension and Border and for the More Options setting in the block toolbar. Pls mention the settings included for the block and link to the detailed settings pages instead.
       2. Some of the PRs have great videos that can be added to the article
-    render: markdown
   
