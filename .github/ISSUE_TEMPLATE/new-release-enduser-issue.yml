@@ -40,7 +40,6 @@ body:
       - label: Make sure the headings are in sentence case
       - label: Convert all reusable blocks to a ‘regular block’.
       - label: Update the changelog at the end of the article
-    render: markdown
 - type: markdown
   attributes:
     value: |
