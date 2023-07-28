@@ -11,13 +11,15 @@ jobs:
         # https://github.com/marketplace/actions/issue-label-notifier
         - uses: jenschelkopf/issue-label-notification-action@1.3
           with:
+             # The Team
+             # https://make.wordpress.org/docs/handbook/the-team/
              recipients: |
                   block editor=@femkreations
                   has-screenshots=@femkreations @atachibana
                   user documentation=@femkreations @atachibana
                   plugins=@theMikeD
                   themes=@kafleg @carolinan @TeBenachi
-                  code reference=@zzap
+                  code reference=@stevenlinx
                   external links=@zzap
                   apis=@zzap
-                  advanced administration=@lucprincen @javiercasares
+                  advanced administration=@javiercasares
