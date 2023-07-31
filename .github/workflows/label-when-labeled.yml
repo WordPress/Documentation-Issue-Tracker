@@ -1,0 +1,30 @@
+# https://github.com/marketplace/actions/github-script
+# https://github.com/orgs/community/discussions/25389#discussioncomment-3247738
+#
+# If `apis`, `code reference`, `plugins` or `themes` label is applied to the issue
+# automatically add `developer documentation (DevHub)` label as well.
+
+name: Label issue when other label applied
+on: 
+  issues:
+    types: [opened, edited, labeled, unlabeled]
+
+jobs:
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: console.log(context)
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, 'apis') || contains(github.event.issue.labels.*.name, 'code reference') || contains(github.event.issue.labels.*.name, 'plugins') || contains(github.event.issue.labels.*.name, 'themes')
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["developer documentation (DevHub)"]
+            })
