@@ -16,7 +16,7 @@ jobs:
         with:
           script: console.log(context)
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.assignee, 'null')
+        if: not(github.event.issue.assignee)
         with:
           script: |
             github.rest.issues.addLabels({
@@ -26,7 +26,7 @@ jobs:
               labels: ["[Status] In progress"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] To do') && cotains(github.event.issue.assignee, 'null') 
+        if: contains(github.event.issue.labels.*.name, '[Status] To do') && not(github.event.issue.assignee) 
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -36,7 +36,7 @@ jobs:
               name: ["[Status] To do"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Done') && contains(github.event.issue.assignee, 'null')
+        if: contains(github.event.issue.labels.*.name, '[Status] Done') && not(github.event.issue.assignee)
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -46,7 +46,7 @@ jobs:
               name: ["[Status] Done"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Review') && contains(github.event.issue.assignee, 'null')
+        if: contains(github.event.issue.labels.*.name, '[Status] Review') && not(github.event.issue.assignee)
         with:
           script: |
             github.rest.issues.removeLabel({
