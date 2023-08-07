@@ -1,6 +1,6 @@
 # https://github.com/marketplace/actions/github-script
 
-name: Labele issue when assigned
+name: Label issue when assigned
 on: 
   issues:
     types: [assigned]
@@ -26,7 +26,7 @@ jobs:
               labels: ["[Status] In progress"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] To do') 
+        if: contains(github.event.issue.labels.*.name, '[Status] To do') && cotains(github.event.issue.assignee, 'null') 
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -36,7 +36,7 @@ jobs:
               name: ["[Status] To do"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Done')
+        if: contains(github.event.issue.labels.*.name, '[Status] Done') && contains(github.event.issue.assignee, 'null')
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -46,7 +46,7 @@ jobs:
               name: ["[Status] Done"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Review')
+        if: contains(github.event.issue.labels.*.name, '[Status] Review') && contains(github.event.issue.assignee, 'null')
         with:
           script: |
             github.rest.issues.removeLabel({
