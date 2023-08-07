@@ -1,0 +1,72 @@
+name: Add issues to GitHub projects
+
+on:
+  issues:
+    types:
+      - labeled
+      
+jobs:
+  add-to-docs-handbook-project:
+    name: Add Docs handbook issues to Docs handbook project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # https://github.com/marketplace/actions/add-to-github-projects
+          project-url: https://github.com/orgs/WordPress/projects/43/views/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: contributor documentation
+          # In case there is more than one label, use operators
+          # label-operator: AND
+          
+  add-to-advanced-administration-project:
+    name: Add Advanced administration handbook issues to Advanced administration handbook project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # https://github.com/marketplace/actions/add-to-github-projects
+          project-url: https://github.com/orgs/WordPress/projects/47/views/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: advanced administration
+          # In case there is more than one label, use operators
+          # label-operator: AND
+          
+  add-to-end-user-project:
+    name: Add End-user issues to End-user Docs project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # https://github.com/marketplace/actions/add-to-github-projects
+          project-url: https://github.com/orgs/WordPress/projects/90/views/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: HelpHub feedback, user documentation (HelpHub)
+          # In case there is more than one label, use operators
+          label-operator: AND
+
+  add-to-wp-6-1-project:
+    name: Add 6.1 issues to 6.1 Docs project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # https://github.com/marketplace/actions/add-to-github-projects
+          project-url: https://github.com/orgs/WordPress/projects/45/views/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: 6.1
+          # In case there is more than one label, use operators
+          # label-operator: OR
+
+  add-to-wp-6-3-project:
+    name: Add WP 6.3 Issue(s) to WP 6.3 Documentation project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        # https://github.com/marketplace/actions/add-to-github-projects
+        with:
+          project-url: https://github.com/orgs/WordPress/projects/108
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: 6.3
+          # In case there is more than one label, use operators
+          # label-operator: AND
