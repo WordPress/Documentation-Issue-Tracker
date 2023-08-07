@@ -10,7 +10,7 @@ jobs:
     name: Add Docs handbook issues to Docs handbook project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.3.0
+      - uses: actions/add-to-project@v0.5.0
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/43/views/1
@@ -23,7 +23,7 @@ jobs:
     name: Add Advanced administration handbook issues to Advanced administration handbook project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.3.0
+      - uses: actions/add-to-project@v0.5.0
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/47/views/1
@@ -36,7 +36,7 @@ jobs:
     name: Add End-user issues to End-user Docs project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.3.0
+      - uses: actions/add-to-project@v0.5.0
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/90/views/1
@@ -49,7 +49,7 @@ jobs:
     name: Add 6.1 issues to 6.1 Docs project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.3.0
+      - uses: actions/add-to-project@v0.5.0
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/45/views/1
@@ -62,7 +62,7 @@ jobs:
     name: Add WP 6.3 Issue(s) to WP 6.3 Documentation project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.3.0
+      - uses: actions/add-to-project@v0.5.0
         # https://github.com/marketplace/actions/add-to-github-projects
         with:
           project-url: https://github.com/orgs/WordPress/projects/108
