@@ -16,7 +16,7 @@ jobs:
         with:
           script: console.log(context)
       - uses: actions/github-script@v6
-        if: ${{ !github.event.issue.assignee }}
+        if: contains(github.event.issue.labels.*.name, '[Status] To do') 
         with:
           script: |
             github.rest.issues.addLabels({
@@ -24,6 +24,12 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ["[Status] In progress"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] To do"]
             })
       # - uses: actions/github-script@v6
       #   if: contains(github.event.issue.labels.*.name, '[Status] To do') && ${{ !github.event.issue.assignee }} 
