@@ -27,7 +27,7 @@ jobs:
               labels: ["[Status] Review"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] In progress')
+        if: contains(github.event.issue.labels.*.name, '[Status] In progress') && contains(github.event.comment.body, '/review')  
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -37,7 +37,7 @@ jobs:
               name: ["[Status] In progress"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] To do')
+        if: contains(github.event.issue.labels.*.name, '[Status] To do') && contains(github.event.comment.body, '/review')
         with:
           script: |
             github.rest.issues.removeLabel({
@@ -47,7 +47,7 @@ jobs:
               name: ["[Status] To do"]
             })
       - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Done')
+        if: contains(github.event.issue.labels.*.name, '[Status] Done') && contains(github.event.comment.body, '/review')
         with:
           script: |
             github.rest.issues.removeLabel({
