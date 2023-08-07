@@ -26,18 +26,30 @@ jobs:
               repo: context.repo.repo,
               labels: ["[Status] Review"]
             })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] In progress')
+        with:
+          script: |
             github.rest.issues.removeLabel({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: ["[Status] In progress"]
             })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] To do')
+        with:
+          script: |
             github.rest.issues.removeLabel({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: ["[Status] To do"]
             })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] Done')
+        with:
+          script: |
             github.rest.issues.removeLabel({
               issue_number: context.issue.number,
               owner: context.repo.owner,
