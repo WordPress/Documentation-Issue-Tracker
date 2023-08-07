@@ -25,33 +25,33 @@ jobs:
               repo: context.repo.repo,
               labels: ["[Status] In progress"]
             })
-      - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] To do') && ${{ !github.event.issue.assignee }} 
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] To do"]
-            })
-      - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Done') && ${{ !github.event.issue.assignee }}
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] Done"]
-            })
-      - uses: actions/github-script@v6
-        if: contains(github.event.issue.labels.*.name, '[Status] Review') && ${{ !github.event.issue.assignee }}
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] Review"]
-            })
+      # - uses: actions/github-script@v6
+      #   if: contains(github.event.issue.labels.*.name, '[Status] To do') && ${{ !github.event.issue.assignee }} 
+      #   with:
+      #     script: |
+      #       github.rest.issues.removeLabel({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         name: ["[Status] To do"]
+      #       })
+      # - uses: actions/github-script@v6
+      #   if: contains(github.event.issue.labels.*.name, '[Status] Done') && ${{ !github.event.issue.assignee }}
+      #   with:
+      #     script: |
+      #       github.rest.issues.removeLabel({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         name: ["[Status] Done"]
+      #       })
+      # - uses: actions/github-script@v6
+      #   if: contains(github.event.issue.labels.*.name, '[Status] Review') && ${{ !github.event.issue.assignee }}
+      #   with:
+      #     script: |
+      #       github.rest.issues.removeLabel({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         name: ["[Status] Review"]
+      #       })
