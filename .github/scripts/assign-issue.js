@@ -2,7 +2,7 @@ const { Octokit } = require('@octokit/rest');
 
 // Create an Octokit instance using the GitHub token
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: process.env.ADD_TO_PROJECT_PAT,
 });
 
 async function assignIssueToCommentAuthor(issueNumber, commentAuthor) {
