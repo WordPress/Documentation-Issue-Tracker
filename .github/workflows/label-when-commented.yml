@@ -1,12 +1,32 @@
 # https://github.com/marketplace/actions/github-script
 # https://github.com/orgs/community/discussions/25389#discussioncomment-3247738
 
-name: Label issue when commented
+name: Label and assign issues when commented
 on: 
   issue_comment:
     types: [created, edited]
 
 jobs:
+  assign_issue:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        
+    - name: Install dependencies
+      run: npm install
+        
+    - name: Run assign-issue.js
+      run: node .github/scripts/assign-issue.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        
   label_issues:
     if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
