@@ -70,6 +70,7 @@ jobs:
           required_label: '[Status] To do'  # if present, the issue must have this label to be assigned
           assigned_label: 'self-assigned'
           assigned_comment: "Hey @{{ comment.user.login }}, thanks for your interest in this issue! 🍪🍪🍪<br>If you have any questions, do not hesitate to ask them in our <a href='https://wordpress.slack.com/archives/C02RP4WU5'>#docs</a> Slack channel.<br>Enjoy and happy contributing ❤️"
+          already_assigned_comment: "Hey @{{ comment.user.login }}, this issue is already assigned to @{{ assignee.login }}.<br>A maintainer can also add you to the list of assignees or swap you with the current assignee. Or you can take a look at other unassigned issues we have.<br>"
           pin_label: '[Status] In progress'
           days_until_unassign: 0
           
