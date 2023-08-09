@@ -62,33 +62,14 @@ jobs:
     if: (github.event_name == 'issue_comment' && contains(github.event.comment.body, '/assign') && contains(github.event.issue.labels.*.name, '[Status] To do'))
     runs-on: ubuntu-latest
     steps:
-      - name: Assign the user or unassign stale assignments
+      - name: Assign the comment author
         uses: takanome-dev/assign-issue-action@v2.0.0
         with:
           github_token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
           trigger: '/assign' # you can change the default trigger to something else
           required_label: '[Status] To do'  # if present, the issue must have this label to be assigned
           assigned_label: 'self-assigned'
-          assigned_comment: "👋 Hey @{{ comment.user.login }}, thanks for your interest in this issue! 🍪<br>"
+          assigned_comment: "Hey @{{ comment.user.login }}, thanks for your interest in this issue! 🍪🍪🍪<br>If you have any questions, do not hesitate to ask them in our <a href='https://wordpress.slack.com/archives/C02RP4WU5'>#docs</a> Slack channel.<br>Enjoy and happy contributing ❤️"
           pin_label: '[Status] In progress'
           days_until_unassign: 0
           
-  
-  #   runs-on: ubuntu-latest
-    
-  #   steps:
-  #   - name: Checkout code
-  #     uses: actions/checkout@v2
-      
-  #   - name: Set up Node.js
-  #     uses: actions/setup-node@v2
-  #     with:
-  #       node-version: '14'
-        
-  #   - name: Install dependencies
-  #     run: npm install
-        
-  #   - name: Run assign-issue.js
-  #     run: node .github/scripts/assign-issue.js
-  #     env:
-  #       GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
