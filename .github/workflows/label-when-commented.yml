@@ -70,7 +70,7 @@ jobs:
       - uses: actions/github-script@v6
         if: contains(github.event.comment.body, '/assign')   # check the comment if it contains the keywords
         with:
-          script: console.log(github.event.comment)
+          script: console.log(github.event)
           
   
   #   runs-on: ubuntu-latest
