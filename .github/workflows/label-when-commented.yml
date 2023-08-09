@@ -61,18 +61,15 @@ jobs:
   assign_issue:
     if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
-#       - uses: actions/github-script@v6
-#         with:
-#           script: console.log(context)
-      - uses: actions/github-script@v6
-        if: contains(github.event.comment.body, '/assign')   # check the comment if it contains the keywords
+      - name: Assign the user or unassign stale assignments
+        uses: takanome-dev/assign-issue-action@v2.0.0
         with:
-          script: |
-            echo "Comment author is ${{context.actor}}"
-            console.log(context.payload.comment)
+          github_token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+          trigger: '/assign' # you can change the default trigger to something else
+          required_label: '[Status] To do'  # if present, the issue must have this label to be assigned
+          assigned_label: 'self-assigned'
+          # days_until_unassign: 7
           
   
   #   runs-on: ubuntu-latest
