@@ -59,7 +59,7 @@ jobs:
             })
 
   assign_issue:
-    if: ${{ !github.event.issue.pull_request }}
+    if: (github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/assign'))
     runs-on: ubuntu-latest
     steps:
       - name: Assign the user or unassign stale assignments
