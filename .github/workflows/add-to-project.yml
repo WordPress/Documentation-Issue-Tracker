@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, 'contributor documentation')
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/43/views/1
@@ -24,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, 'advanced administration')
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/47/views/1
@@ -37,6 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, 'HelpHub feedback') && contains(github.event.issue.labels.*.name, 'user documentation (HelpHub)')
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/90/views/1
@@ -50,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, '6.1')
         with:
           # https://github.com/marketplace/actions/add-to-github-projects
           project-url: https://github.com/orgs/WordPress/projects/45/views/1
@@ -63,6 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, '6.3')
         # https://github.com/marketplace/actions/add-to-github-projects
         with:
           project-url: https://github.com/orgs/WordPress/projects/108
