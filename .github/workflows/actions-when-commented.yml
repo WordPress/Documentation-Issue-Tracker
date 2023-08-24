@@ -65,7 +65,7 @@ jobs:
       - name: Assign the comment author
         uses: takanome-dev/assign-issue-action@v2.0.0
         with:
-          github_token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
           trigger: '/assign' # you can change the default trigger to something else
           required_label: '[Status] To do'  # if present, the issue must have this label to be assigned
           assigned_label: 'self-assigned'
