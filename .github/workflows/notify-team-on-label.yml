@@ -24,3 +24,4 @@ jobs:
                   apis=@zzap
                   advanced administration=@javiercasares
                   tutorial review=@femkreations
+                  [Status] Review=@docs-reviewers
