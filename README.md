@@ -57,5 +57,7 @@ Please add your details to our [CONTRIBUTORS.md](https://github.com/WordPress/Do
 
 ## About this repository
 
-The WordPress ecosystem is vast and the numerous sub-projects use a variety of tools to manage their project. This makes knowing where to report an issue complicated. That's where this repository comes in, to create a single spot anyone can report a documentation issue.
+The WordPress ecosystem is vast, and the numerous sub-projects use various tools to manage their project. This makes knowing where to report an issue complicated. That's where this repository comes in: anyone can report a documentation issue to create a single spot.
+
+Read more about this repo [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/).
 
