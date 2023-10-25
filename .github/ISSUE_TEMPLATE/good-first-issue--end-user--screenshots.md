@@ -2,7 +2,7 @@
 name: Good first issue - end-user - screenshots
 about: Create a new good first issue for updating screenshots for end-user docs.
 title: "[HelpHub][x.x][screenshots]: "
-labels: ["user documentation (HelpHub)", "[Status] To do", "good first issue"]
+labels: ["user documentation (HelpHub)", "[Status] To do", "good first issue", "needs screenshots"]
 ---
 
 Article:  <https://wordpress.org/documentation/article/...>
