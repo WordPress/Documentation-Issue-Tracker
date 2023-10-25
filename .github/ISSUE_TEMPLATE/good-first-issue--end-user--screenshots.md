@@ -1,8 +1,8 @@
 ---
 name: Good first issue - end-user - screenshots
-about: Create a new issue for WordPress release end-user docs.
+about: Create a new good first issue for updating screenshots for end-user docs.
 title: "[HelpHub][x.x][screenshots]: "
-labels: ["user documentation (HelpHub)", "[Status] To do"]
+labels: ["user documentation (HelpHub)", "[Status] To do"], "good first issue"
 ---
 
 Article:  <https://wordpress.org/documentation/article/...>
