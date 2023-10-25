@@ -75,3 +75,17 @@ jobs:
           labeled: 6.3
           # In case there is more than one label, use operators
           # label-operator: AND
+          
+  add-to-wp-6-4-project:
+    name: Add WP 6.4 Issue(s) to WP 6.4 Documentation project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.5.0
+        if: contains(github.event.issue.labels.*.name, '6.4')
+        # https://github.com/marketplace/actions/add-to-github-projects
+        with:
+          project-url: https://github.com/orgs/WordPress/projects/141
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: 6.4
+          # In case there is more than one label, use operators
+          # label-operator: AND
