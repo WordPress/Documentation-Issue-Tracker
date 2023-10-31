@@ -9,7 +9,7 @@ Article:  <https://wordpress.org/documentation/article/...>
 
 ## Task
 
-Make sure all images have ALT attributes. 
+Check if all images have ALT attributes. 
 
 ## Directions
 - Check all the images in the article (link above).
