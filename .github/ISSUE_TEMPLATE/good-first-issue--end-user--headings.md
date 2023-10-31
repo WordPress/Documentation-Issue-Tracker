@@ -17,6 +17,10 @@ Make sure all headings are in sentence case (e.g. Block settings).
 - Post these titles in the comment on this issue.
 - Request review by stating in the comment that the issue is ready for review.
 
+## Resources
+
+- Read about headings capitalisation - [Checking headings capitalization](https://make.wordpress.org/docs/handbook/get-involved/getting-started-at-a-contributor-day/good-first-issues/#checking-headings-capitalization)
+
 ## Automation
 - If you want, you can assign yourself to the issue and change the label for review by posting specific keywords in a comment. Read about our repo's automatisation [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/#label-issues).
 
