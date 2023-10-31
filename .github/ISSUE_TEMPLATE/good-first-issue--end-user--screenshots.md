@@ -20,7 +20,8 @@ Make sure all screenshots are relevant to the latest version.
 
 ## Resources
 1. You can set WordPress install in one click by visiting https://playground.wordpress.net/ use InstaWP sandbox https://app.instawp.io/onboard
-2. Watch the video on creating screenshots for the latest WordPress versions - [Updating screenshots](https://wordpress.tv/2022/03/04/update-screenshots-in-wordpress-documentation/)
+2. Read about updating screenshots - [Updating screenshots](https://make.wordpress.org/docs/handbook/get-involved/getting-started-at-a-contributor-day/good-first-issues/#updating-screenshots)
+3. Watch the video on creating screenshots for the latest WordPress versions - [Updating screenshots](https://wordpress.tv/2022/03/04/update-screenshots-in-wordpress-documentation/)
 
 ## Automation
 - If you want, you can assign yourself to the issue and change the label for review by posting specific keywords in a comment. Read about our repo's automatisation [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/#label-issues).
