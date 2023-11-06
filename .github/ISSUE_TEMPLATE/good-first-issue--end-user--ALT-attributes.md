@@ -24,4 +24,4 @@ Check if all images have ALT attributes.
 ## Automation
 - If you want, you can assign yourself to the issue and change the label for review by posting specific keywords in a comment. Read about our repo's automatisation [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/#label-issues).
 
-Thank you for contributing, have a cookie :cookie: 
+Thank you for contributing, have a cookie :cookie:  
