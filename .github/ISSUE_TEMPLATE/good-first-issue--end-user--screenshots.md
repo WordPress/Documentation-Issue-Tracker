@@ -14,12 +14,12 @@ Make sure all screenshots are relevant to the latest version.
 ## Directions
 - Compare existing screenshots (on the article link) to the actual interface in the latest WordPress version.
 - Ensure you have the appropriate WordPress version and that new screenshots cover the same page area as the existing one.
-- If something is different, make a new screenshot.
+- If something is different in the latest version, make a new screenshot.
 - Upload new screenshots to the comment on this issue.
 - Request review by stating in the comment that the issue is ready for review.
 
 ## Resources
-1. You can set WordPress install in one click by visiting https://playground.wordpress.net/ use InstaWP sandbox https://app.instawp.io/onboard
+1. You can set WordPress install in one click by visiting https://playground.wordpress.net/ or use InstaWP sandbox https://app.instawp.io/onboard
 2. Read about updating screenshots - [Updating screenshots](https://make.wordpress.org/docs/handbook/get-involved/getting-started-at-a-contributor-day/good-first-issues/#updating-screenshots)
 3. Watch the video on creating screenshots for the latest WordPress versions - [Updating screenshots](https://wordpress.tv/2022/03/04/update-screenshots-in-wordpress-documentation/)
 
