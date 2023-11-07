@@ -14,7 +14,7 @@ Check if all images have ALT attributes.
 ## Directions
 - Check all the images in the article (link above).
 - Note all images without ALT attributes
-- Post the position in the article (section title or surrounding text etc.) of this images in the comment on this issue.
+- Post the position in the article (section title or surrounding text etc.) of these images in the comment on this issue.
 - Request review by stating in the comment that the issue is ready for review.
 
 ## Resources
