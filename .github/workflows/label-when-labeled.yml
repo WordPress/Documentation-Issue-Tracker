@@ -75,3 +75,51 @@ jobs:
               repo: context.repo.repo,
               name: ["[Status] Done"]
             })
+
+  status_label_in_progress:
+    if: contains(github.event.issue.labels.*.name, '[Status] In progress')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: console.log(context)
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] To do')
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] To do"]
+            })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] Review')
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] Review"]
+            })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] Ready to Publish')
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] Ready to Publish"]
+            })
+      - uses: actions/github-script@v6
+        if: contains(github.event.issue.labels.*.name, '[Status] Done')
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] Done"]
+            })
