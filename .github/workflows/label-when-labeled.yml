@@ -28,3 +28,19 @@ jobs:
               repo: context.repo.repo,
               labels: ["developer documentation (DevHub)"]
             })
+  status_label_todo:
+    if: contains(github.event.issue.labels.*.name, '[Status] To do')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: console.log(context)
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["[Status] In progress", "[Status] Review", "[Status] Ready to Publish", "[Status] Done"]
+            })
