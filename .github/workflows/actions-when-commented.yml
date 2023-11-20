@@ -14,10 +14,10 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7.0.1
         with:
           script: console.log(context)
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7.0.1
         if: contains(github.event.comment.body, '/review')   # check the comment if it contains the keywords
         with:
           script: |
@@ -27,7 +27,7 @@ jobs:
               repo: context.repo.repo,
               labels: ["[Status] Review"]
             })
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7.0.1
         if: contains(github.event.issue.labels.*.name, '[Status] In progress') && contains(github.event.comment.body, '/review')  
         with:
           script: |
@@ -37,7 +37,7 @@ jobs:
               repo: context.repo.repo,
               name: ["[Status] In progress"]
             })
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7.0.1
         if: contains(github.event.issue.labels.*.name, '[Status] To do') && contains(github.event.comment.body, '/review')
         with:
           script: |
@@ -47,7 +47,7 @@ jobs:
               repo: context.repo.repo,
               name: ["[Status] To do"]
             })
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7.0.1
         if: contains(github.event.issue.labels.*.name, '[Status] Done') && contains(github.event.comment.body, '/review')
         with:
           script: |
