@@ -62,4 +62,4 @@ The WordPress ecosystem is vast, and its numerous sub-projects use various tools
 Read more about this repo [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/).
 
 
-This is my first contribution to WordPress documentation. 🎉
+This is my first contribution to WordPress documentation. 
