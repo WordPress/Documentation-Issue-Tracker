@@ -20,6 +20,8 @@ All other Make / WordPress team handbooks are maintained by internally by said r
 
 ## How to report an issue?
 
+**Before opening a new issue**, please search the **[existing issues](https://github.com/WordPress/Documentation-Issue-Tracker/issues)** to check whether the problem has already been reported.
+
 At the top of this GitHub repository is an Issues tab, click on that tab. The next page will show a green button for "New issue" in the top right, click there to start an issue filling out the template as complete as possible. See [GitHub's official documentation for issues](https://docs.github.com/en/issues).
 
 Thank you for taking the time to report an issue.
