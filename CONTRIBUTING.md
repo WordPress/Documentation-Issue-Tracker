@@ -22,4 +22,4 @@ If you do not have the permission to assign issues to yourself, please ask in th
 
 We want to make sure people know that you've contributed. We would be happy to acknowledge your contribution.
 
-Please add your details to our [Google Sheet](https://docs.google.com/spreadsheets/d/1hAPORz_yl4UTerPo8Tl5j_Xznfpm_NItrNftoXwBqvA/edit#gid=1730522902) - we assign badges monthly.
+Please add your details to our CONTRIBUTORS.md file and our contributor tracking Google Sheet - we assign badges monthly.
