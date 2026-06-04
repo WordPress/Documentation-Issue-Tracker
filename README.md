@@ -52,7 +52,9 @@ You can join the documentation team on Slack in **#docs** channel. See the [Docu
 
 ## Getting Recognition
 
-We want to make sure your contributions are recognized, and we would be glad to acknowledge them. If you reported an issue or fixed an issue, please submit your contribution details using the form in the right sidebar of the Documentation Team page at https://make.wordpress.org/docs/. The required information is your WordPress.org username, GitHub username, and the GitHub issue number.
+We want to make sure people know that you’ve contributed, and we would be happy to acknowledge your contribution. To keep track of all contributors to the Docs team, we maintain a document called CONTRIBUTORS.md. Everyone who has reported an issue, fixed an issue, and/or participated in a discussion should create a PR to add their information to this document. The required information is the wp.org username, GitHub username, and GitHub issue number.
+
+Please add your details to our [CONTRIBUTORS.md](https://github.com/WordPress/Documentation-Issue-Tracker/blob/main/CONTRIBUTORS.md) - we assign badges monthly.
 
 After we verify that your contributions are valid, we will award you the Documentation Contributor badge on your WordPress.org profile.
 
