@@ -13,7 +13,7 @@ Is this your first time here to contribute? Great! We're so glad you are here! Y
 Whether you pick up an issue to work on or are simply implementing the changes suggested by someone else, please make sure you do the following
 
 1. Label the issues accordingly
-2. Assign yourself so that people know that the issue is being picked up
+2. Assign yourself so that people know that the issue is being picked up using `/assign` command in the comment.
 3. Close the issue when the implementation has been finished.
 
 If you do not have the permission to assign issues to yourself, please ask in the issue and we'll do the assignment as necessary.
@@ -22,4 +22,4 @@ If you do not have the permission to assign issues to yourself, please ask in th
 
 We want to make sure people know that you've contributed. We would be happy to acknowledge your contribution.
 
-Please add your details to our [Google Sheet](https://docs.google.com/spreadsheets/d/1hAPORz_yl4UTerPo8Tl5j_Xznfpm_NItrNftoXwBqvA/edit#gid=1730522902) - we assign badges monthly.
+Please submit your contribution details using the form in the right sidebar of the Documentation Team page at https://make.wordpress.org/docs/. The required information is your WordPress.org username, GitHub username, and the GitHub issue number.

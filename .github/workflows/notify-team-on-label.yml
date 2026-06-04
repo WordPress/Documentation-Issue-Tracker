@@ -14,14 +14,14 @@ jobs:
              # The Team
              # https://make.wordpress.org/docs/handbook/the-team/
              recipients: |
-                  block editor=@Leonardus-Nugraha
-                  has-screenshots=@Leonardus-Nugraha @atachibana
-                  user documentation=@Leonardus-Nugraha @atachibana
-                  plugins=@theMikeD
+                  block editor=
+                  has-screenshots= @atachibana
+                  user documentation= @atachibana
+                  plugins=
                   themes=@kafleg @TeBenachi
                   code reference=@stevenlinx
                   external links=@zzap
                   apis=@zzap
                   advanced administration=@javiercasares
-                  tutorial review=@Leonardus-Nugraha
+                  tutorial review=
                   [Status] Review=@docs-reviewers
