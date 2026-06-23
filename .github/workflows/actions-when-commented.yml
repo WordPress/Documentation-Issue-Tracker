@@ -23,7 +23,7 @@ jobs:
             const { owner, repo } = context.repo; 
             const issue_number = context.issue.number;
             
-            # Get latest issue state (labels + assignees)
+            // Get latest issue state (labels + assignees)
             const { data: issue } = await github.rest.issues.get({   
               owner,
               repo,
@@ -32,7 +32,7 @@ jobs:
             
             const labels = issue.labels.map(l => l.name);
             
-            # Add [Status] Review if missing
+            // Add [Status] Review if missing
             if (!labels.includes('[Status] Review')) {
               await github.rest.issues.addLabels({
                 owner,
@@ -42,7 +42,7 @@ jobs:
               });
             }
             
-            # Remove [Status] In progress if present
+            // Remove [Status] In progress if present
             if (labels.includes('[Status] In progress')) {
               await github.rest.issues.removeLabel({
                 owner,
@@ -52,7 +52,7 @@ jobs:
               });
             }
             
-            # Unassign all assignees
+            // Unassign all assignees
             const assignees = (issue.assignees || []).map(a => a.login);
             if (assignees.length > 0) {
               await github.rest.issues.removeAssignees({
