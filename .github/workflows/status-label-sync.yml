@@ -1,14 +1,16 @@
 name: Sync labels from Project status
-
 on:
+  project_v2_item:
+    types: [edited, converted]
   schedule:
-    - cron: "3,13,23,33,43,53 * * * *" 
+    - cron: "13 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
-  issues: write    
+  issues: write
   pull-requests: write
+  projects: read
 
 jobs:
   sync-labels:
@@ -18,17 +20,12 @@ jobs:
       - name: Sync issue labels from project status
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.PROJECT_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             const core = require('@actions/core');
 
             const owner = 'WordPress';
             const projectNumber = 286; // WordPress 7.0 Documentation
-
-            const statusLabels = [
-              '[Status] In progress',
-              '[Status] Review',
-            ];
 
             const mapping = {
               'In Progress': {
@@ -106,7 +103,6 @@ jobs:
                 number: projectNumber,
                 cursor,
               });
-
               const items = result.organization.projectV2.items;
 
               for (const item of items.nodes) {
@@ -120,7 +116,12 @@ jobs:
                   (value) => value?.field?.name === 'Status'
                 )?.name;
 
-                if (!status || !mapping[status]) {
+                if (!status) {
+                  continue;
+                }
+
+                if (!mapping[status]) {
+                  core.warning(`Unknown Status option: ${status}`);
                   continue;
                 }
 
@@ -128,7 +129,7 @@ jobs:
 
                 const repoOwner = content.repository.owner.login;
                 const repo = content.repository.name;
-                const issue_number = content.number;
+                const number = content.number;
                 const existing = new Set(content.labels.nodes.map((label) => label.name));
 
                 const labelsToAdd = rule.add.filter((label) => !existing.has(label));
@@ -137,11 +138,11 @@ jobs:
                   await github.rest.issues.addLabels({
                     owner: repoOwner,
                     repo,
-                    issue_number,
+                    issue_number: number,
                     labels: labelsToAdd,
                   });
 
-                  core.info(`#${issue_number}: added ${labelsToAdd.join(', ')}`);
+                  core.info(`#${number}: added ${labelsToAdd.join(', ')}`);
                 }
 
                 for (const label of rule.remove) {
@@ -153,11 +154,11 @@ jobs:
                     await github.rest.issues.removeLabel({
                       owner: repoOwner,
                       repo,
-                      issue_number,
+                      issue_number: number,
                       name: label,
                     });
 
-                    core.info(`#${issue_number}: removed ${label}`);
+                    core.info(`#${number}: removed ${label}`);
                   } catch (error) {
                     if (error.status !== 404) {
                       throw error;
