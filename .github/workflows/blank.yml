@@ -1,14 +1,14 @@
 name: Sync labels from Project status
 
 on:
-  projects_v2_item:
+  project_card: 
     types: [edited]
 
 permissions:
   contents: read
   issues: write
   pull-requests: write
-  project: read
+  # project: read
 
 jobs:
   sync-labels:
