@@ -8,8 +8,7 @@ on:
 
 jobs:
         
-  label_issues:
-    if: ${{ !github.event.issue.pull_request }}
+  label_assign_issues:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -17,61 +16,71 @@ jobs:
       - uses: actions/github-script@v7.0.1
         with:
           script: console.log(context)
-      - uses: actions/github-script@v7.0.1
-        if: contains(github.event.comment.body, '/review')   # check the comment if it contains the keywords
+      - uses: actions/github-script@v7.0.1 
+        if: ${{ !github.event.issue.pull_request && contains(github.event.comment.body, '/review') }}       
         with:
           script: |
-            github.rest.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ["[Status] Review"]
-            })
-      - uses: actions/github-script@v7.0.1
-        if: contains(github.event.issue.labels.*.name, '[Status] In progress') && contains(github.event.comment.body, '/review')  
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] In progress"]
-            })
-      - uses: actions/github-script@v7.0.1
-        if: contains(github.event.issue.labels.*.name, '[Status] To do') && contains(github.event.comment.body, '/review')
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] To do"]
-            })
-      - uses: actions/github-script@v7.0.1
-        if: contains(github.event.issue.labels.*.name, '[Status] Done') && contains(github.event.comment.body, '/review')
-        with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["[Status] Done"]
-            })
+            const { owner, repo } = context.repo; 
+            const issue_number = context.issue.number;
+            
+            # Get latest issue state (labels + assignees)
+            const { data: issue } = await github.rest.issues.get({   
+              owner,
+              repo,
+              issue_number,
+            });
+            
+            const labels = issue.labels.map(l => l.name);
+            
+            # Add [Status] Review if missing
+            if (!labels.includes('[Status] Review')) {
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number,
+                labels: ['[Status] Review'],
+              });
+            }
+            
+            # Remove [Status] In progress if present
+            if (labels.includes('[Status] In progress')) {
+              await github.rest.issues.removeLabel({
+                owner,
+                repo,
+                issue_number,
+                name: '[Status] In progress',
+              });
+            }
+            
+            # Unassign all assignees
+            const assignees = (issue.assignees || []).map(a => a.login);
+            if (assignees.length > 0) {
+              await github.rest.issues.removeAssignees({
+                owner,
+                repo,
+                issue_number,
+                assignees,
+              });
+            }
 
-  # rather use this one: https://github.com/marketplace/actions/contributor-takes-action
-  assign_issue:
-    if: github.event_name == 'issue_comment' && contains(github.event.comment.body, '/assign')
+  assign_issue_to_commenter:
+    if: ${{ !github.event.issue.pull_request && contains(github.event.comment.body, '/assign') }}
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-      - name: Assign the comment author
-        uses: takanome-dev/assign-issue-action@v2.0.0
+      - uses: actions/github-script@v7
         with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          trigger: '/assign' # you can change the default trigger to something else
-          required_label: ''  # if present, the issue must have this label to be assigned
-          assigned_label: 'self-assigned'
-          assigned_comment: "Hey @{{ comment.user.login }}, thanks for your interest in this issue! 🍪🍪🍪<br>If you have any questions, do not hesitate to ask them in our <a href='https://wordpress.slack.com/archives/C02RP4WU5'>#docs</a> Slack channel.<br>Enjoy and happy contributing ❤️"
-          already_assigned_comment: "Hey @{{ comment.user.login }}, this issue is already assigned to @{{ assignee.login }}.<br>A maintainer can also add you to the list of assignees or swap you with the current assignee. Or you can take a look at other unassigned issues we have.<br>"
-          pin_label: ''
-          days_until_unassign: 0
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const commenter = context.payload.comment.user.login;
+
+            // Assign the issue to the commenter
+            await github.rest.issues.addAssignees({
+              owner,
+              repo,
+              issue_number,
+              assignees: [commenter],
+            });
           
