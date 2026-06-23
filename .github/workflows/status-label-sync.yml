@@ -2,12 +2,12 @@ name: Sync labels from Project status
 
 on:
   schedule:
-    - cron: "*/30 * * * *" # every 30 minutes
+    - cron: "3,13,23,33,43,53 * * * *" 
   workflow_dispatch:
 
 permissions:
   contents: read
-  issues: write
+  issues: write    
   pull-requests: write
 
 jobs:
