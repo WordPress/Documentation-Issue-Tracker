@@ -24,17 +24,22 @@ jobs:
               const repo = context.repo.repo;
               const orgLogin = "WordPress";
               const projectNumber = 286; // 7.0 Docs
+              
+              // Ordered map: first match wins
+              const labelToStatus = [
+                { label: "[status] in progress", status: "In Progress" },
+                { label: "[status] review", status: "Needs 1st Review" },
+              ];
 
               const issueNumber = context.payload.issue.number;
               const issueNodeId = context.payload.issue.node_id;
               const labels = (context.payload.issue.labels || []).map(l => (l.name || "").toLowerCase());
-
+              
               // Decide status from current labels (priority order)
               let targetStatus = null;
-              if (labels.includes("[Status] In progress")) targetStatus = "In Progress";
-              else if (labels.includes("[Status] Review")) targetStatus = "Needs 1st Review";
-              else targetStatus = "Todo"; // fallback/default
-
+              const matched = labelToStatus.find(({ label }) => labels.includes(label));
+              const targetStatus = matched ? matched.status : "Todo"; // fallback/default
+              
               const projectData = await github.graphql(
                 `query($org: String!, $number: Int!) {
                   organization(login: $org) {
