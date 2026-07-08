@@ -27,18 +27,17 @@ jobs:
               const projectNumber = 286; // 7.0 Docs
               
               // Ordered map: first match wins
-              const labelToStatus = [
-                { label: "[status] in progress", status: "In Progress" },
-                { label: "[status] review", status: "Needs 1st Review" },
-              ];
+              const labelToStatus = {
+                "[status] in progress": "In Progress",
+                "[status] review": "Needs 1st Review",
+              };
 
               const issueNumber = context.payload.issue.number;
               const issueNodeId = context.payload.issue.node_id;
               const labels = (context.payload.issue.labels || []).map(l => (l.name || "").toLowerCase());
               
-              // Decide status from current labels (priority order)
-              const matched = labelToStatus.find(({ label }) => labels.includes(label));
-              const targetStatus = matched ? matched.status : "Todo"; // fallback/default
+              // Decide status from current labels
+              const targetStatus = Object.entries(labelToStatus).find(([label]) => labels.includes(label))?.[1] ?? "Todo";
               
               const projectData = await github.graphql(
                 `query($org: String!, $number: Int!) {
