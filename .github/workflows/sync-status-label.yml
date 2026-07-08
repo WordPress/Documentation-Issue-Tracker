@@ -36,7 +36,6 @@ jobs:
               const labels = (context.payload.issue.labels || []).map(l => (l.name || "").toLowerCase());
               
               // Decide status from current labels (priority order)
-              let targetStatus = null;
               const matched = labelToStatus.find(({ label }) => labels.includes(label));
               const targetStatus = matched ? matched.status : "Todo"; // fallback/default
               
