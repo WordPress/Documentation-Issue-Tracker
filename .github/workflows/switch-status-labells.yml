@@ -1,0 +1,39 @@
+name: Enforce mutually exclusive status labels
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  enforce_status_labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const addedLabel = context.payload.label?.name;
+            const issue = context.payload.issue;
+            if (!issue || !addedLabel) return;
+
+            const IN_PROGRESS = '[Status] In progress';
+            const REVIEW = '[Status] Review';
+
+            if (addedLabel !== IN_PROGRESS && addedLabel !== REVIEW) return;
+
+            const opposite = addedLabel === IN_PROGRESS ? REVIEW : IN_PROGRESS;
+            const labels = issue.labels.map((l) => l.name);
+
+            if (!labels.includes(opposite)) return;
+
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                name: opposite
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
