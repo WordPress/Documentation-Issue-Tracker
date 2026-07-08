@@ -11,12 +11,13 @@ permissions:
 jobs:
   sync-status:
     # Optional: skip PRs if they ever appear here
-    if: ${{ github.event.issue.pull_request == null }}
+    if: ${{ github.event.issue.pull_request == null && contains(github.event.issue.labels.*.name, '7.0') }} 
     runs-on: ubuntu-latest
 
     steps:
         - name: Sync project status from label
           uses: actions/github-script@v8
+          if: contains(github.event.issue.labels.*.name, '[Status] In progress') || contains(github.event.issue.labels.*.name, '[Status] Review')
           with:
             github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
             script: |
