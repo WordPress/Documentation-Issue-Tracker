@@ -1,0 +1,113 @@
+name: Issue Label → Project Status Sync
+
+on:
+  issues:
+    types: [labeled, unlabeled]
+
+permissions:
+  issues: read
+  repository-projects: write
+
+jobs:
+  sync-status:
+    # Optional: skip PRs if they ever appear here
+    if: ${{ github.event.issue.pull_request == null }}
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Sync project status from label
+          uses: actions/github-script@v8
+          with:
+            github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+            script: |
+              const owner = context.repo.owner;
+              const repo = context.repo.repo;
+              const orgLogin = "WordPress";
+              const projectNumber = 286; // 7.0 Docs
+
+              const issueNumber = context.payload.issue.number;
+              const issueNodeId = context.payload.issue.node_id;
+              const labels = (context.payload.issue.labels || []).map(l => (l.name || "").toLowerCase());
+
+              // Decide status from current labels (priority order)
+              let targetStatus = null;
+              if (labels.includes("[Status] In progress")) targetStatus = "In Progress";
+              else if (labels.includes("[Status] Review")) targetStatus = "Needs 1st Review";
+              else targetStatus = "Todo"; // fallback/default
+
+              const projectData = await github.graphql(
+                `query($org: String!, $number: Int!) {
+                  organization(login: $org) {
+                    projectV2(number: $number) {
+                      id
+                      fields(first: 100) {
+                        nodes {
+                          ... on ProjectV2SingleSelectField {
+                            id
+                            name
+                            options { id name }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }`,
+                { org: orgLogin, number: projectNumber }
+              );
+
+              const project = projectData.organization?.projectV2;
+              if (!project) throw new Error("Project not found");
+
+              const statusField = project.fields.nodes.find(f => f?.name === "Status");
+              if (!statusField) throw new Error("Status field not found");
+
+              const statusOption = statusField.options.find(o => o.name === targetStatus);
+              if (!statusOption) throw new Error(`Status option '${targetStatus}' not found`);
+
+              const issueItems = await github.graphql(
+                `query($owner: String!, $repo: String!, $issueNumber: Int!) {
+                  repository(owner: $owner, name: $repo) {
+                    issue(number: $issueNumber) {
+                      projectItems(first: 50) {
+                        nodes { id project { id } }
+                      }
+                    }
+                  }
+                }`,
+                { owner, repo, issueNumber }
+              );
+
+              let item = issueItems.repository.issue.projectItems.nodes.find(
+                n => n.project.id === project.id
+              );
+
+              if (!item) {
+                const addResult = await github.graphql(
+                  `mutation($projectId: ID!, $contentId: ID!) {
+                    addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
+                      item { id }
+                    }
+                  }`,
+                  { projectId: project.id, contentId: issueNodeId }
+                );
+                item = addResult.addProjectV2ItemById.item;
+              }
+
+              await github.graphql(
+                `mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId
+                    itemId: $itemId
+                    fieldId: $fieldId
+                    value: { singleSelectOptionId: $optionId }
+                  }) {
+                    projectV2Item { id }
+                  }
+                }`,
+                {
+                  projectId: project.id,
+                  itemId: item.id,
+                  fieldId: statusField.id,
+                  optionId: statusOption.id
+                }
+              );
