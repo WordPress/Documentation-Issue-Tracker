@@ -2,7 +2,7 @@
   "metadata": {
     "release": "7.1",
     "schema_version": 2,
-    "updated_at": "2026-07-12T17:17:28+02:00",
+    "updated_at": "2026-07-12T17:30:00+02:00",
     "source_query": "https://core.trac.wordpress.org/query?milestone=7.1&status=closed&group=component&max=200&order=priority&col=id&col=summary&col=status&col=type&col=focuses&col=keywords",
     "source_ticket_count": 156,
     "triage_status": "in_progress",
@@ -25,16 +25,16 @@
       "slug": "abilities-api",
       "file": "components/abilities-api.json",
       "ticket_count": 12,
-      "reviewed_count": 8,
-      "status": "in_progress",
+      "reviewed_count": 12,
+      "status": "review_complete_pending_open_ticket",
       "import_ready": false,
-      "issue_candidates": 5
+      "issue_candidates": 7
     }
   ],
   "statistics": {
     "tickets_total_in_release_query": 156,
     "tickets_indexed_in_component_files": 14,
-    "tickets_reviewed": 10,
+    "tickets_reviewed": 14,
     "components_completed": 1,
     "components_in_progress": 1
   }

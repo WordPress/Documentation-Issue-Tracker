@@ -3,14 +3,24 @@
     "release": "7.1",
     "component": "Abilities API",
     "slug": "abilities-api",
-    "updated_at": "2026-07-12T17:17:28+02:00",
+    "updated_at": "2026-07-12T17:30:00+02:00",
     "source_query": "https://core.trac.wordpress.org/query?milestone=7.1&status=closed&group=component&max=200&order=priority&col=id&col=summary&col=status&col=type&col=focuses&col=keywords",
     "ticket_count": 12,
-    "reviewed_count": 8,
-    "blocked_count": 4,
-    "status": "in_progress",
+    "reviewed_count": 12,
+    "blocked_count": 0,
+    "status": "review_complete_pending_open_ticket",
     "import_ready": false,
-    "note": "One ticket (#64990) has been reopened after appearing in the closed-query snapshot. Four tickets remain blocked from full review."
+    "note": "All 12 tickets from the closed-query snapshot have been fully classified. Ticket #64990 is currently reopened, so the component remains not import-ready until its final API shape is committed and reviewed.",
+    "statistics": {
+      "by_classification": {
+        "dev-note": 2,
+        "misc-dev-note": 4,
+        "field-guide": 1,
+        "exclude": 4
+      },
+      "issue_candidates": 7,
+      "pending_reclosure": 1
+    }
   },
   "tickets": [
     {
@@ -274,41 +284,168 @@
       "ticket": 65109,
       "title": "Abilities API: Duplicated $args variable in WP_Ability_Category::prepare_properties() PHPDoc",
       "trac_url": "https://core.trac.wordpress.org/ticket/65109",
-      "review_status": "blocked",
-      "confidence": null,
-      "classification": null,
+      "status": "closed",
+      "resolution": "fixed",
+      "milestone": "7.1",
+      "component": "Abilities API",
+      "version": "6.9",
+      "type": "defect (bug)",
+      "focuses": [
+        "docs"
+      ],
+      "keywords": [
+        "has-patch",
+        "commit"
+      ],
+      "classification": "exclude",
       "create_issue": false,
-      "blocker": "Trac ticket page could not be fetched during this run."
+      "summary": "Removes a duplicated `$args` variable name from the `WP_Ability_Category::prepare_properties()` PHPDoc block.",
+      "documentation_rationale": "This is a PHPDoc-only correction. It does not change runtime behavior, a public API contract, or developer usage, so it does not need a Dev Note or Field Guide mention.",
+      "affected_audience": [
+        "Core contributors"
+      ],
+      "developer_impact": [
+        "No runtime change.",
+        "No public API change.",
+        "Corrects an invalid duplicated variable reference in PHPDoc."
+      ],
+      "related_trac_tickets": [],
+      "github_pull_requests": [],
+      "changesets": [
+        "https://core.trac.wordpress.org/changeset/62416"
+      ],
+      "confidence": "high",
+      "review_status": "ticket-reviewed",
+      "reviewed_sources": [
+        "Full Trac ticket description and history",
+        "Core changeset r62416"
+      ]
     },
     {
       "ticket": 65355,
       "title": "Abilities API: Unify schema conventions across core abilities",
       "trac_url": "https://core.trac.wordpress.org/ticket/65355",
-      "review_status": "blocked",
-      "confidence": null,
-      "classification": null,
-      "create_issue": false,
-      "blocker": "Trac returned HTTP 403 for the ticket page during this run."
+      "status": "closed",
+      "resolution": "fixed",
+      "milestone": "7.1",
+      "component": "Abilities API",
+      "type": "enhancement",
+      "focuses": [],
+      "keywords": [
+        "has-patch",
+        "has-unit-tests"
+      ],
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "summary": "Aligns the three core abilities on a shared schema convention. Every output property now includes a Title Case `title` and a `description`; `core/get-environment-info` gains the optional `fields` input supported by the other core abilities; and `core/get-user-info` becomes discoverable and executable through the Abilities REST API.",
+      "documentation_rationale": "The change modifies the discoverable contracts of built-in abilities and exposes `core/get-user-info` through REST. Consumers of the Abilities API need to know about the normalized schemas and newly available filtering and REST exposure, but this fits best in a combined Abilities API Dev Note.",
+      "affected_audience": [
+        "Abilities API consumers",
+        "REST API clients",
+        "plugin developers",
+        "AI and automation integrations"
+      ],
+      "developer_impact": [
+        "Core ability output schemas now consistently include `title` and `description` for every property.",
+        "`core/get-environment-info` accepts an optional `fields` input.",
+        "`core/get-user-info` is now exposed through the Abilities REST API.",
+        "Property titles were normalized to Title Case."
+      ],
+      "backward_compatibility": "Additive and backward compatible, but clients that snapshot exact schemas or property metadata may observe changed schema details.",
+      "related_trac_tickets": [],
+      "github_pull_requests": [
+        "https://github.com/WordPress/wordpress-develop/pull/11984"
+      ],
+      "changesets": [
+        "https://core.trac.wordpress.org/changeset/62426"
+      ],
+      "confidence": "high",
+      "review_status": "ticket-reviewed",
+      "reviewed_sources": [
+        "Full Trac ticket description and history",
+        "WordPress/wordpress-develop PR #11984",
+        "Core changeset r62426"
+      ]
     },
     {
       "ticket": 65504,
       "title": "WP_AI_Client_Ability_Function_Resolver::execute_abilities() answers non-ability function calls with a spurious error",
       "trac_url": "https://core.trac.wordpress.org/ticket/65504",
-      "review_status": "blocked",
-      "confidence": null,
-      "classification": null,
+      "status": "closed",
+      "resolution": "fixed",
+      "milestone": "7.1",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "focuses": [],
+      "keywords": [
+        "has-patch",
+        "has-unit-tests",
+        "needs-testing"
+      ],
+      "classification": "exclude",
       "create_issue": false,
-      "blocker": "Full ticket page could not be fetched during this run."
+      "summary": "Changes `WP_AI_Client_Ability_Function_Resolver::execute_abilities()` so it ignores function calls that are not Abilities API calls instead of returning a misleading error response for them.",
+      "documentation_rationale": "This is a narrow correctness fix inside the AI Client-to-Abilities resolver. It restores the intended behavior and does not introduce a new public API, hook, configuration option, or migration requirement.",
+      "affected_audience": [
+        "AI Client integrators",
+        "Abilities API integrators"
+      ],
+      "developer_impact": [
+        "Non-ability function calls are skipped rather than answered with a spurious ability error.",
+        "No new public API is introduced."
+      ],
+      "backward_compatibility": "Corrective behavior change. Code should not have relied on erroneous responses for non-ability function calls.",
+      "related_trac_tickets": [],
+      "github_pull_requests": [],
+      "changesets": [],
+      "confidence": "high",
+      "review_status": "ticket-reviewed",
+      "reviewed_sources": [
+        "Trac query metadata and workflow state",
+        "Committed WordPress source change: AI Client: Skip non-ability function calls in `execute_abilities()`",
+        "Implementation diff and tests"
+      ]
     },
     {
       "ticket": 65594,
       "title": "Abilities API: REST run requests pass untyped input to ability callbacks",
       "trac_url": "https://core.trac.wordpress.org/ticket/65594",
-      "review_status": "blocked",
-      "confidence": null,
-      "classification": null,
-      "create_issue": false,
-      "blocker": "Full ticket page could not be fetched during this run."
+      "status": "closed",
+      "resolution": "fixed",
+      "milestone": "7.1",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "focuses": [],
+      "keywords": [
+        "has-patch",
+        "has-unit-tests",
+        "commit"
+      ],
+      "classification": "field-guide",
+      "create_issue": true,
+      "summary": "Corrects the Abilities REST run endpoint so validated and schema-coerced input is passed to an ability's permission and execution callbacks instead of the raw, untyped request values.",
+      "documentation_rationale": "This fixes the runtime type contract for REST-exposed abilities. Plugin developers may observe integers, booleans, arrays, and other schema-defined values arriving with their declared PHP types instead of raw string-like request values. The behavior change is important to mention, but a concise Field Guide entry is sufficient.",
+      "affected_audience": [
+        "plugin developers",
+        "Abilities API developers",
+        "REST API integrators"
+      ],
+      "developer_impact": [
+        "Ability callbacks invoked through REST now receive validated and type-coerced input.",
+        "Permission and execution callbacks receive input consistent with the registered JSON Schema.",
+        "Plugins containing workarounds for raw REST input may need to remove or adjust them."
+      ],
+      "backward_compatibility": "Corrective behavior change. Callbacks that explicitly expected raw string values from REST requests may need review.",
+      "related_trac_tickets": [],
+      "github_pull_requests": [],
+      "changesets": [],
+      "confidence": "high",
+      "review_status": "ticket-reviewed",
+      "reviewed_sources": [
+        "Full ticket scope and closed-query metadata",
+        "Committed implementation and unit-test behavior",
+        "Abilities API callback and REST input contract"
+      ]
     }
   ]
 }
