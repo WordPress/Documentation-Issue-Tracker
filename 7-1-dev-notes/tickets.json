@@ -7,7 +7,15 @@
     "source_ticket_count": 156,
     "triage_status": "in_progress",
     "import_ready": false,
-    "organization": "component-files"
+    "organization": "component-files",
+    "filtering": {
+      "excluded_types": [
+        "defect (bug)"
+      ],
+      "excluded_focuses": [
+        "tests"
+      ]
+    }
   },
   "components": [
     {
@@ -29,13 +37,23 @@
       "status": "review_complete_pending_open_ticket",
       "import_ready": false,
       "issue_candidates": 7
+    },
+    {
+      "name": "Administration",
+      "slug": "administration",
+      "file": "components/administration.json",
+      "ticket_count": 1,
+      "reviewed_count": 1,
+      "status": "complete",
+      "import_ready": true,
+      "issue_candidates": 1
     }
   ],
   "statistics": {
     "tickets_total_in_release_query": 156,
     "tickets_indexed_in_component_files": 14,
     "tickets_reviewed": 14,
-    "components_completed": 1,
+    "components_completed": 2,
     "components_in_progress": 1
   }
 }

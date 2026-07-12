@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "release": "7.1",
+    "component": "Administration",
+    "slug": "administration",
+    "updated_at": "2026-07-12T17:47:02+02:00",
+    "source_query": "https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords",
+    "ticket_count": 1,
+    "reviewed_count": 1,
+    "status": "complete",
+    "import_ready": true,
+    "statistics": {
+      "by_classification": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 1,
+        "exclude": 0
+      },
+      "by_type": {
+        "enhancement": 1
+      },
+      "issue_candidates": 1
+    }
+  },
+  "tickets": [
+    {
+      "ticket": 65382,
+      "title": "Admin color schemes: improve contrast to make sidebar compatible with Gutenberg editor chrome",
+      "trac_url": "https://core.trac.wordpress.org/ticket/65382",
+      "status": "closed",
+      "resolution": "fixed",
+      "milestone": "7.1",
+      "component": "Administration",
+      "type": "enhancement",
+      "focuses": [
+        "ui",
+        "accessibility",
+        "css"
+      ],
+      "keywords": [
+        "has-patch"
+      ],
+      "classification": "field-guide",
+      "create_issue": true,
+      "summary": "Updates the bundled admin color schemes so their sidebar and primary-button colors work with the block editor and Site Editor chrome when it adopts the user’s admin color scheme. Blue, Coffee, Ectoplasm, Light, Midnight, Ocean, and Sunrise were adjusted to improve contrast, align with the WPDS-generated editor color ramp, and keep admin theme color tokens synchronized through the bundled Gutenberg update.",
+      "documentation_rationale": "This is a visible cross-admin styling change with accessibility implications and potential impact on plugins that build custom wp-admin interfaces or assume specific bundled scheme colors. It does not introduce a new public PHP API, so a concise Field Guide entry is more appropriate than a standalone Dev Note.",
+      "affected_audience": [
+        "plugin developers building wp-admin interfaces",
+        "admin UI developers",
+        "accessibility-focused developers",
+        "theme and editor integration developers"
+      ],
+      "developer_impact": [
+        "Several bundled admin color schemes use new sidebar and primary-button colors.",
+        "The revised colors meet or improve WCAG 2.x AA text contrast targets described in the ticket.",
+        "Editor chrome can now visually align with the selected admin color scheme.",
+        "Plugins that hard-code bundled admin scheme colors may need visual regression testing.",
+        "Existing `--wp-admin-theme-color` tokens are synchronized through the related Gutenberg backport."
+      ],
+      "backward_compatibility": "No API break, but this is a visual compatibility change. Custom admin interfaces that depend on exact hard-coded Core color values should be retested.",
+      "related_trac_tickets": [],
+      "github_pull_requests": [
+        "https://github.com/WordPress/wordpress-develop/pull/12026",
+        "https://github.com/WordPress/wordpress-develop/pull/12153",
+        "https://github.com/WordPress/gutenberg/pull/78397"
+      ],
+      "changesets": [
+        "https://core.trac.wordpress.org/changeset/62454"
+      ],
+      "confidence": "high",
+      "review_status": "ticket-reviewed",
+      "reviewed_sources": [
+        "Full Trac ticket description and complete discussion",
+        "WordPress/wordpress-develop PR #12026",
+        "WordPress/wordpress-develop PR #12153",
+        "WordPress/gutenberg PR #78397",
+        "Core changeset r62454"
+      ]
+    }
+  ]
+}
