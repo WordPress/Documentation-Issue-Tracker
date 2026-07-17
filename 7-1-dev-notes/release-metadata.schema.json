@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/wordpress-7-1-release-metadata.schema.json",
+  "title": "WordPress 7.1 Release Metadata",
+  "description": "Schema for WordPress 7.1 Dev Notes release metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["metadata", "components", "statistics"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["release", "schema_version", "updated_at", "source_query", "filtering"],
+      "properties": {
+        "release": { "type": "string", "const": "7.1" },
+        "schema_version": { "type": "integer", "const": 2 },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "source_query": { "type": "string", "format": "uri" },
+        "filtering": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["excluded_types", "excluded_focuses"],
+          "properties": {
+            "excluded_types": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "const": ["defect (bug)"]
+            },
+            "excluded_focuses": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "const": ["tests"]
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/component" }
+    },
+    "statistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tickets_total_count_in_query",
+        "tickets_indexed_in_component_files",
+        "tickets_reviewed",
+        "tickets_pending_review",
+        "components_total",
+        "components_completed",
+        "components_not_started",
+        "by_classification",
+        "by_type",
+        "github_issue_candidates",
+        "github_issues_created_count"
+      ],
+      "properties": {
+        "tickets_total_count_in_query": { "$ref": "#/$defs/nonNegativeInteger" },
+        "tickets_indexed_in_component_files": { "$ref": "#/$defs/nonNegativeInteger" },
+        "tickets_reviewed": { "$ref": "#/$defs/nonNegativeInteger" },
+        "tickets_pending_review": { "$ref": "#/$defs/nonNegativeInteger" },
+        "components_total": { "$ref": "#/$defs/nonNegativeInteger" },
+        "components_completed": { "$ref": "#/$defs/nonNegativeInteger" },
+        "components_not_started": { "$ref": "#/$defs/nonNegativeInteger" },
+        "by_classification": { "$ref": "#/$defs/classificationStatistics" },
+        "by_type": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enhancement", "feature request", "task (blessed)"],
+          "properties": {
+            "enhancement": { "$ref": "#/$defs/nonNegativeInteger" },
+            "feature request": { "$ref": "#/$defs/nonNegativeInteger" },
+            "task (blessed)": { "$ref": "#/$defs/nonNegativeInteger" }
+          }
+        },
+        "github_issue_candidates": { "$ref": "#/$defs/nonNegativeInteger" },
+        "github_issues_created_count": { "$ref": "#/$defs/nonNegativeInteger" }
+      }
+    }
+  },
+  "$defs": {
+    "nonNegativeInteger": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "classificationStatistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dev-note", "misc-dev-note", "field-guide"],
+      "properties": {
+        "dev-note": { "$ref": "#/$defs/nonNegativeInteger" },
+        "misc-dev-note": { "$ref": "#/$defs/nonNegativeInteger" },
+        "field-guide": { "$ref": "#/$defs/nonNegativeInteger" }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "slug",
+        "file",
+        "ticket_count",
+        "reviewed_count",
+        "status",
+        "issue_candidates",
+        "issues_created_count",
+        "statistics"
+      ],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "slug": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^components/[a-z0-9]+(?:-[a-z0-9]+)*\\.json$"
+        },
+        "ticket_count": { "$ref": "#/$defs/nonNegativeInteger" },
+        "reviewed_count": { "$ref": "#/$defs/nonNegativeInteger" },
+        "status": {
+          "type": "string",
+          "enum": ["not_started", "in_progress", "complete"]
+        },
+        "issue_candidates": { "$ref": "#/$defs/nonNegativeInteger" },
+        "issues_created_count": { "$ref": "#/$defs/nonNegativeInteger" },
+        "statistics": { "$ref": "#/$defs/classificationStatistics" }
+      }
+    }
+  }
+}
