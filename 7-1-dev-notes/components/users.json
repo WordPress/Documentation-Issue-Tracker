@@ -1,0 +1,26 @@
+{
+    "trac_instance": "core",
+    "trac_label": "WordPress Core Trac",
+    "trac_base_url": "https://core.trac.wordpress.org",
+    "count": 1,
+    "tickets": [
+      {
+        "id": 56914,
+        "summary": "Better guide users when deleting other users",
+        "status": "closed",
+        "component": "Users",
+        "type": "enhancement",
+        "priority": "normal",
+        "resolution": "fixed",
+        "severity": "normal",
+        "version": "3.5",
+        "owner": "joedolson",
+        "reporter": "stefan.velthuys",
+        "created": "Wed, 26 Oct 2022 12:33:21 GMT",
+        "modified": "Fri, 10 Jul 2026 17:01:48 GMT",
+        "description": "When deleting a user, you have to decide, if their content should be assigned to another person, or if that content should be deleted.\r\n\r\nThe option to delete the content is quite drastic, compared to assigning it.\r\nSince this option is not reversible, it should be made clearer, what impact this has.\r\n\r\nI see multiple ways to warn the users, what they're about to do:\r\n- Mark the option to delete bold and use a different color (e.g. red)\r\n- Users have to confirm in a second step, if the delete option is selected\r\n- By default, pre-select the option to assign the content to another user\r\n- Use a kind of \"Danger Zone\" like GitHub does for deleting repositories\r\n\r\nBut maybe, something as simple as showing the amount of content could suffice: \r\n- **Delete** all content (19 posts, 2 pages, 31 images)",
+        "url": "https://core.trac.wordpress.org/ticket/56914"
+      }
+    ],
+    "search_mode": "summary_query"
+  }

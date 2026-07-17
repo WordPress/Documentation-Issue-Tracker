@@ -1,0 +1,26 @@
+{
+    "trac_instance": "core",
+    "trac_label": "WordPress Core Trac",
+    "trac_base_url": "https://core.trac.wordpress.org",
+    "count": 1,
+    "tickets": [
+      {
+        "id": 65404,
+        "summary": "Docs: Update parameter types to allow null for interactivity api functions",
+        "status": "closed",
+        "component": "Interactivity API",
+        "type": "enhancement",
+        "priority": "normal",
+        "resolution": "fixed",
+        "severity": "normal",
+        "version": "",
+        "owner": "dmsnell",
+        "reporter": "Soean",
+        "created": "Thu, 04 Jun 2026 08:49:50 GMT",
+        "modified": "Thu, 04 Jun 2026 09:10:16 GMT",
+        "description": "In [[https://core.trac.wordpress.org/changeset/58327|r58327]] the `null` type was added to some interactivity API function parameters. We also need to update the docs.",
+        "url": "https://core.trac.wordpress.org/ticket/65404"
+      }
+    ],
+    "search_mode": "summary_query"
+  }

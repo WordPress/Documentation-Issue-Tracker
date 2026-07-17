@@ -1,0 +1,8 @@
+{
+    "servers": {
+      "wordpress-trac": {
+        "type": "http",
+        "url": "https://mcp-server-wporg-trac-staging.a8cai.workers.dev/mcp"
+      }
+    }
+  }
