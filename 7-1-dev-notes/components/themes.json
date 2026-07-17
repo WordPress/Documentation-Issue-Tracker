@@ -1,0 +1,26 @@
+{
+    "trac_instance": "core",
+    "trac_label": "WordPress Core Trac",
+    "trac_base_url": "https://core.trac.wordpress.org",
+    "count": 1,
+    "tickets": [
+      {
+        "id": 64569,
+        "summary": "Password protected content: password form styling and UX improvements",
+        "status": "closed",
+        "component": "Themes",
+        "type": "enhancement",
+        "priority": "normal",
+        "resolution": "fixed",
+        "severity": "normal",
+        "version": "",
+        "owner": "wildworks",
+        "reporter": "Nyiriland",
+        "created": "Sun, 08 Feb 2026 21:13:13 GMT",
+        "modified": "Wed, 15 Jul 2026 09:03:36 GMT",
+        "description": "This is specifically referring to the form seen when trying to view a password-protected page or post. \r\n\r\nThe current password protection form currently uses default browser html form styles, though it would be expected to inherit form styling from theme.\r\n\r\nSuggestions for improvements:\r\n\r\n- Refactor form to inherit input, label and submit button styles from theme.\r\n- Improve form accessibility by allowing users to toggle password visibility.",
+        "url": "https://core.trac.wordpress.org/ticket/64569"
+      }
+    ],
+    "search_mode": "summary_query"
+  }
