@@ -115,11 +115,11 @@
         "slug": {
           "type": "string",
           "minLength": 1,
-          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"
         },
         "file": {
           "type": "string",
-          "pattern": "^components/[a-z0-9]+(?:-[a-z0-9]+)*\\.json$"
+          "pattern": "^components/[a-z0-9]+(?:[-_][a-z0-9]+)*\\.json$"
         },
         "ticket_count": { "$ref": "#/$defs/nonNegativeInteger" },
         "reviewed_count": { "$ref": "#/$defs/nonNegativeInteger" },
