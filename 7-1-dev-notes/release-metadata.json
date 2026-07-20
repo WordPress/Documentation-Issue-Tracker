@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "release": "7.1",
+    "schema_version": 2,
+    "updated_at": "2026-07-20T17:30:16+02:00",
+    "source_query": "https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords",
+    "filtering": {
+      "excluded_types": [
+        "defect (bug)"
+      ],
+      "excluded_focuses": [
+        "tests"
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Abilities API",
+      "slug": "abilities-api",
+      "file": "components/abilities-api.json",
+      "ticket_count": 8,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Administration",
+      "slug": "administration",
+      "file": "components/administration.json",
+      "ticket_count": 15,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "AI",
+      "slug": "ai",
+      "file": "components/ai.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Charset",
+      "slug": "charset",
+      "file": "components/charset.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Comments",
+      "slug": "comments",
+      "file": "components/comments.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Customize",
+      "slug": "customize",
+      "file": "components/customize.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Database",
+      "slug": "database",
+      "file": "components/database.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Editor",
+      "slug": "editor",
+      "file": "components/editor.json",
+      "ticket_count": 20,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "External Libraries",
+      "slug": "external-libraries",
+      "file": "components/external-libraries.json",
+      "ticket_count": 2,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Filesystem API",
+      "slug": "filesystem-api",
+      "file": "components/filesystem-api.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Formatting",
+      "slug": "formatting",
+      "file": "components/formatting.json",
+      "ticket_count": 2,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "General",
+      "slug": "general",
+      "file": "components/general.json",
+      "ticket_count": 22,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "HTML API",
+      "slug": "html-api",
+      "file": "components/html-api.json",
+      "ticket_count": 4,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Interactivity API",
+      "slug": "interactivity-api",
+      "file": "components/interactivity-api.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Login and Registration",
+      "slug": "login-and-registration",
+      "file": "components/login-and-registration.json",
+      "ticket_count": 2,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Media",
+      "slug": "media",
+      "file": "components/media.json",
+      "ticket_count": 4,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Networks and Sites",
+      "slug": "networks-and-sites",
+      "file": "components/networks-and-sites.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Pings/Trackbacks",
+      "slug": "pings-trackbacks",
+      "file": "components/pings-trackbacks.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Posts, Post Types",
+      "slug": "posts-post_types",
+      "file": "components/posts-post_types.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Privacy",
+      "slug": "privacy",
+      "file": "components/privacy.json",
+      "ticket_count": 2,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "REST API",
+      "slug": "rest-api",
+      "file": "components/rest-api.json",
+      "ticket_count": 4,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Role/Capability",
+      "slug": "role-capability",
+      "file": "components/role-capability.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Sitemaps",
+      "slug": "sitemaps",
+      "file": "components/sitemaps.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Themes",
+      "slug": "themes",
+      "file": "components/themes.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Toolbar",
+      "slug": "toolbar",
+      "file": "components/toolbar.json",
+      "ticket_count": 5,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Users",
+      "slug": "users",
+      "file": "components/users.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    },
+    {
+      "name": "Widgets",
+      "slug": "widgets",
+      "file": "components/widgets.json",
+      "ticket_count": 1,
+      "reviewed_count": 0,
+      "status": "not_started",
+      "issue_candidates": 0,
+      "issues_created_count": 0,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 0
+      }
+    }
+  ],
+  "statistics": {
+    "tickets_total_count_in_query": 105,
+    "tickets_indexed_in_component_files": 0,
+    "tickets_reviewed": 0,
+    "tickets_pending_review": 105,
+    "components_total": 27,
+    "components_completed": 0,
+    "components_not_started": 27,
+    "by_classification": {
+      "dev-note": 0,
+      "misc-dev-note": 0,
+      "field-guide": 0
+    },
+    "by_type": {
+      "enhancement": 90,
+      "feature request": 4,
+      "task (blessed)": 11
+    },
+    "github_issue_candidates": 0,
+    "github_issues_created_count": 0
+  }
+}
