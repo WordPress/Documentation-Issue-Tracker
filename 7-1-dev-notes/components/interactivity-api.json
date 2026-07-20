@@ -19,7 +19,9 @@
         "created": "Thu, 04 Jun 2026 08:49:50 GMT",
         "modified": "Thu, 04 Jun 2026 09:10:16 GMT",
         "description": "In [[https://core.trac.wordpress.org/changeset/58327|r58327]] the `null` type was added to some interactivity API function parameters. We also need to update the docs.",
-        "url": "https://core.trac.wordpress.org/ticket/65404"
+        "url": "https://core.trac.wordpress.org/ticket/65404",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

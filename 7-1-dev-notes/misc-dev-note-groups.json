@@ -1,0 +1,42 @@
+[
+  {
+    "key": "abilities-api",
+    "title": "Abilities API additions",
+    "ticket_ids": [64311, 65234, 65248, 65355]
+  },
+  {
+    "key": "responsive-styles",
+    "title": "Responsive styles and block states",
+    "ticket_ids": [65239, 65503, 65596, 65615]
+  },
+  {
+    "key": "block-supports",
+    "title": "Block supports updates",
+    "ticket_ids": [64598, 65388, 65531]
+  },
+  {
+    "key": "view-config",
+    "title": "DataViews and DataForm view configuration",
+    "ticket_ids": [65552, 65577]
+  },
+  {
+    "key": "html-api-parsing",
+    "title": "HTML API parsing changes",
+    "ticket_ids": [63736, 64504, 65582]
+  },
+  {
+    "key": "media-processing-rest",
+    "title": "Client-side media processing REST API changes",
+    "ticket_ids": [65329, 64798, 65262, 65481]
+  },
+  {
+    "key": "hooks-and-conditionals",
+    "title": "New hooks and conditional APIs",
+    "ticket_ids": [65127, 65166, 64837, 65096, 51543]
+  },
+  {
+    "key": "miscelaneous-dev-notes",
+    "title": "Miscelaneous Dev Notes",
+    "ticket_ids": [65482, 64576, 65592]
+  }
+]

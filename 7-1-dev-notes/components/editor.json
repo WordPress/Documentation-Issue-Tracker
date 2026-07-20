@@ -19,7 +19,11 @@
         "created": "Wed, 11 Feb 2026 07:25:47 GMT",
         "modified": "Tue, 14 Jul 2026 09:20:24 GMT",
         "description": "This ticket tracks the backport of PHP files for the following Gutenberg update:\r\n\r\nhttps://github.com/WordPress/gutenberg/pull/75226\r\n\r\nThese updates add support for generating preset CSS custom properties (vars) on feature-specific selectors rather than only a block's root selector.\r\n\r\nSome blocks define their root selector as an inner element (e.g. the Button block uses `.wp-block-button .wp-block-button__link`). Preset CSS vars (like dimension sizes) need to be applied on the outer block wrapper instead. This change enables that by allowing blocks to define feature-level selectors that are used when outputting preset CSS variables.\r\n\r\nThis is required for the Button block's adoption of width block support. See https://github.com/WordPress/gutenberg/pull/74242 for further context.",
-        "url": "https://core.trac.wordpress.org/ticket/64598"
+        "url": "https://core.trac.wordpress.org/ticket/64598",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2424,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2424"
       },
       {
         "id": 64806,
@@ -36,7 +40,11 @@
         "created": "Thu, 05 Mar 2026 10:20:33 GMT",
         "modified": "Mon, 06 Jul 2026 04:23:50 GMT",
         "description": "Adds theme.json support for styling the current navigation item (@current) and its interactive states in the core/navigation-link block.\r\n\r\nTheme authors need a way to style the active/current menu item differently from the rest of the navigation, including controlling its hover, focus, and active states.\r\n\r\nNo UI changes are included; this is theme.json only.\r\n\r\nA new VALID_BLOCK_CUSTOM_STATES constant whitelists @-prefixed states per block in theme.json, playing the same role that VALID_BLOCK_PSEUDO_SELECTORS plays for CSS pseudo-selectors — the @ prefix distinguishes these class-based states from real CSS pseudo-selectors.\r\n\r\nEach block declares its state CSS selectors in block.json under selectors.states, following the existing Selectors API pattern, which get_blocks_metadata() reads into block metadata and get_block_nodes() uses to generate CSS.\r\n\r\nBlocks listed in VALID_BLOCK_CUSTOM_STATES also inherit their VALID_BLOCK_PSEUDO_SELECTORS as valid sub-states, producing compound selectors like .wp-block-navigation-item.current-menu-item:hover.\r\n\r\nTesting Instructions\r\n\r\nAdd the following snippets to your theme.json under styles.blocks and verify the correct CSS is generated on the frontend:\r\n\r\nCurrent item base styles:\r\n\r\n\r\n{{{\r\n\"core/navigation-link\": {\r\n  \"@current\": {\r\n    \"color\": { \"text\": \"#ff0000\" }\r\n  }\r\n}\r\n}}}\r\n\r\n\r\nCurrent item hover:\r\n\r\n\r\n{{{\r\n\"core/navigation-link\": {\r\n  \"@current\": {\r\n    \":hover\": {\r\n      \"color\": { \"text\": \"#0000ff\" }\r\n    }\r\n  }\r\n}\r\n}}}\r\n\r\n\r\nCurrent item focus:\r\n\r\n\r\n{{{\r\n\"core/navigation-link\": {\r\n  \"@current\": {\r\n    \":focus\": {\r\n      \"color\": { \"text\": \"#00aa00\" }\r\n    }\r\n  }\r\n}\r\n}}}\r\n\r\n\r\nAll combined:\r\n\r\n\r\n{{{\r\n\"core/navigation-link\": {\r\n  \"@current\": {\r\n    \"color\": { \"text\": \"#ff0000\" },\r\n    \"typography\": { \"fontWeight\": \"700\" },\r\n    \":hover\": {\r\n      \"color\": { \"text\": \"#0000ff\" }\r\n    },\r\n    \":focus\": {\r\n      \"color\": { \"text\": \"#00aa00\" }\r\n    },\r\n    \":active\": {\r\n      \"color\": { \"text\": \"#ff6600\" }\r\n    }\r\n  }\r\n}\r\n}}}\r\n\r\n\r\nTest for both items with submenus and without. Try other styles that aren't just the text color.",
-        "url": "https://core.trac.wordpress.org/ticket/64806"
+        "url": "https://core.trac.wordpress.org/ticket/64806",
+        "classification": "dev-note",
+        "create_issue": true,
+        "github_issue_number": 2408,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2408"
       },
       {
         "id": 64974,
@@ -53,7 +61,11 @@
         "created": "Sat, 28 Mar 2026 07:50:58 GMT",
         "modified": "Tue, 14 Jul 2026 23:36:14 GMT",
         "description": "This ticket tracks the backport of PHP files for the following Gutenberg update:\r\n\r\nhttps://github.com/WordPress/gutenberg/pull/75859\r\n\r\nAdds `background.gradient` as a new block support, enabling blocks to have a gradient picker in the Background panel. This is separate from the existing color.gradient in the Color panel and allows blocks to combine a background gradient with a background image via comma-separated background-image CSS values.\r\n\r\nThe ability to move away from the shorthand `background` CSS property for block supports is also required to unblock further design tooling improvements such as text gradients.",
-        "url": "https://core.trac.wordpress.org/ticket/64974"
+        "url": "https://core.trac.wordpress.org/ticket/64974",
+        "classification": "dev-note",
+        "create_issue": true,
+        "github_issue_number": 2411,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2411"
       },
       {
         "id": 65039,
@@ -70,7 +82,11 @@
         "created": "Wed, 08 Apr 2026 14:25:52 GMT",
         "modified": "Wed, 03 Jun 2026 05:18:22 GMT",
         "description": "WP_Block_Type_Registry::register() has four _doing_it_wrong() calls for invalid block names. Three of them don't say which name caused the error.\r\n\r\nExample: you get \"Block type names must not contain uppercase characters.\" with no way to tell which block it's about.\r\n\r\nThe fourth message (\"Block type \"%s\" is already registered.\") already includes the name. The other three should do the same to improve developper experience.",
-        "url": "https://core.trac.wordpress.org/ticket/65039"
+        "url": "https://core.trac.wordpress.org/ticket/65039",
+        "classification": "field-guide",
+        "create_issue": true,
+        "github_issue_number": 2430,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
       },
       {
         "id": 65164,
@@ -87,7 +103,11 @@
         "created": "Tue, 19 May 2026 20:46:14 GMT",
         "modified": "Wed, 17 Jun 2026 03:37:59 GMT",
         "description": "Tracking the needed core updates to implement responsive style states for blocks, as described in https://github.com/WordPress/gutenberg/issues/77817.\r\n\r\nThe first part of the work in in https://github.com/WordPress/gutenberg/pull/77513.",
-        "url": "https://core.trac.wordpress.org/ticket/65164"
+        "url": "https://core.trac.wordpress.org/ticket/65164",
+        "classification": "dev-note",
+        "create_issue": true,
+        "github_issue_number": 2415,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2415"
       },
       {
         "id": 65166,
@@ -104,7 +124,11 @@
         "created": "Tue, 05 May 2026 13:40:26 GMT",
         "modified": "Tue, 07 Jul 2026 06:02:51 GMT",
         "description": "This ticket tracks the backport of PHP files for the following Gutenberg update:\r\n\r\nhttps://github.com/WordPress/gutenberg/pull/77911\r\n\r\nWe're hiding the Classic block in the block editor inserter by default.\r\n\r\nWe're also introducing a new `wp_classic_block_supports_inserter` filter that allows overriding that behavior globally or per post. \r\n\r\nSee https://github.com/WordPress/gutenberg/pull/77911 for the full context.",
-        "url": "https://core.trac.wordpress.org/ticket/65166"
+        "url": "https://core.trac.wordpress.org/ticket/65166",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2428,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
       },
       {
         "id": 65239,
@@ -121,7 +145,11 @@
         "created": "Thu, 14 May 2026 05:27:08 GMT",
         "modified": "Tue, 16 Jun 2026 07:01:52 GMT",
         "description": "https://github.com/WordPress/gutenberg/pull/76491 adds a new \"states\" block support, intended to allow styling pseudo states, custom block states such as \"current menu item\" and specific viewport sizes. This needs adding to core.",
-        "url": "https://core.trac.wordpress.org/ticket/65239"
+        "url": "https://core.trac.wordpress.org/ticket/65239",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2423,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2423"
       },
       {
         "id": 65373,
@@ -138,7 +166,11 @@
         "created": "Sat, 30 May 2026 12:54:02 GMT",
         "modified": "Mon, 13 Jul 2026 10:19:51 GMT",
         "description": "Gutenberg PR: https://github.com/WordPress/gutenberg/pull/64916",
-        "url": "https://core.trac.wordpress.org/ticket/65373"
+        "url": "https://core.trac.wordpress.org/ticket/65373",
+        "classification": "field-guide",
+        "create_issue": true,
+        "github_issue_number": 2430,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
       },
       {
         "id": 65388,
@@ -155,7 +187,11 @@
         "created": "Tue, 02 Jun 2026 00:02:34 GMT",
         "modified": "Wed, 15 Jul 2026 02:18:11 GMT",
         "description": "This ticket tracks backporting changes from Gutenberg to WordPress Core.\r\n\r\nGutenberg PR: https://github.com/WordPress/gutenberg/pull/74242\r\n\r\nIt migrates the Button block from its ad-hoc width attribute to the standard dimensions.width block support, enabling width configuration via global styles and theme.json while preserving backward compatibility for existing buttons.",
-        "url": "https://core.trac.wordpress.org/ticket/65388"
+        "url": "https://core.trac.wordpress.org/ticket/65388",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2424,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2424"
       },
       {
         "id": 65482,
@@ -172,7 +208,11 @@
         "created": "Thu, 18 Jun 2026 10:05:32 GMT",
         "modified": "Tue, 07 Jul 2026 21:44:42 GMT",
         "description": "== Summary ==\r\n\r\nBlock comments (Notes) shipped in WordPress 6.9. The next milestone adds '''inline (partial-text) Notes''' — notes anchored to a text selection ''within'' a block rather than to the whole block.\r\n\r\nAn inline note's anchor is an in-content marker:\r\n\r\n{{{\r\n<mark class=\"wp-note\" data-id=\"N\">…marked text…</mark>\r\n}}}\r\n\r\nThe `data-id` identifies the note, and because the marker lives in the content its position follows edits — no separate selection offset metadata has to be stored. The marker is kept in the raw `post_content` (and the REST `raw` view, revisions, and exports) so the editor can re-attach the note on reload.\r\n\r\nThe public front end, however, should never expose note metadata. This ticket adds a server-side filter that strips the marker from rendered output only.\r\n\r\n== Proposed change ==\r\n\r\nAdd `wp_strip_inline_note_markers()`, hooked on `render_block`, which unwraps each note `<mark>` and its matching closer while preserving the marked text and any nested formatting.\r\n\r\n * `src/wp-includes/comment.php` — the new function.\r\n * `src/wp-includes/default-filters.php` — registers it on `render_block`.\r\n * `tests/phpunit/tests/comment/stripInlineNoteMarkers.php` — unit coverage.\r\n\r\n== Why the HTML API instead of a regex ==\r\n\r\nMatching is done with `WP_HTML_Tag_Processor::has_class()` so only the exact `wp-note` class token is targeted. This avoids three classes of bug a regex would introduce:\r\n\r\n * An unrelated user or plugin `<mark>` (a `core/text-color` highlight, or an unrelated `wp-note-foo` class) survives '''byte-for-byte''' with all attributes intact. A `\\bwp-note\\b` word boundary would wrongly match `wp-note-foo`.\r\n * A `</mark>`-looking sequence inside an HTML comment or attribute value is never mistaken for a real closing tag.\r\n * A nesting stack pairs each note opener with its own closer, so overlapping notes and nested highlight `<mark>`s resolve correctly.\r\n\r\nThe HTML API has no public token-removal method yet, so an anonymous `WP_HTML_Tag_Processor` subclass removes the marker token directly on the parsed token stream.\r\n\r\n== Testing ==\r\n\r\nRun the unit tests:\r\n\r\n{{{\r\nphpunit --filter Tests_Comment_StripInlineNoteMarkers\r\n}}}\r\n\r\nOr manually:\r\n\r\n 1. Add an inline note to part of a paragraph in the editor and save.\r\n 2. View the post on the front end.\r\n 3. Confirm the `<mark class=\"wp-note\">` wrapper is absent while the marked text remains.\r\n 4. Confirm a non-note `<mark>` highlight (e.g. from text color) is left untouched.",
-        "url": "https://core.trac.wordpress.org/ticket/65482"
+        "url": "https://core.trac.wordpress.org/ticket/65482",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2429,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
       },
       {
         "id": 65503,
@@ -189,7 +229,11 @@
         "created": "Mon, 22 Jun 2026 05:36:07 GMT",
         "modified": "Thu, 25 Jun 2026 10:03:55 GMT",
         "description": "Related: #65164\r\nGutenberg PR: https://github.com/WordPress/gutenberg/pull/79210\r\n\r\nAs mentioned in the PR, currently when a user sets a responsive style, the data is stored under plain keys in either block or theme json data:\r\n\r\n\r\n{{{\r\nstyles: {\r\n  mobile: {\r\n    color: { text: 'red' }\r\n  },\r\n  color: { text: 'blue' }\r\n}\r\n}}}\r\n\r\n\r\nThe key 'mobile' that represents a state lives alongside regular style properties like 'color'.\r\n\r\nA concern is that in the future it may be possible for developers to define custom responsive states, for example 'small', 'medium', 'big'. If the names can be arbitrary there's a risk that style state names can clash with the names of regular style properties.\r\n\r\nPseudo style states are already shipped in trunk (and in 7.0) and use keys like `:hover`, `:focus`, so the proposal to fix the possible namespace clashes for responsive states is to use a prefix - `@mobile`, `@tablet`, the `@` will represent a responsive style state.",
-        "url": "https://core.trac.wordpress.org/ticket/65503"
+        "url": "https://core.trac.wordpress.org/ticket/65503",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2423,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2423"
       },
       {
         "id": 65530,
@@ -206,7 +250,11 @@
         "created": "Wed, 24 Jun 2026 08:56:57 GMT",
         "modified": "Wed, 01 Jul 2026 15:06:27 GMT",
         "description": "The classic editor Publish box currently presents the Visibility controls as three radio options: Public, Password protected, and Private. When Password protected is selected, the password field appears inline within that group. The Sticky checkbox is also conditionally shown for public posts.\r\n\r\nThis works functionally, but the layout makes the visibility choices and their related secondary controls harder to scan. The password field is a conditional setting for the Password protected option, rather than a visibility option itself, and it can make the radio group feel visually uneven.\r\n\r\nThis ticket proposes a small markup/layout improvement for the classic editor Publish box:\r\n\r\n- Keep the existing Visibility radio choices:\r\n  - Public\r\n  - Password protected\r\n  - Private\r\n- When Password protected is selected, show the password input below the radio group.\r\n- Keep “Stick this post to the front page” as a checkbox, shown only when Public is selected and sticky posts are supported.\r\n- Preserve the existing save contract using `visibility=public|password|private`.\r\n- Preserve existing OK/Cancel behavior:\r\n  - OK updates the Visibility summary.\r\n  - Cancel restores the previous visibility, password, and sticky state.\r\n- Avoid changing post status behavior or the underlying meaning of public/password/private/private visibility.\r\n\r\nThis is intended as a small, incremental improvement to the classic editor Publish box that makes related Visibility controls easier to scan, moves the UI slightly closer to the block editor’s explicit Visibility choices, and preserves the existing workflow and save behavior.\r\n\r\nRelated:\r\n- #7745 discusses long-standing Status/Visibility coupling and includes older publish box UI explorations, but this ticket is narrower and does not attempt to change private post status behavior.\r\n- #25459 addressed accessibility improvements in the Publish box.\r\n- #24792 touched the password-protected visibility password field.\r\n- #47153 provides broader admin form control accessibility context.",
-        "url": "https://core.trac.wordpress.org/ticket/65530"
+        "url": "https://core.trac.wordpress.org/ticket/65530",
+        "classification": "field-guide",
+        "create_issue": true,
+        "github_issue_number": 2430,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
       },
       {
         "id": 65531,
@@ -223,7 +271,11 @@
         "created": "Wed, 24 Jun 2026 10:50:43 GMT",
         "modified": "Thu, 25 Jun 2026 06:55:13 GMT",
         "description": "Add support for auto-fit in layout.php grid block support, allowing grid columns to stretch and fill available space instead of leaving empty tracks. Backport of Gutenberg PR #79356.",
-        "url": "https://core.trac.wordpress.org/ticket/65531"
+        "url": "https://core.trac.wordpress.org/ticket/65531",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2424,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2424"
       },
       {
         "id": 65532,
@@ -240,7 +292,11 @@
         "created": "Wed, 24 Jun 2026 12:58:10 GMT",
         "modified": "Wed, 01 Jul 2026 15:07:00 GMT",
         "description": "In the Classic Editor publish box, the Status control is currently rendered as a compact <select> inside the editable Status panel.\r\n\r\nThe available choices are mutually exclusive and small in number:\r\n\r\n* Published\r\n* Pending Review\r\n* Draft\r\n* Scheduled, when applicable\r\n\r\nThis ticket proposes replacing that dropdown with a radio button group while preserving the existing submitted post_status value and save behavior.\r\n\r\nThe goal is to make the Status control easier to scan and interact with, and to bring the Classic Editor publish box closer to the block editor’s “Status & visibility” experience, where these publishing choices are presented as explicit options rather than compact form controls.\r\n\r\nThis should be a UI-only change. The underlying save contract should remain unchanged:\r\n\r\n* The submitted field should continue to be post_status.\r\n* Existing values such as publish, pending, draft, future, and private-related behavior should continue to work as they do today.\r\n* OK should update the visible Status summary.\r\n* Cancel should restore the previous status.\r\n* Existing visibility behavior, including Private posts changing the visible status text to “Privately Published” and hiding the Status edit link, should be preserved.\r\n\r\nThe change should also keep the current progressive enhancement behavior in the publish box. The radio buttons would replace the select control inside the existing edit panel, rather than changing the overall publish box flow.\r\n\r\nRelated tickets I found, but which do not appear to be exact duplicates:\r\n\r\n* #7745 covers long-standing confusion around private posts and status behavior.\r\n* #37613 discusses publish box UI/spacing around Visibility controls.\r\n* #17906 is a broader ticket about refactoring the submit/publish box.\r\n* #12706 covers custom post status behavior and edge cases.\r\n* #64308 is related to broader wp-admin visual refresh work.\r\n\r\nNone of those appear to specifically propose replacing the Classic Editor publish box Status dropdown with radio buttons while preserving the existing post_status submission behavior.",
-        "url": "https://core.trac.wordpress.org/ticket/65532"
+        "url": "https://core.trac.wordpress.org/ticket/65532",
+        "classification": "field-guide",
+        "create_issue": true,
+        "github_issue_number": 2430,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
       },
       {
         "id": 65533,
@@ -257,7 +313,9 @@
         "created": "Wed, 24 Jun 2026 16:08:56 GMT",
         "modified": "Wed, 15 Jul 2026 08:43:27 GMT",
         "description": "This ticket tracks the backport of PHP files for the following Gutenberg update:\r\n\r\nhttps://github.com/WordPress/gutenberg/pull/76556/\r\n\r\n`prepend_to_selector()` can get call hundreds or thousands of times, which can add up.  For supported conditions this small optimization can dramatically reduce the time spent in `prepend_to_selector()`.",
-        "url": "https://core.trac.wordpress.org/ticket/65533"
+        "url": "https://core.trac.wordpress.org/ticket/65533",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65538,
@@ -274,7 +332,9 @@
         "created": "Thu, 25 Jun 2026 00:29:32 GMT",
         "modified": "Mon, 13 Jul 2026 05:17:46 GMT",
         "description": "This is a backport of Gutenberg PR https://github.com/WordPress/gutenberg/pull/79511.\r\nRelated: https://github.com/WordPress/gutenberg/pull/77894\r\n\r\nEarlier fix to elements hover styles guard wasn't backported to Gutenberg. The Gutenberg PR for this also adds a test against regressions for this. So this ticket tracks the backporting of the test to core.",
-        "url": "https://core.trac.wordpress.org/ticket/65538"
+        "url": "https://core.trac.wordpress.org/ticket/65538",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65588,
@@ -291,7 +351,9 @@
         "created": "Tue, 07 Jul 2026 04:53:25 GMT",
         "modified": "Mon, 13 Jul 2026 01:46:07 GMT",
         "description": "Backport of Gutenberg PR https://github.com/WordPress/gutenberg/pull/79924.\r\n\r\nTidies up the regex used to add a block style variation's class (e.g. `.is-style-custom`) to a block's selector in `WP_Theme_JSON`.\r\n\r\nThe regex is hard to follow and its first capture group is effectively dead. It only matches a literal `:(...)`, which isn't valid selector syntax (functional pseudo-classes like `:is()` and `:where()` always have a name between the colon and the parenthesis), so `$matches[1]` is always empty. The second group does all the work, so dropping the dead group gives identical output and is much easier to follow.\r\n\r\nThis is a behaviour-preserving change, so the output should be identical to before.",
-        "url": "https://core.trac.wordpress.org/ticket/65588"
+        "url": "https://core.trac.wordpress.org/ticket/65588",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65596,
@@ -308,7 +370,11 @@
         "created": "Thu, 09 Jul 2026 00:35:35 GMT",
         "modified": "Thu, 09 Jul 2026 01:46:33 GMT",
         "description": "Bringing in the changes from https://github.com/WordPress/gutenberg/pull/79104.\r\n\r\nAdds a viewport object to theme.json settings, with two child values: tablet and mobile. These can be set to px, em or rem values.",
-        "url": "https://core.trac.wordpress.org/ticket/65596"
+        "url": "https://core.trac.wordpress.org/ticket/65596",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2423,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2423"
       },
       {
         "id": 65615,
@@ -325,7 +391,11 @@
         "created": "Mon, 13 Jul 2026 05:39:33 GMT",
         "modified": "Wed, 15 Jul 2026 13:50:26 GMT",
         "description": "Sync the changes from https://github.com/WordPress/gutenberg/pull/80037 that allow block instances to set state-specific text alignments.",
-        "url": "https://core.trac.wordpress.org/ticket/65615"
+        "url": "https://core.trac.wordpress.org/ticket/65615",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2423,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2423"
       },
       {
         "id": 65406,
@@ -342,7 +412,11 @@
         "created": "Thu, 04 Jun 2026 12:24:04 GMT",
         "modified": "Thu, 18 Jun 2026 10:36:35 GMT",
         "description": "Add Block Bindings support for the List Item block's `content` attribute.\r\n\r\nThis needs more than registering the attribute, because a List Item stores its rich text and a nested List in the same `<li>`:\r\n\r\n  {{{\r\n  <!-- wp:list-item -->\r\n  <li>My text\r\n  <!-- wp:list -->\r\n  <ul class=\"wp-block-list\"><!-- wp:list-item -->\r\n  <li>Nested item</li>\r\n  <!-- /wp:list-item --></ul>\r\n  <!-- /wp:list --></li>\r\n  <!-- /wp:list-item -->\r\n  }}}\r\n\r\n`WP_Block::replace_html()` replaces everything between the selector's opening and closing tag for a rich-text attribute. It has no awareness that part of that content came from inner blocks, so binding the list item `content` overwrites the nested list:\r\n\r\n  {{{\r\n  <li>Bound value</li>\r\n  }}}\r\n\r\n'''The fix:''' a block's own rich text always renders before its inner blocks, so the replacement only needs to run up to where the first inner block begins. `WP_Block::render()` already builds the output by walking `inner_content`, so it knows each inner block's byte offset and can hand those to the replacement, which stops at the first inner block inside the selector.\r\n\r\nThis is general — there is no list-item-specific code in the render path, so it works for any block that places an inner block inside a bound rich-text element. Blocks without inner blocks are unaffected.\r\n\r\nBecause it uses real inner-block positions, it also tells apart raw `<ul>` markup typed into the text (part of the rich text, replaced) from an actual nested block (preserved).\r\n\r\n`core/list-item` is the only core block today whose bound rich-text selector contains an inner block, so this also adds `content` to its supported binding attributes. The other multi-rich-text blocks (table, pullquote, quote, file, gallery) keep their inner content outside the bound selector and are unaffected.\r\n\r\n\r\nSteps to reproduce:\r\n  1. Register a binding source returning a plain string.\r\n  2. Insert a List, add a list item with a nested list under it.\r\n  3. Bind the outer list item's `content` to the source.\r\n  4. View the post on the front end.\r\n\r\nExpected: the bound text replaces the list item's own text, the nested list stays. Actual (before patch): the nested list is dropped.\r\n\r\nPatch and unit tests in Gutenberg's PR [https://github.com/WordPress/wordpress-develop/pull/12113], which supersedes the registration-only patch in PR [https://github.com/WordPress/wordpress-develop/pull/12084].\r\n \r\nCompanion Gutenberg compatibility for WordPress 6.9/7.0 in WordPress/gutenberg#78991.",
-        "url": "https://core.trac.wordpress.org/ticket/65406"
+        "url": "https://core.trac.wordpress.org/ticket/65406",
+        "classification": "dev-note",
+        "create_issue": true,
+        "github_issue_number": 2417,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2417"
       }
     ],
     "search_mode": "summary_query"

@@ -19,7 +19,11 @@
         "created": "Sat, 31 Jan 2026 00:45:13 GMT",
         "modified": "Fri, 19 Jun 2026 11:02:31 GMT",
         "description": "Similar to the support added to popovers, invoker commands are now baseline, and should be allowed in post content.\r\n\r\nSee #61959.",
-        "url": "https://core.trac.wordpress.org/ticket/64576"
+        "url": "https://core.trac.wordpress.org/ticket/64576",
+        "classification": "misc-dev-note",
+        "create_issue": true,
+        "github_issue_number": 2429,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
       },
       {
         "id": 65619,
@@ -36,7 +40,9 @@
         "created": "Mon, 13 Jul 2026 08:05:23 GMT",
         "modified": "Wed, 15 Jul 2026 13:50:55 GMT",
         "description": "- Related to #30421\r\n- Gutenberg PR: https://github.com/WordPress/gutenberg/pull/80163\r\n\r\nWe aim to stabilize the Tabs block family and release it in 7.1. This block consists of HTML like the following, and the Tab Panel has a tabindex attribute.\r\n\r\nHowever, during the process of stabilizing the block, I noticed that the tabindex attribute is not globally permitted.\r\n\r\nI believe the `tabindex` attribute should be globally allowed as it is a common attribute.",
-        "url": "https://core.trac.wordpress.org/ticket/65619"
+        "url": "https://core.trac.wordpress.org/ticket/65619",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

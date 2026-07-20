@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+source "$(cd "$(dirname "$0")" && pwd)/issues-common.sh"
+
+parse_mode "$@"
+trap cleanup_common EXIT
+require_tools_and_files
+load_project_data
+
+tickets="$(all_tickets_json)"
+
+[[ -f "$MISC_GROUPS_FILE" ]] || {
+    printf 'Error: missing Misc Dev Note group data: %s\n' "$MISC_GROUPS_FILE" >&2
+    exit 1
+}
+
+jq -e '
+    type == "array" and length > 0 and
+    all(.[];
+        (keys | sort) == (["key", "ticket_ids", "title"] | sort) and
+        (.key | type == "string" and test("^[a-z0-9]+(?:-[a-z0-9]+)*$")) and
+        (.title | type == "string" and length > 0) and
+        (.ticket_ids | type == "array" and length > 0) and
+        all(.ticket_ids[]; type == "number" and floor == . and . > 0) and
+        (.ticket_ids | unique | length) == (.ticket_ids | length)
+    ) and
+    ([.[].key] | unique | length) == length and
+    ([.[].ticket_ids[]] | unique | length) == ([.[].ticket_ids[]] | length)
+' "$MISC_GROUPS_FILE" >/dev/null || {
+    printf 'Error: malformed or duplicate Misc Dev Note group data in %s.\n' "$MISC_GROUPS_FILE" >&2
+    exit 1
+}
+
+covered_ids='[]'
+mapfile -t groups < <(jq -c '.[]' "$MISC_GROUPS_FILE")
+for group in "${groups[@]}"; do
+    key="$(jq -r '.key' <<<"$group")"
+    group_title="$(jq -r '.title' <<<"$group")"
+    ids_json="$(jq -c '.ticket_ids' <<<"$group")"
+    group_tickets="$(jq -c --argjson ids "$ids_json" '[.[] | select(.id as $id | $ids | index($id))]' <<<"$tickets")"
+
+    [[ "$(jq 'length' <<<"$group_tickets")" == "$(jq 'length' <<<"$ids_json")" ]] || {
+        printf 'Error: group %s does not resolve every configured ticket.\n' "$key" >&2
+        exit 1
+    }
+    jq -e 'all(.[]; .classification == "misc-dev-note" and .create_issue == true)' <<<"$group_tickets" >/dev/null || {
+        printf 'Error: group %s contains an ineligible ticket.\n' "$key" >&2
+        exit 1
+    }
+
+    covered_ids="$(jq -cn --argjson old "$covered_ids" --argjson new "$ids_json" '$old + $new')"
+    title="[7.1][Misc Dev Note] $group_title"
+    component="$(jq -r '[.[].component] | unique | if length == 1 then .[0] else "Multiple Components" end' <<<"$group_tickets")"
+    create_or_reuse_issue "misc-dev-note-$key" "$title" "misc-dev-note" "Misc Dev Note" "$component" "$group_tickets"
+done
+
+eligible_ids="$(jq -c '[.[] | select(.classification == "misc-dev-note" and .create_issue == true) | .id] | sort' <<<"$tickets")"
+covered_ids="$(jq -c 'sort' <<<"$covered_ids")"
+[[ "$covered_ids" == "$eligible_ids" ]] || {
+    printf 'Error: misc group coverage is incomplete or contains duplicates.\nEligible: %s\nCovered: %s\n' "$eligible_ids" "$covered_ids" >&2
+    exit 1
+}

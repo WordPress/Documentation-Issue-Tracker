@@ -19,7 +19,9 @@
         "created": "Thu, 23 Apr 2026 17:35:30 GMT",
         "modified": "Tue, 14 Jul 2026 05:41:50 GMT",
         "description": "= This patch improves the inline documentation for the WP_Network_Query class: =\r\n\r\n* Clarifies and corrects PHPDoc blocks for class properties, specifying types and expected values.\r\n* Updates the constructor’s parameter documentation to reference the accepted arguments and their types.\r\n* Improves descriptions for complex array properties and return values, especially for query variables and results.\r\n* Enhances code readability and assists developers and IDEs with more accurate type information.\r\n\r\n'''These changes are documentation-only and do not affect runtime behavior.'''",
-        "url": "https://core.trac.wordpress.org/ticket/65118"
+        "url": "https://core.trac.wordpress.org/ticket/65118",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

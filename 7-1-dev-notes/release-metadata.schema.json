@@ -89,11 +89,12 @@
     "classificationStatistics": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["dev-note", "misc-dev-note", "field-guide"],
+      "required": ["dev-note", "misc-dev-note", "field-guide", "exclude"],
       "properties": {
         "dev-note": { "$ref": "#/$defs/nonNegativeInteger" },
         "misc-dev-note": { "$ref": "#/$defs/nonNegativeInteger" },
-        "field-guide": { "$ref": "#/$defs/nonNegativeInteger" }
+        "field-guide": { "$ref": "#/$defs/nonNegativeInteger" },
+        "exclude": { "$ref": "#/$defs/nonNegativeInteger" }
       }
     },
     "component": {

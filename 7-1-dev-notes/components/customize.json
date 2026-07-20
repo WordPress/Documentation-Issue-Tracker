@@ -19,7 +19,9 @@
         "created": "Fri, 08 Apr 2016 15:21:12 GMT",
         "modified": "Tue, 14 Jul 2026 21:43:31 GMT",
         "description": "The new icons at the bottom of the Customizer for toggling the preview window of your site really need tooltips to indicate what they're for.\r\n\r\nJust like the tooltips on the Visual Editor icons, other icons in the Dashboard should have tooltips as well. As leading usability expert Jakob Nielsen explains;\r\n\r\n>A user’s understanding of an icon is based on previous experience. Due to the absence of a standard usage for most icons, text labels are necessary to communicate the meaning and reduce ambiguity.\r\n\r\nhttps://www.nngroup.com/articles/icon-usability/\r\n\r\nEven the Google Design Guidelines recommend tooltips for icons\r\nhttps://www.google.com/design/spec/components/tooltips.html#\r\n\r\nI originally raised this as a post on the [https://wordpress.org/support/topic/responsive-preview-icons-in-customizer-need-tooltips Beta forum] but it was suggested that since it's getting late in the 4.5 release cycle it would be best to raise it as a Trac ticket.",
-        "url": "https://core.trac.wordpress.org/ticket/36447"
+        "url": "https://core.trac.wordpress.org/ticket/36447",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

@@ -19,7 +19,9 @@
         "created": "Tue, 08 Mar 2022 16:36:42 GMT",
         "modified": "Tue, 14 Jul 2026 18:50:19 GMT",
         "description": "Currently, WordPress' login form has a checkbox labeled \"Remember Me.\" \r\n\r\nOver the years, there's been some debate over the verbiage used for \"Remember Me\" (say, versus \"Stay Logged In\" or \"Keep Me Logged In\") and what it really means.\r\n\r\nTo eliminate any confusion, this is to request the [https://ibb.co/fkqN7Vz /addition of a tooltip] next to \"Remember Me\" in the form of a question (?) mark. Further, the tooltip can offer a security warning to all users.\r\n\r\nThe content (text) for the tooltip could be:\r\n\r\n\"**Selecting Remember Me reduces the number of times you’ll be asked to log in using this device. To keep your account secure, use this option only on your personal devices.**\"\r\n\r\nAlso, in anticipation that this enhancement request will be approved, I would like to recommend updating the [https://developer.wordpress.org/reference/functions/wp_login_form /affected codex page] for the login form to add a code snippet that will allow developers to change the content (text) of the tooltip to suit their needs.\r\n\r\nThe above would be a nice addition or update to WordPress' login form.\r\n\r\nThank you.",
-        "url": "https://core.trac.wordpress.org/ticket/55343"
+        "url": "https://core.trac.wordpress.org/ticket/55343",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65075,
@@ -36,7 +38,9 @@
         "created": "Tue, 14 Apr 2026 19:31:21 GMT",
         "modified": "Tue, 30 Jun 2026 18:55:22 GMT",
         "description": "Accessibility scanning tools are pointing out that the links on a vanilla WordPress installation's wp-login screen are not identifiable. They are text-colored and the default text-underline has been nulled:\r\n\r\n\r\n{{{\r\n.login #nav a, .login #backtoblog a {\r\n    text-decoration: none;\r\n    color: #50575e;\r\n}\r\n}}}\r\n\r\nOn WP.org, specific login styles have been added to address this accessibility concern:\r\n\r\n\r\n{{{\r\n    text-decoration: underline !important;\r\n}}}\r\n\r\nI propose that the property `text-decoration: none;` simply be removed from `login.css` for improved accessibility standards compliance.\r\n\r\nThanks!",
-        "url": "https://core.trac.wordpress.org/ticket/65075"
+        "url": "https://core.trac.wordpress.org/ticket/65075",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"
