@@ -19,7 +19,9 @@
         "created": "Sat, 18 Apr 2026 04:46:17 GMT",
         "modified": "Sat, 23 May 2026 18:16:46 GMT",
         "description": "WordPress uses `is_user_member_of_blog()` in the rest api controllers to prevent the user endpoints running for non-members of the site.\r\n\r\nFor WordPress.org this caused an issue as 'no' users are members of the site on which we wanted users to be able to use the rest-api endpoints for various account purposes.\r\n\r\nThis was resolved through faking the metadata such that it always returned truthful, without granting additional capabilities: https://github.com/WordPress/wporg-two-factor/pull/348#issuecomment-4206959949\r\n\r\nI've run into another use-case for it, where I want to dynamically grant a user access to a site, but I don't want to give the user a role directly. Causing me to use the same metadata filter approach. \r\n\r\nA filter on `is_user_member_of_blog` would make this a lot simpler.",
-        "url": "https://core.trac.wordpress.org/ticket/65096"
+        "url": "https://core.trac.wordpress.org/ticket/65096",
+        "classification": "misc-dev-note",
+        "create_issue": true
       }
     ],
     "search_mode": "summary_query"

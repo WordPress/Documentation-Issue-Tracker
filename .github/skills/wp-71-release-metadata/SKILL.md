@@ -39,14 +39,21 @@ A raw file contains top-level `count` and `tickets` fields. Require:
 - `count` to be a non-negative integer equal to `tickets.length`;
 - every ticket to have a unique integer `id`, a non-empty `component`, and a schema-supported `type`.
 
-For a raw file, derive:
+When no tickets in a raw file have `classification`, derive:
 
 - component name from the single unique `tickets[].component` value;
 - `ticket_count` from `tickets.length`;
 - `reviewed_count: 0`;
 - `status: "not_started"`;
 - `issue_candidates: 0`;
-- all three classification counts as `0`.
+- all four classification counts as `0`.
+
+When tickets are classified, require every ticket in the file to have exactly one of `dev-note`, `misc-dev-note`, `field-guide`, or `exclude`; do not accept a partially classified file. Require `create_issue: false` for `exclude` and `create_issue: true` for the other three classifications. Derive:
+
+- `reviewed_count` from the number of classified tickets, including exclusions;
+- `status: "complete"` when all tickets are classified;
+- all four classification counts from the tickets;
+- `issue_candidates` from `dev-note + misc-dev-note + field-guide`, excluding `exclude`.
 
 If a raw file has no tickets, require a usable component name in its metadata; otherwise stop because the display name cannot be derived safely.
 
@@ -58,7 +65,7 @@ A reviewed file contains top-level `metadata` and `tickets` fields. Read:
 - ticket count from `metadata.ticket_count` and verify it equals `tickets.length`;
 - reviewed count from `metadata.reviewed_count`;
 - status from `metadata.status`;
-- classification counts from `metadata.statistics.by_classification` for `dev-note`, `misc-dev-note`, and `field-guide`;
+- classification counts from `metadata.statistics.by_classification` for `dev-note`, `misc-dev-note`, `field-guide`, and `exclude`;
 - issue candidates from `metadata.statistics.issue_candidates`.
 
 Require all counts to be non-negative integers. Require `reviewed_count <= ticket_count`. Require status to be one of `not_started`, `in_progress`, or `complete`. Require:
@@ -67,7 +74,7 @@ Require all counts to be non-negative integers. Require `reviewed_count <= ticke
 issue_candidates = dev-note + misc-dev-note + field-guide
 ```
 
-Do not copy the `exclude` classification into release metadata.
+Record `exclude` in component and release classification statistics, but never include it in `issue_candidates`.
 
 For either format, require every ticket in a file to identify the same component. Use `id` as the ticket identifier in raw exports and `ticket` in reviewed files. Require integer identifiers and reject duplicates within or across files.
 
@@ -90,7 +97,8 @@ Create exactly one entry per component file:
   "statistics": {
     "dev-note": 0,
     "misc-dev-note": 0,
-    "field-guide": 0
+    "field-guide": 0,
+    "exclude": 0
   }
 }
 ```
@@ -135,7 +143,7 @@ Calculate release statistics from the component entries and their tickets:
 - `components_total`: number of component entries
 - `components_completed`: count whose status is `complete`
 - `components_not_started`: count whose status is `not_started`
-- `by_classification`: sum each of the three component classification counts
+- `by_classification`: sum each of the four component classification counts, including `exclude`
 - `by_type`: count every ticket by its exact `type`
 - `github_issue_candidates`: sum of component `issue_candidates`
 - `github_issues_created_count`: sum of component `issues_created_count`
@@ -154,7 +162,7 @@ Before replacing the target, verify:
 6. `tickets_indexed_in_component_files` equals `tickets_reviewed`.
 7. Pending tickets equal total minus reviewed and are not negative.
 8. No component has more reviewed tickets than tickets.
-9. Every component's issue candidates equal its three classification counts.
+9. Every component's issue candidates equal its `dev-note`, `misc-dev-note`, and `field-guide` counts; `exclude` is not an issue candidate.
 10. Global classification and issue totals equal their component sums.
 11. Created issue counts do not exceed candidate counts.
 12. Names, slugs, and file paths are unique.

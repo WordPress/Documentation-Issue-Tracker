@@ -19,7 +19,9 @@
         "created": "Tue, 31 Dec 2024 10:54:15 GMT",
         "modified": "Wed, 15 Jul 2026 02:56:19 GMT",
         "description": "An update is available for the jQuery UI library. Core currently bundles 1.14.1.\r\nChangelog: https://blog.jqueryui.com/2024/10/jquery-ui-1-14-1-released/",
-        "url": "https://core.trac.wordpress.org/ticket/62757"
+        "url": "https://core.trac.wordpress.org/ticket/62757",
+        "classification": "field-guide",
+        "create_issue": true
       },
       {
         "id": 65632,
@@ -36,7 +38,9 @@
         "created": "Tue, 14 Jul 2026 19:50:21 GMT",
         "modified": "Wed, 15 Jul 2026 05:51:23 GMT",
         "description": "Version `1.9.2` of the `htmlhint` library is available. Core currently includes version `1.8.0`.\r\n\r\nA full list of changes can be found on GitHub: https://github.com/htmlhint/HTMLHint/compare/v1.8.0...v1.9.2.",
-        "url": "https://core.trac.wordpress.org/ticket/65632"
+        "url": "https://core.trac.wordpress.org/ticket/65632",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

@@ -19,7 +19,9 @@
         "created": "Mon, 25 May 2026 22:58:33 GMT",
         "modified": "Sun, 31 May 2026 17:58:01 GMT",
         "description": "These functions are useful primitives but missing when the mbstring extension isn’t available. This patch adds polyfills for those few environments where this is the case so that WordPress code can unconditionally call them.\r\n\r\nOnly UTF-8 is supported for practical reasons. Code in unsupported environments should convert first to UTF-8 and then call these functions. See also #62172\r\n\r\nThis work is part of #31992",
-        "url": "https://core.trac.wordpress.org/ticket/65342"
+        "url": "https://core.trac.wordpress.org/ticket/65342",
+        "classification": "dev-note",
+        "create_issue": true
       }
     ],
     "search_mode": "summary_query"

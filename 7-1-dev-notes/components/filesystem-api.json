@@ -19,7 +19,9 @@
         "created": "Thu, 04 Jun 2026 12:57:52 GMT",
         "modified": "Sun, 05 Jul 2026 01:15:24 GMT",
         "description": "The constructor parameters of the `WP_Filesystem_FTPext`and `WP_Filesystem_SSH2` classes should be an `array` not an empty `string` (`''`). We also should improve the doc block.",
-        "url": "https://core.trac.wordpress.org/ticket/65409"
+        "url": "https://core.trac.wordpress.org/ticket/65409",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

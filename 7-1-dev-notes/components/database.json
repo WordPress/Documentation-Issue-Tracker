@@ -19,7 +19,9 @@
         "created": "Mon, 06 Jul 2026 04:07:13 GMT",
         "modified": "Mon, 06 Jul 2026 16:50:10 GMT",
         "description": "[https://mariadb.org/about/#maintenance-policy MariaDB 10.6 will reach end of life on 6 Jul 2026].\r\n\r\nTo ensure WordPress is recommending a supported version of the software, the recommended version should be updated to 10.11 or greater, which is the next oldest still supported LTS version.\r\n\r\nPreviously:\r\n- Bump to 10.1 & 10.2 (#41490)\r\n- Bump to 10.3 (#55791)\r\n- Bump to 10.4 (#58158)\r\n- Bump to 10.5 (#61458)\r\n- Bump to 10.6 (#63587)",
-        "url": "https://core.trac.wordpress.org/ticket/65585"
+        "url": "https://core.trac.wordpress.org/ticket/65585",
+        "classification": "field-guide",
+        "create_issue": true
       }
     ],
     "search_mode": "summary_query"

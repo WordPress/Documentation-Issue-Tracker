@@ -19,7 +19,9 @@
         "created": "Sat, 04 Apr 2026 05:59:25 GMT",
         "modified": "Fri, 10 Jul 2026 12:06:52 GMT",
         "description": "Pulled from here after @matt shared it as an area to improve: \r\n[http://scripting.com/2026/04/03.html#a140913]\r\n\r\nWhile we could show first N characters of a post when title is empty, there are also other ideas to consider to both still reflect a post title is missing but to make it easier for the person skimming to know what the post is likely about. Speaking personally, I like to see (no title) or some indication a title is missing so I can fill in.\r\n\r\nLet's discuss ideas and implement a solution based on the discussion.",
-        "url": "https://core.trac.wordpress.org/ticket/65022"
+        "url": "https://core.trac.wordpress.org/ticket/65022",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"

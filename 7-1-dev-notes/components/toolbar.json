@@ -19,7 +19,9 @@
         "created": "Wed, 18 Feb 2026 11:18:05 GMT",
         "modified": "Sat, 04 Jul 2026 04:12:42 GMT",
         "description": "This is a small, non-urgent, proposal for the WordPress admin-bar user dropdown, to do a few things:\r\n\r\n- Make the avatar circular. This matches avatar usage inside the block editor, but notably can help distinguish from \"site logos\" which are often square or round-rects.\r\n- Refine the margins, paddings spacings, of the items inside.\r\n- Make the username white.",
-        "url": "https://core.trac.wordpress.org/ticket/64667"
+        "url": "https://core.trac.wordpress.org/ticket/64667",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65088,
@@ -36,7 +38,9 @@
         "created": "Fri, 17 Apr 2026 13:29:53 GMT",
         "modified": "Thu, 02 Jul 2026 12:39:40 GMT",
         "description": "== Problem / Current Behavior ==\r\n\r\nThe admin bar displays a generic '''home dashicon''' next to the site name. This icon is the same for every WordPress site and carries no site-specific meaning. Users typically scan the admin bar rather than reading it, so a generic icon does little to help them quickly identify which site they are viewing, especially when multiple sites are open in different tabs. \r\n\r\nThe site icon (set via Settings → General or the Customizer) already serves as a unique visual identity for the site in browser tabs and mobile home screens, but it is not surfaced in the admin bar.\r\n\r\n\r\n== Proposed Enhancement ==\r\n\r\nReplace the home dashicon in the admin bar with the site's icon. When no site icon is set, display a '''default letter icon''' using the first letter of the site name.\r\n\r\n[[Image(site-icon.png)]]\r\n\r\n=== When a site icon is set ===\r\n\r\n * Replace the home dashicon (`dashicons-admin-home`) with an `<img>` element using the site icon at 20×20 px.\r\n * Apply `border-radius: 2px` for subtle rounded corners.\r\n * It should be support it by HiDPI/Retina displays\r\n\r\n\r\n=== When no site icon is set (default letter icon) ===\r\n\r\n * Display a 20×20 px square with `background-color: #3858E9` and `border-radius: 2px`.\r\n * Render the '''first letter''' of the site name centered inside the square, uppercase.\r\n * This default icon is '''only''' used in the admin bar, it does not appear in browser tabs or anywhere else, and it is not related to the Site Icon setting in Settings → General.\r\n\r\n== Rationale ==\r\n\r\n * '''Unique visual identity:''' The site icon is the site's unique mark, already used in browser tabs and mobile bookmarks. Surfacing it in the admin bar reinforces that identity where users interact most.\r\n * '''Scanability:''' Users scan but, in general, they don't read the page. A unique, site icon is faster to identify than a monochrome generic house across multiple tabs.\r\n * '''Consistent experience:''' Even sites without a custom site icon get a more meaningful visual cue, the first letter of their site name, instead of an identical home icon on every WordPress install.\r\n\r\n== Backward Compatibility ==\r\n\r\nThis change is fully backward compatible:\r\n\r\n * No existing settings or options are affected.\r\n * Plugins or themes that modify the admin bar will continue to work. \r\n * No deprecations needed.\r\n\r\n== Accessibility ==\r\n\r\n * Both the site icon and the letter fallback should have `aria-hidden=\"true\"` since the site name text is already present next to them, the icon is decorative.\r\n * Ensure the icon does not break the admin bar's existing keyboard navigation or screen reader announcements.\r\n\r\n== Future Consideration ==\r\n\r\nThe default letter icon could also be extended to the '''browser tab favicon'''. When users have multiple WordPress sites open without custom site icons, all tabs display an empty space, making them hard to distinguish. Generating a letter-based favicon would solve this. However, that change has a broader scope so it is better suited as a follow-up ticket.\r\n\r\n== Related Tickets ==\r\n\r\n * #46657 — Show site icon in My Sites admin menu (fixed, WP 5.8)\r\n * #25971 — Changed site-name icon from globe to home dashicon (fixed)\r\n * #64308 — Admin visual reskin exploration for WP 7.0",
-        "url": "https://core.trac.wordpress.org/ticket/65088"
+        "url": "https://core.trac.wordpress.org/ticket/65088",
+        "classification": "field-guide",
+        "create_issue": true
       },
       {
         "id": 65091,
@@ -53,7 +57,9 @@
         "created": "Fri, 17 Apr 2026 16:43:21 GMT",
         "modified": "Tue, 14 Jul 2026 08:32:16 GMT",
         "description": "== Problem / Current Behavior ==\r\n\r\nThe WordPress Admin Bar (Toolbar) is displayed on the front end and across wp-admin screens, but it is '''hidden''' in both the Site Editor and the Block Editor. This creates a navigation inconsistency: users who rely on the Admin Bar as their primary way to move between areas of WordPress lose that affordance the moment they enter either editor.\r\n\r\nAs WordPress has evolved, the editors have introduced their own navigation patterns, the Site Editor sidebar, the back arrow / WordPress logo button, the ''Template · Page Title'' breadcrumb, that differ from the rest of the admin experience. The result is multiple, competing navigation models:\r\n\r\n * '''wp-admin screens''': Admin Bar + left sidebar menu.\r\n * '''Front end (logged in)''': Admin Bar.\r\n * '''Site Editor''': Custom sidebar (Design panel) with no Admin Bar.\r\n * '''Block Editor (fullscreen, the default)''': Custom top toolbar with no Admin Bar and no wp-admin sidebar.\r\n\r\nThis fragmentation means:\r\n\r\n * It is not immediately clear how to '''exit''' the editor and return to wp-admin or the front end.\r\n * Users must learn different navigation patterns depending on which screen they are on.\r\n * The Admin Bar, the one element that is consistent across the front end and wp-admin, is absent precisely where users may need it most.\r\n\r\n\r\n== Proposed Enhancement ==\r\n\r\nDisplay the Admin Bar in the Site Editor and Block Editor, just as it is rendered on wp-admin screens and the front end. The full Toolbar should appear at the top of the viewport, above the editor chrome, preserving all standard nodes and any nodes added by plugins.\r\n\r\nThis would unify the navigation model across all WordPress contexts:\r\n\r\n * '''wp-admin screens''': Admin Bar + left sidebar.\r\n * '''Front end''': Admin Bar.\r\n * '''Site Editor''': Admin Bar + editor sidebar.\r\n * '''Block Editor''': Admin Bar + editor toolbar.\r\n\r\nThe Admin Bar becomes the single, persistent navigation element users can always rely on.\r\n\r\n[[Image(site-editor.png)]]\r\n\r\n== Rationale ==\r\n\r\n'''Why Core and not a plugin:'''\r\n\r\n * The Admin Bar is a Core feature and its visibility is a Core decision.\r\n * Navigation consistency across all of WordPress is a platform-level concern, not a plugin concern.\r\n * The current situation, where Core itself hides Core's own navigation element, is an inconsistency that should be resolved in Core.\r\n\r\n'''Who benefits:'''\r\n\r\n * '''All users''': consistent, predictable navigation regardless of context.\r\n * '''New users''': fewer navigation patterns to learn.\r\n * '''Power users and site administrators''': quick access to ''+New'', user menu, and plugin-added toolbar nodes without leaving the editor.\r\n * '''Plugin developers''': toolbar nodes they register via the standard API become available in the editors without extra work.\r\n\r\n'''Supporting context:'''\r\n\r\nRelated tickets and issues confirm that editor navigation is a recognized pain point:\r\n\r\n * [https://github.com/WordPress/gutenberg/issues/38554 Gutenberg #38554]: Users requesting ''Add New'' access from within the Block Editor, which the Admin Bar already provides.\r\n * [https://github.com/WordPress/gutenberg/issues/72135 Gutenberg #72135]: Proposal to unify the Site Editor layout, including consistency between admin and editor views.\r\n\r\n\r\n== Backward Compatibility ==\r\n\r\nThis change is '''additive'''. No existing functionality is removed or altered\r\n\r\n\r\n== Future Considerations ==\r\n\r\nIf this enhancement is accepted and implemented, follow-up tickets should be filed to address editor UI adjustments that ensure visual and functional consistency with the Admin Bar present. These may include, but are not limited to:\r\n\r\n * Aligning the Block Editor top toolbar layout and spacing with the Admin Bar above it.\r\n * Revisiting the Site Editor sidebar header and back-navigation affordances to complement (rather than duplicate) what the Admin Bar already provides.\r\n * Ensuring responsive behavior on smaller screens accounts for the combined height of the Admin Bar and editor toolbar.\r\n\r\nEach of these would be filed as a separate ticket and cross-referenced back to this one.",
-        "url": "https://core.trac.wordpress.org/ticket/65091"
+        "url": "https://core.trac.wordpress.org/ticket/65091",
+        "classification": "field-guide",
+        "create_issue": true
       },
       {
         "id": 65403,
@@ -70,7 +76,9 @@
         "created": "Thu, 04 Jun 2026 08:40:08 GMT",
         "modified": "Thu, 04 Jun 2026 13:02:51 GMT",
         "description": "`WP_Admin_Bar->_get_node()` returns an `object` or `null` since [[https://core.trac.wordpress.org/changeset/62178/trunk/src/wp-includes/class-wp-admin-bar.php|r62178]]. Now we can use the null coalescing operator and simplify the code.",
-        "url": "https://core.trac.wordpress.org/ticket/65403"
+        "url": "https://core.trac.wordpress.org/ticket/65403",
+        "classification": "exclude",
+        "create_issue": false
       },
       {
         "id": 65514,
@@ -87,7 +95,9 @@
         "created": "Mon, 22 Jun 2026 12:22:39 GMT",
         "modified": "Mon, 22 Jun 2026 23:13:50 GMT",
         "description": "Update /wp-includes/css/admin-bar.css typo error indentation line 971",
-        "url": "https://core.trac.wordpress.org/ticket/65514"
+        "url": "https://core.trac.wordpress.org/ticket/65514",
+        "classification": "exclude",
+        "create_issue": false
       }
     ],
     "search_mode": "summary_query"
