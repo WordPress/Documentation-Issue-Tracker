@@ -73,7 +73,7 @@ For either format, require every ticket in a file to identify the same component
 
 ## Create component entries
 
-Derive the slug from the component filename by removing `.json`. Require it to match `^[a-z0-9]+(?:-[a-z0-9]+)*$`.
+Derive the slug from the component filename by removing `.json`. Allow lowercase letters, numbers, hyphens, and underscores: `^[a-z0-9]+(?:[-_][a-z0-9]+)*$`.
 
 Create exactly one entry per component file:
 
@@ -94,6 +94,16 @@ Create exactly one entry per component file:
   }
 }
 ```
+
+When populating metadata:
+
+- derive slug from the filename by removing .json;
+- preserve underscores and hyphens exactly as they appear in the filename;
+- derive file as components/<original-filename>;
+- read the human-readable component name from the component file;
+- do not generate the display name by mechanically replacing separators;
+- require each slug and file path to be unique;
+- do not rename component files as part of metadata generation.
 
 Set `file` relative to `7-1-dev-notes/`, not the repository root. Sort entries by `name` using case-insensitive comparison. Reject duplicate names, slugs, or file paths.
 
