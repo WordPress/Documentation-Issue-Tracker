@@ -21,7 +21,9 @@
         "description": "Similar to the support added to popovers, invoker commands are now baseline, and should be allowed in post content.\r\n\r\nSee #61959.",
         "url": "https://core.trac.wordpress.org/ticket/64576",
         "classification": "misc-dev-note",
-        "create_issue": true
+        "create_issue": true,
+        "github_issue_number": 2429,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
       },
       {
         "id": 65619,

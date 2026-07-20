@@ -21,7 +21,9 @@
         "description": "An update is available for the jQuery UI library. Core currently bundles 1.14.1.\r\nChangelog: https://blog.jqueryui.com/2024/10/jquery-ui-1-14-1-released/",
         "url": "https://core.trac.wordpress.org/ticket/62757",
         "classification": "field-guide",
-        "create_issue": true
+        "create_issue": true,
+        "github_issue_number": 2430,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
       },
       {
         "id": 65632,

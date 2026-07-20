@@ -2,7 +2,7 @@
   "metadata": {
     "release": "7.1",
     "schema_version": 2,
-    "updated_at": "2026-07-20T17:49:41+02:00",
+    "updated_at": "2026-07-20T22:27:39+02:00",
     "source_query": "https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords",
     "filtering": {
       "excluded_types": [
@@ -22,7 +22,7 @@
       "reviewed_count": 8,
       "status": "complete",
       "issue_candidates": 8,
-      "issues_created_count": 0,
+      "issues_created_count": 5,
       "statistics": {
         "dev-note": 4,
         "misc-dev-note": 4,
@@ -38,7 +38,7 @@
       "reviewed_count": 15,
       "status": "complete",
       "issue_candidates": 2,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -54,7 +54,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
@@ -70,7 +70,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 1,
         "misc-dev-note": 0,
@@ -118,7 +118,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -134,7 +134,7 @@
       "reviewed_count": 20,
       "status": "complete",
       "issue_candidates": 17,
-      "issues_created_count": 0,
+      "issues_created_count": 9,
       "statistics": {
         "dev-note": 4,
         "misc-dev-note": 9,
@@ -150,7 +150,7 @@
       "reviewed_count": 2,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -182,7 +182,7 @@
       "reviewed_count": 2,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
@@ -198,7 +198,7 @@
       "reviewed_count": 22,
       "status": "complete",
       "issue_candidates": 10,
-      "issues_created_count": 0,
+      "issues_created_count": 8,
       "statistics": {
         "dev-note": 5,
         "misc-dev-note": 3,
@@ -214,7 +214,7 @@
       "reviewed_count": 4,
       "status": "complete",
       "issue_candidates": 3,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 3,
@@ -262,7 +262,7 @@
       "reviewed_count": 4,
       "status": "complete",
       "issue_candidates": 3,
-      "issues_created_count": 0,
+      "issues_created_count": 3,
       "statistics": {
         "dev-note": 1,
         "misc-dev-note": 1,
@@ -294,7 +294,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
@@ -326,7 +326,7 @@
       "reviewed_count": 2,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -342,7 +342,7 @@
       "reviewed_count": 4,
       "status": "complete",
       "issue_candidates": 4,
-      "issues_created_count": 0,
+      "issues_created_count": 2,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 3,
@@ -358,7 +358,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
@@ -374,7 +374,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
@@ -390,7 +390,7 @@
       "reviewed_count": 1,
       "status": "complete",
       "issue_candidates": 1,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -406,7 +406,7 @@
       "reviewed_count": 5,
       "status": "complete",
       "issue_candidates": 2,
-      "issues_created_count": 0,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
@@ -467,6 +467,6 @@
       "task (blessed)": 11
     },
     "github_issue_candidates": 59,
-    "github_issues_created_count": 0
+    "github_issues_created_count": 24
   }
 }

@@ -21,7 +21,9 @@
         "description": "[https://github.com/whatwg/html/issues/12023 Issue 12023] was filed with the WHATWG HTML spec (based on WordPress HTML API work). It was resolved in [https://github.com/whatwg/html/pull/12084 PR 12084].\r\n\r\nThe standard changed how some DOCTYPE declarations determine the document mode. The HTML API doctype class needs to be updated accordingly.",
         "url": "https://core.trac.wordpress.org/ticket/64504",
         "classification": "misc-dev-note",
-        "create_issue": true
+        "create_issue": true,
+        "github_issue_number": 2426,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
       },
       {
         "id": 65581,
@@ -59,7 +61,9 @@
         "description": "[https://github.com/whatwg/html/pull/12118 Processing instruction parsing has been updated in the HTML standard.] `<?processing instructions ?>` were transformed into comments, but are now preserved.\r\n\r\n[https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-open-state See the processing instruction states in the standard.]\r\n\r\nSee #65581 (adds updated tests).",
         "url": "https://core.trac.wordpress.org/ticket/65582",
         "classification": "misc-dev-note",
-        "create_issue": true
+        "create_issue": true,
+        "github_issue_number": 2426,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
       },
       {
         "id": 63736,
@@ -78,7 +82,9 @@
         "description": "The HTML standard is being updated to support customizable select elements. The HTML API should be updated to account for the new changes.\r\n\r\n[https://github.com/whatwg/html/pull/10548 WHATWG/HTML PR 10548] had landed with the updates. Several browsers already have support and MDN pages have been updated for [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select select], [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/selectedcontent selectedcontent], and a new [https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select guide on customizable select elements].\r\n\r\nThere's also an [https://github.com/html5lib/html5lib-tests/pull/178 html5-lib tests PR] that updates tests to account for the changes.",
         "url": "https://core.trac.wordpress.org/ticket/63736",
         "classification": "misc-dev-note",
-        "create_issue": true
+        "create_issue": true,
+        "github_issue_number": 2426,
+        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
       }
     ],
     "search_mode": "summary_query"

@@ -115,7 +115,7 @@ When populating metadata:
 
 Set `file` relative to `7-1-dev-notes/`, not the repository root. Sort entries by `name` using case-insensitive comparison. Reject duplicate names, slugs, or file paths.
 
-Component files do not currently encode `issues_created_count`. Preserve that value by slug from an existing, valid `release-metadata.json`; use `0` for a new component or when the target is empty. Never derive it from ticket text or network data. Require it to be a non-negative integer no greater than `issue_candidates`; if preserved data violates this rule, stop and report the conflict.
+Derive `issues_created_count` from the number of distinct `github_issue_number` values on that component's tickets. Require `github_issue_number` and `github_issue_url` to appear together, require the number to be a positive integer, and require the URL to identify that number in `WordPress/Documentation-Issue-Tracker`. Excluded tickets must not have GitHub issue fields. Never discover issue data from ticket prose.
 
 ## Populate release metadata
 
@@ -146,7 +146,9 @@ Calculate release statistics from the component entries and their tickets:
 - `by_classification`: sum each of the four component classification counts, including `exclude`
 - `by_type`: count every ticket by its exact `type`
 - `github_issue_candidates`: sum of component `issue_candidates`
-- `github_issues_created_count`: sum of component `issues_created_count`
+- `github_issues_created_count`: number of distinct `github_issue_number` values across all component tickets
+
+A grouped issue may cover tickets in multiple components. Count it once in each affected component's `issues_created_count`, but only once in the release-level `github_issues_created_count`. Therefore, the release count is not required to equal the sum of component counts.
 
 The only allowed type keys are `enhancement`, `feature request`, and `task (blessed)`. Emit all three even when their count is zero. Stop on any other type.
 
@@ -163,9 +165,10 @@ Before replacing the target, verify:
 7. Pending tickets equal total minus reviewed and are not negative.
 8. No component has more reviewed tickets than tickets.
 9. Every component's issue candidates equal its `dev-note`, `misc-dev-note`, and `field-guide` counts; `exclude` is not an issue candidate.
-10. Global classification and issue totals equal their component sums.
-11. Created issue counts do not exceed candidate counts.
-12. Names, slugs, and file paths are unique.
+10. Global classification totals equal their component sums.
+11. Every component's created count equals its distinct referenced issues and does not exceed its candidate count.
+12. The global created count equals the number of distinct referenced issues across all tickets and does not exceed global candidates.
+13. Names, slugs, and file paths are unique.
 
 Validate the complete document against `7-1-dev-notes/release-metadata.schema.json` with a JSON Schema Draft 2020-12 validator. Enable format validation so `date-time` and URI formats are checked. Do not claim schema validation based only on parsing JSON. If no compatible validator is available, stop without writing and report that validation could not be completed.
 
