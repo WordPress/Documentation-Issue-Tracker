@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+source "$(cd "$(dirname "$0")" && pwd)/issues-common.sh"
+
+parse_mode "$@"
+trap cleanup_common EXIT
+require_tools_and_files
+load_project_data
+
+tickets="$(all_tickets_json)"
+mapfile -t ticket_ids < <(jq -r '.[] | select(.classification == "dev-note" and .create_issue == true) | .id' <<<"$tickets" | sort -n)
+
+for ticket_id in "${ticket_ids[@]}"; do
+    ticket="$(jq -c --argjson id "$ticket_id" '[.[] | select(.id == $id)]' <<<"$tickets")"
+    title="$(jq -r '.[0] | "[7.1][Dev Note][#\(.id)] \(.summary)"' <<<"$ticket")"
+    component="$(jq -r '.[0].component' <<<"$ticket")"
+    create_or_reuse_issue "dev-note-$ticket_id" "$title" "dev-note" "Dev Note" "$component" "$ticket"
+done
+

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+source "$(cd "$(dirname "$0")" && pwd)/issues-common.sh"
+
+parse_mode "$@"
+trap cleanup_common EXIT
+require_tools_and_files
+load_project_data
+
+tickets="$(all_tickets_json)"
+field_guide_tickets="$(jq -c '[.[] | select(.classification == "field-guide" and .create_issue == true)] | sort_by(.component,.id)' <<<"$tickets")"
+
+[[ "$(jq 'length' <<<"$field_guide_tickets")" -gt 0 ]] || {
+    printf 'No eligible Field Guide tickets found.\n'
+    exit 0
+}
+
+create_or_reuse_issue \
+    "field-guide-non-dev-notes" \
+    "[7.1][Field Guide] Non-Dev-Notes updates" \
+    "field-guide" \
+    "Field Guide" \
+    "Multiple Components" \
+    "$field_guide_tickets" \
+    "zzap"
+
