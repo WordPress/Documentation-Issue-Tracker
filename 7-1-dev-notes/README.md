@@ -72,8 +72,8 @@ Once I had all the data I needed for creating GitHub issues and adding them to G
 
 ### Relevant PRs
 
-- Add tickets per components files #2399
-- Add metadata schema #2400
-- Update release metadata SKILL to match new file structure #2401
-- Update SKILL to allow underscore in component file name #2404 and #2405
-- Populate release-metadata.json, classify tickets, and create bash scripts for creating issues #2406
+- Add tickets per components files [#2399](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2399)
+- Add metadata schema [#2400](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2400)
+- Update release metadata SKILL to match new file structure [#2401](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2401)
+- Update SKILL to allow underscore in component file name [#2404](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2404) and [#2405](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2405)
+- Populate release-metadata.json, classify tickets, and create bash scripts for creating issues [#2406](https://github.com/WordPress/Documentation-Issue-Tracker/pull/2406)
