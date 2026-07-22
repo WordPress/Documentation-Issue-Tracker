@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 10,
+  "count": 9,
   "tickets": [
     {
       "id": 64798,
@@ -35,17 +35,6 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
-      "id": 65096,
-      "summary": "Add `is_user_member_of_blog` filter",
-      "component": "REST API",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Sat, 18 Apr 2026 04:42:33 GMT",
-      "modified": "Sat, 23 May 2026 18:16:46 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65096"
-    },
-    {
       "id": 65119,
       "summary": "Docs: Correct the grammar/spelling in api.js documentation",
       "component": "REST API",
@@ -54,7 +43,9 @@
       "owner": "westonruter",
       "created": "Thu, 23 Apr 2026 18:13:11 GMT",
       "modified": "Sat, 11 Jul 2026 01:21:50 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65119"
+      "url": "https://core.trac.wordpress.org/ticket/65119",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65262,
@@ -80,7 +71,9 @@
       "owner": "westonruter",
       "created": "Tue, 19 May 2026 14:31:40 GMT",
       "modified": "Mon, 08 Jun 2026 21:24:18 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65271"
+      "url": "https://core.trac.wordpress.org/ticket/65271",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65367,
@@ -91,7 +84,9 @@
       "owner": "adamsilverstein",
       "created": "Thu, 28 May 2026 17:58:49 GMT",
       "modified": "Wed, 01 Jul 2026 20:10:02 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65367"
+      "url": "https://core.trac.wordpress.org/ticket/65367",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65481,
@@ -117,7 +112,9 @@
       "owner": "adamsilverstein",
       "created": "Mon, 22 Jun 2026 21:49:28 GMT",
       "modified": "Wed, 15 Jul 2026 13:47:09 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65517"
+      "url": "https://core.trac.wordpress.org/ticket/65517",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65670,
@@ -128,7 +125,9 @@
       "owner": "westonruter",
       "created": "Mon, 20 Jul 2026 11:32:37 GMT",
       "modified": "Wed, 22 Jul 2026 07:12:43 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65670"
+      "url": "https://core.trac.wordpress.org/ticket/65670",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

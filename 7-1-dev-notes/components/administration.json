@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 25,
+  "count": 15,
   "tickets": [
     {
       "id": 34753,
@@ -26,7 +26,9 @@
       "owner": "spacedmonkey",
       "created": "Tue, 25 Apr 2023 09:16:03 GMT",
       "modified": "Sun, 19 Jul 2026 23:18:01 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/58189"
+      "url": "https://core.trac.wordpress.org/ticket/58189",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64792,
@@ -50,7 +52,9 @@
       "owner": "joedolson",
       "created": "Mon, 23 Mar 2026 10:19:28 GMT",
       "modified": "Tue, 21 Jul 2026 22:59:30 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64932"
+      "url": "https://core.trac.wordpress.org/ticket/64932",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64952,
@@ -61,7 +65,9 @@
       "owner": "afercia",
       "created": "Thu, 26 Mar 2026 05:41:32 GMT",
       "modified": "Wed, 22 Jul 2026 10:20:05 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64952"
+      "url": "https://core.trac.wordpress.org/ticket/64952",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65027,
@@ -87,20 +93,9 @@
       "owner": "joedolson",
       "created": "Wed, 29 Apr 2026 20:40:48 GMT",
       "modified": "Wed, 01 Jul 2026 06:03:31 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65153"
-    },
-    {
-      "id": 65175,
-      "summary": "Tests: Add unit tests for wp_make_theme_file_tree()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Tue, 05 May 2026 21:53:03 GMT",
-      "modified": "Tue, 19 May 2026 21:51:01 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65175",
-      "classification": "exclude",
-      "create_issue": false
+      "url": "https://core.trac.wordpress.org/ticket/65153",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65177,
@@ -111,124 +106,9 @@
       "owner": "wildworks",
       "created": "Wed, 06 May 2026 01:41:46 GMT",
       "modified": "Thu, 04 Jun 2026 09:44:29 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65177"
-    },
-    {
-      "id": 65182,
-      "summary": "Tests: Add unit tests for wp_doc_link_parse()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Wed, 06 May 2026 19:51:20 GMT",
-      "modified": "Sat, 16 May 2026 23:45:51 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65182",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65186,
-      "summary": "Tests: Add unit tests for _customizer_mobile_viewport_meta()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Wed, 06 May 2026 21:45:54 GMT",
-      "modified": "Tue, 12 May 2026 22:19:19 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65186",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65187,
-      "summary": "Tests: Add unit tests for wp_admin_viewport_meta()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Wed, 06 May 2026 22:04:42 GMT",
-      "modified": "Thu, 14 May 2026 21:53:47 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65187",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65192,
-      "summary": "Tests: Add unit tests for wp_admin_canonical_url()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 15:36:47 GMT",
-      "modified": "Mon, 18 May 2026 22:35:26 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65192",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65193,
-      "summary": "Tests: Add unit tests for wp_page_reload_on_back_button_js()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 15:51:40 GMT",
-      "modified": "Fri, 15 May 2026 23:47:08 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65193",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65199,
-      "summary": "Tests: Add unit tests for wp_refresh_heartbeat_nonces()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 17:10:11 GMT",
-      "modified": "Wed, 13 May 2026 08:38:28 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65199",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65200,
-      "summary": "Tests: Add unit tests for wp_heartbeat_set_suspension()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 17:13:19 GMT",
-      "modified": "Mon, 11 May 2026 22:23:05 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65200",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65202,
-      "summary": "Tests: Add unit tests for _wp_privacy_settings_filter_draft_page_titles()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 17:39:08 GMT",
-      "modified": "Sun, 10 May 2026 23:42:25 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65202",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65203,
-      "summary": "Tests: Add unit tests for wp_check_php_version()",
-      "component": "Administration",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Thu, 07 May 2026 17:49:23 GMT",
-      "modified": "Sat, 09 May 2026 23:01:52 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65203",
-      "classification": "exclude",
-      "create_issue": false
+      "url": "https://core.trac.wordpress.org/ticket/65177",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65250,
@@ -239,7 +119,9 @@
       "owner": "joedolson",
       "created": "Fri, 15 May 2026 12:09:14 GMT",
       "modified": "Sun, 28 Jun 2026 21:41:23 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65250"
+      "url": "https://core.trac.wordpress.org/ticket/65250",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65298,
@@ -250,7 +132,9 @@
       "owner": "westonruter",
       "created": "Thu, 21 May 2026 09:54:57 GMT",
       "modified": "Sat, 06 Jun 2026 12:13:47 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65298"
+      "url": "https://core.trac.wordpress.org/ticket/65298",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65382,
@@ -276,7 +160,9 @@
       "owner": "westonruter",
       "created": "Wed, 03 Jun 2026 17:40:50 GMT",
       "modified": "Tue, 09 Jun 2026 03:52:46 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65401"
+      "url": "https://core.trac.wordpress.org/ticket/65401",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65629,
@@ -300,7 +186,9 @@
       "owner": "afercia",
       "created": "Tue, 14 Jul 2026 14:34:35 GMT",
       "modified": "Thu, 16 Jul 2026 09:12:32 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65630"
+      "url": "https://core.trac.wordpress.org/ticket/65630",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65646,
@@ -311,7 +199,9 @@
       "owner": "0mirka00",
       "created": "Thu, 16 Jul 2026 15:24:45 GMT",
       "modified": "Fri, 17 Jul 2026 09:08:43 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65646"
+      "url": "https://core.trac.wordpress.org/ticket/65646",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

@@ -2,19 +2,8 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 7,
+  "count": 6,
   "tickets": [
-    {
-      "id": 36447,
-      "summary": "Responsive preview icons in Customizer need visible text",
-      "component": "Comments",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "joedolson",
-      "created": "Fri, 08 Apr 2016 02:44:59 GMT",
-      "modified": "Tue, 14 Jul 2026 21:43:31 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/36447"
-    },
     {
       "id": 46713,
       "summary": "Comment reply link uses inconvenient eventlistener",
@@ -24,7 +13,9 @@
       "owner": "westonruter",
       "created": "Fri, 29 Mar 2019 09:04:48 GMT",
       "modified": "Tue, 16 Jun 2026 20:20:43 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/46713"
+      "url": "https://core.trac.wordpress.org/ticket/46713",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64217,
@@ -35,7 +26,9 @@
       "owner": "adamsilverstein",
       "created": "Fri, 07 Nov 2025 16:36:55 GMT",
       "modified": "Wed, 22 Jul 2026 00:55:38 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64217"
+      "url": "https://core.trac.wordpress.org/ticket/64217",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65392,
@@ -46,7 +39,9 @@
       "owner": "tyxla",
       "created": "Tue, 02 Jun 2026 13:35:42 GMT",
       "modified": "Sat, 04 Jul 2026 04:13:38 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65392"
+      "url": "https://core.trac.wordpress.org/ticket/65392",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65400,
@@ -57,7 +52,9 @@
       "owner": "westonruter",
       "created": "Wed, 03 Jun 2026 11:35:49 GMT",
       "modified": "Tue, 09 Jun 2026 03:35:11 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65400"
+      "url": "https://core.trac.wordpress.org/ticket/65400",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65570,
@@ -81,7 +78,9 @@
       "owner": "adamsilverstein",
       "created": "Sat, 11 Jul 2026 09:46:51 GMT",
       "modified": "Mon, 20 Jul 2026 15:13:58 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65613"
+      "url": "https://core.trac.wordpress.org/ticket/65613",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

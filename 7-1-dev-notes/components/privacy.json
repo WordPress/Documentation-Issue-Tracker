@@ -28,7 +28,9 @@
       "owner": "westonruter",
       "created": "Fri, 03 Aug 2018 21:00:02 GMT",
       "modified": "Mon, 06 Jul 2026 04:12:53 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/44723"
+      "url": "https://core.trac.wordpress.org/ticket/44723",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 58969,
@@ -39,7 +41,9 @@
       "owner": "masteradhoc",
       "created": "Thu, 03 Aug 2023 12:09:39 GMT",
       "modified": "Wed, 08 Jul 2026 03:18:16 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/58969"
+      "url": "https://core.trac.wordpress.org/ticket/58969",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 63467,
@@ -50,7 +54,9 @@
       "owner": "westonruter",
       "created": "Tue, 20 May 2025 14:59:49 GMT",
       "modified": "Sat, 04 Jul 2026 16:52:10 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/63467"
+      "url": "https://core.trac.wordpress.org/ticket/63467",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65025,
@@ -74,7 +80,9 @@
       "owner": "westonruter",
       "created": "Wed, 22 Apr 2026 13:54:48 GMT",
       "modified": "Thu, 28 May 2026 22:43:06 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65113"
+      "url": "https://core.trac.wordpress.org/ticket/65113",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65132,
@@ -85,7 +93,9 @@
       "owner": "swissspidy",
       "created": "Mon, 27 Apr 2026 07:55:17 GMT",
       "modified": "Tue, 07 Jul 2026 08:34:49 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65132"
+      "url": "https://core.trac.wordpress.org/ticket/65132",
+      "classification": "exclude",
+      "create_issue": false
     }
   ],
   "search_mode": "summary_query"

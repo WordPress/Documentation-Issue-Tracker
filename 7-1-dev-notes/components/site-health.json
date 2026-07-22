@@ -13,7 +13,9 @@
       "owner": "SergeyBiryukov",
       "created": "Mon, 12 Jun 2023 14:03:56 GMT",
       "modified": "Sun, 21 Jun 2026 23:33:53 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/58518"
+      "url": "https://core.trac.wordpress.org/ticket/58518",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65014,
@@ -24,7 +26,9 @@
       "owner": "wildworks",
       "created": "Thu, 02 Apr 2026 17:18:03 GMT",
       "modified": "Tue, 23 Jun 2026 15:52:39 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65014"
+      "url": "https://core.trac.wordpress.org/ticket/65014",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65477,
@@ -35,7 +39,9 @@
       "owner": "SergeyBiryukov",
       "created": "Wed, 17 Jun 2026 10:15:32 GMT",
       "modified": "Sun, 21 Jun 2026 23:33:17 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65477"
+      "url": "https://core.trac.wordpress.org/ticket/65477",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

@@ -13,7 +13,9 @@
       "owner": "SergeyBiryukov",
       "created": "Sat, 11 Nov 2017 14:07:01 GMT",
       "modified": "Tue, 21 Jul 2026 14:27:45 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/42513"
+      "url": "https://core.trac.wordpress.org/ticket/42513",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64569,
@@ -39,7 +41,9 @@
       "owner": "ramonopoly",
       "created": "Thu, 12 Mar 2026 07:06:39 GMT",
       "modified": "Mon, 25 May 2026 01:18:20 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64848"
+      "url": "https://core.trac.wordpress.org/ticket/64848",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65541,
@@ -50,7 +54,9 @@
       "owner": "SergeyBiryukov",
       "created": "Thu, 25 Jun 2026 14:05:44 GMT",
       "modified": "Fri, 26 Jun 2026 22:49:13 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65541"
+      "url": "https://core.trac.wordpress.org/ticket/65541",
+      "classification": "exclude",
+      "create_issue": false
     }
   ],
   "search_mode": "summary_query"

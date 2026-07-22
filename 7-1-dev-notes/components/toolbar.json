@@ -82,7 +82,9 @@
       "owner": "tyxla",
       "created": "Fri, 10 Jul 2026 12:01:11 GMT",
       "modified": "Fri, 10 Jul 2026 12:41:53 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65606"
+      "url": "https://core.trac.wordpress.org/ticket/65606",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65668,
@@ -93,7 +95,9 @@
       "owner": "tyxla",
       "created": "Mon, 20 Jul 2026 10:58:17 GMT",
       "modified": "Wed, 22 Jul 2026 06:47:38 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65668"
+      "url": "https://core.trac.wordpress.org/ticket/65668",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

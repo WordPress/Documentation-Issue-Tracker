@@ -13,7 +13,9 @@
       "owner": "westonruter",
       "created": "Thu, 15 Oct 2020 21:41:38 GMT",
       "modified": "Wed, 08 Jul 2026 07:03:59 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/51542"
+      "url": "https://core.trac.wordpress.org/ticket/51542",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 51543,
@@ -39,7 +41,9 @@
       "owner": "SergeyBiryukov",
       "created": "Thu, 25 Jun 2026 14:24:17 GMT",
       "modified": "Sun, 28 Jun 2026 23:21:10 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65542"
+      "url": "https://core.trac.wordpress.org/ticket/65542",
+      "classification": "exclude",
+      "create_issue": false
     }
   ],
   "search_mode": "summary_query"

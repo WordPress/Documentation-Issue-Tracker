@@ -13,7 +13,9 @@
       "owner": "joedolson",
       "created": "Wed, 12 Aug 2020 04:48:33 GMT",
       "modified": "Wed, 22 Jul 2026 00:11:19 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/50921"
+      "url": "https://core.trac.wordpress.org/ticket/50921",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64452,
@@ -24,7 +26,9 @@
       "owner": "wildworks",
       "created": "Thu, 25 Dec 2025 10:17:25 GMT",
       "modified": "Sat, 06 Jun 2026 20:53:00 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64452"
+      "url": "https://core.trac.wordpress.org/ticket/64452",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 64598,
@@ -50,7 +54,9 @@
       "owner": "ramonopoly",
       "created": "Mon, 23 Feb 2026 01:03:55 GMT",
       "modified": "Tue, 14 Jul 2026 19:51:47 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64695"
+      "url": "https://core.trac.wordpress.org/ticket/64695",
+      "classification": "misc-dev-note",
+      "create_issue": true
     },
     {
       "id": 64806,
@@ -91,7 +97,9 @@
       "owner": "ramonopoly",
       "created": "Wed, 08 Apr 2026 04:40:19 GMT",
       "modified": "Tue, 14 Jul 2026 19:54:32 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65037"
+      "url": "https://core.trac.wordpress.org/ticket/65037",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65039,
@@ -117,7 +125,9 @@
       "owner": "isabel_brison",
       "created": "Mon, 20 Apr 2026 00:19:01 GMT",
       "modified": "Tue, 16 Jun 2026 04:29:47 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65101"
+      "url": "https://core.trac.wordpress.org/ticket/65101",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65164,
@@ -173,7 +183,9 @@
       "owner": "isabel_brison",
       "created": "Tue, 19 May 2026 06:35:07 GMT",
       "modified": "Wed, 01 Jul 2026 19:48:16 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65265"
+      "url": "https://core.trac.wordpress.org/ticket/65265",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65268,
@@ -184,7 +196,9 @@
       "owner": "wildworks",
       "created": "Tue, 19 May 2026 10:10:30 GMT",
       "modified": "Tue, 07 Jul 2026 12:49:05 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65268"
+      "url": "https://core.trac.wordpress.org/ticket/65268",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65370,
@@ -195,7 +209,9 @@
       "owner": "wildworks",
       "created": "Fri, 29 May 2026 11:05:57 GMT",
       "modified": "Tue, 14 Jul 2026 08:11:08 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65370"
+      "url": "https://core.trac.wordpress.org/ticket/65370",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65373,
@@ -221,7 +237,9 @@
       "owner": "westonruter",
       "created": "Mon, 01 Jun 2026 01:55:37 GMT",
       "modified": "Mon, 15 Jun 2026 23:45:45 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65379"
+      "url": "https://core.trac.wordpress.org/ticket/65379",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65388,
@@ -247,7 +265,9 @@
       "owner": "SergeyBiryukov",
       "created": "Tue, 02 Jun 2026 10:29:56 GMT",
       "modified": "Thu, 11 Jun 2026 23:09:33 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65390"
+      "url": "https://core.trac.wordpress.org/ticket/65390",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65406,
@@ -273,7 +293,9 @@
       "owner": "westonruter",
       "created": "Mon, 08 Jun 2026 12:53:59 GMT",
       "modified": "Thu, 18 Jun 2026 00:09:24 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65435"
+      "url": "https://core.trac.wordpress.org/ticket/65435",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65456,
@@ -284,7 +306,9 @@
       "owner": "wildworks",
       "created": "Sat, 13 Jun 2026 11:26:56 GMT",
       "modified": "Sat, 27 Jun 2026 21:44:27 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65456"
+      "url": "https://core.trac.wordpress.org/ticket/65456",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65462,
@@ -295,7 +319,9 @@
       "owner": "isabel_brison",
       "created": "Mon, 15 Jun 2026 03:10:15 GMT",
       "modified": "Tue, 16 Jun 2026 06:49:07 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65462"
+      "url": "https://core.trac.wordpress.org/ticket/65462",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65482,
@@ -407,7 +433,9 @@
       "owner": "isabel_brison",
       "created": "Fri, 26 Jun 2026 03:14:13 GMT",
       "modified": "Tue, 30 Jun 2026 00:26:24 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65544"
+      "url": "https://core.trac.wordpress.org/ticket/65544",
+      "classification": "misc-dev-note",
+      "create_issue": true
     },
     {
       "id": 65561,
@@ -418,7 +446,9 @@
       "owner": "ramonopoly",
       "created": "Tue, 30 Jun 2026 03:49:37 GMT",
       "modified": "Tue, 14 Jul 2026 05:08:44 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65561"
+      "url": "https://core.trac.wordpress.org/ticket/65561",
+      "classification": "misc-dev-note",
+      "create_issue": true
     },
     {
       "id": 65586,
@@ -429,7 +459,9 @@
       "owner": "",
       "created": "Mon, 06 Jul 2026 12:54:27 GMT",
       "modified": "Wed, 22 Jul 2026 01:17:27 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65586"
+      "url": "https://core.trac.wordpress.org/ticket/65586",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65588,
@@ -483,7 +515,9 @@
       "owner": "tyxla",
       "created": "Tue, 14 Jul 2026 09:07:21 GMT",
       "modified": "Tue, 14 Jul 2026 10:41:12 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65625"
+      "url": "https://core.trac.wordpress.org/ticket/65625",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65636,
@@ -494,7 +528,9 @@
       "owner": "ellatrix",
       "created": "Wed, 15 Jul 2026 03:43:17 GMT",
       "modified": "Wed, 15 Jul 2026 04:27:04 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65636"
+      "url": "https://core.trac.wordpress.org/ticket/65636",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 65667,
@@ -505,7 +541,9 @@
       "owner": "tyxla",
       "created": "Mon, 20 Jul 2026 08:09:05 GMT",
       "modified": "Mon, 20 Jul 2026 08:55:40 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65667"
+      "url": "https://core.trac.wordpress.org/ticket/65667",
+      "classification": "dev-note",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

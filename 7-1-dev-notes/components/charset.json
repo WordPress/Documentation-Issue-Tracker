@@ -28,7 +28,9 @@
       "owner": "jonsurrell",
       "created": "Thu, 18 Jun 2026 13:21:24 GMT",
       "modified": "Sat, 04 Jul 2026 04:14:27 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65483"
+      "url": "https://core.trac.wordpress.org/ticket/65483",
+      "classification": "misc-dev-note",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

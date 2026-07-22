@@ -43,7 +43,9 @@
       "owner": "gziolo",
       "created": "Sun, 29 Mar 2026 15:13:36 GMT",
       "modified": "Thu, 21 May 2026 06:56:43 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/64977"
+      "url": "https://core.trac.wordpress.org/ticket/64977",
+      "classification": "dev-note",
+      "create_issue": true
     },
     {
       "id": 64989,
@@ -84,7 +86,9 @@
       "owner": "westonruter",
       "created": "Wed, 22 Apr 2026 07:32:39 GMT",
       "modified": "Mon, 25 May 2026 21:34:40 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65109"
+      "url": "https://core.trac.wordpress.org/ticket/65109",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65234,
@@ -140,7 +144,9 @@
       "owner": "gziolo",
       "created": "Mon, 22 Jun 2026 05:58:27 GMT",
       "modified": "Thu, 25 Jun 2026 07:57:56 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65504"
+      "url": "https://core.trac.wordpress.org/ticket/65504",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65512,
@@ -151,7 +157,9 @@
       "owner": "gziolo",
       "created": "Mon, 22 Jun 2026 10:38:44 GMT",
       "modified": "Thu, 25 Jun 2026 08:00:10 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65512"
+      "url": "https://core.trac.wordpress.org/ticket/65512",
+      "classification": "exclude",
+      "create_issue": false
     },
     {
       "id": 65568,
@@ -177,7 +185,9 @@
       "owner": "jorgefilipecosta",
       "created": "Wed, 08 Jul 2026 13:05:39 GMT",
       "modified": "Thu, 09 Jul 2026 11:10:10 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65594"
+      "url": "https://core.trac.wordpress.org/ticket/65594",
+      "classification": "dev-note",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

@@ -2,19 +2,8 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 4,
+  "count": 3,
   "tickets": [
-    {
-      "id": 56914,
-      "summary": "Better guide users when deleting other users",
-      "component": "Upgrade/Install",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "joedolson",
-      "created": "Wed, 26 Oct 2022 12:11:27 GMT",
-      "modified": "Fri, 10 Jul 2026 17:01:48 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/56914"
-    },
     {
       "id": 65053,
       "summary": "Media upload from the post edit screen shows an inaccurate number when uploading multiple media files",
@@ -24,7 +13,9 @@
       "owner": "adamsilverstein",
       "created": "Thu, 09 Apr 2026 16:27:15 GMT",
       "modified": "Tue, 14 Jul 2026 21:35:43 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65053"
+      "url": "https://core.trac.wordpress.org/ticket/65053",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65454,
@@ -35,7 +26,9 @@
       "owner": "afercia",
       "created": "Fri, 12 Jun 2026 09:26:49 GMT",
       "modified": "Mon, 13 Jul 2026 14:59:42 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65454"
+      "url": "https://core.trac.wordpress.org/ticket/65454",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65492,
@@ -46,7 +39,9 @@
       "owner": "SergeyBiryukov",
       "created": "Fri, 19 Jun 2026 09:53:23 GMT",
       "modified": "Fri, 19 Jun 2026 12:46:00 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65492"
+      "url": "https://core.trac.wordpress.org/ticket/65492",
+      "classification": "exclude",
+      "create_issue": false
     }
   ],
   "search_mode": "summary_query"

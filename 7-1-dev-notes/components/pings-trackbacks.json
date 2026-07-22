@@ -28,7 +28,9 @@
       "owner": "SergeyBiryukov",
       "created": "Thu, 09 Apr 2026 10:08:51 GMT",
       "modified": "Sun, 24 May 2026 21:45:31 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65047"
+      "url": "https://core.trac.wordpress.org/ticket/65047",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

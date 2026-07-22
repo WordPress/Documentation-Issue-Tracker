@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 5,
+  "count": 3,
   "tickets": [
     {
       "id": 63736,
@@ -33,30 +33,6 @@
       "create_issue": true,
       "github_issue_number": 2426,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
-    },
-    {
-      "id": 65404,
-      "summary": "Docs: Update parameter types to allow null for interactivity api functions",
-      "component": "HTML API",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "dmsnell",
-      "created": "Thu, 04 Jun 2026 08:49:22 GMT",
-      "modified": "Thu, 04 Jun 2026 09:10:16 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65404"
-    },
-    {
-      "id": 65581,
-      "summary": "HTML API: Migrate html5lib-tests to web-platform-tests",
-      "component": "HTML API",
-      "type": "task (blessed)",
-      "resolution": "fixed",
-      "owner": "jonsurrell",
-      "created": "Fri, 03 Jul 2026 15:41:15 GMT",
-      "modified": "Wed, 15 Jul 2026 13:48:37 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65581",
-      "classification": "exclude",
-      "create_issue": false
     },
     {
       "id": 65582,

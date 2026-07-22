@@ -26,7 +26,9 @@
       "owner": "westonruter",
       "created": "Sat, 04 Jul 2026 22:59:33 GMT",
       "modified": "Sun, 05 Jul 2026 01:15:24 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65584"
+      "url": "https://core.trac.wordpress.org/ticket/65584",
+      "classification": "exclude",
+      "create_issue": false
     }
   ],
   "search_mode": "summary_query"

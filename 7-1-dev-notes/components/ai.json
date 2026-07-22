@@ -28,7 +28,9 @@
       "owner": "gziolo",
       "created": "Fri, 05 Jun 2026 11:17:00 GMT",
       "modified": "Wed, 15 Jul 2026 08:33:40 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65421"
+      "url": "https://core.trac.wordpress.org/ticket/65421",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

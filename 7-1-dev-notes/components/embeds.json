@@ -13,7 +13,9 @@
       "owner": "westonruter",
       "created": "Mon, 13 Apr 2026 21:22:14 GMT",
       "modified": "Mon, 15 Jun 2026 20:13:56 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65068"
+      "url": "https://core.trac.wordpress.org/ticket/65068",
+      "classification": "misc-dev-note",
+      "create_issue": true
     },
     {
       "id": 65098,
@@ -24,7 +26,9 @@
       "owner": "westonruter",
       "created": "Sat, 18 Apr 2026 18:00:39 GMT",
       "modified": "Thu, 18 Jun 2026 17:22:09 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65098"
+      "url": "https://core.trac.wordpress.org/ticket/65098",
+      "classification": "misc-dev-note",
+      "create_issue": true
     },
     {
       "id": 65602,
@@ -35,7 +39,9 @@
       "owner": "wildworks",
       "created": "Thu, 09 Jul 2026 15:26:43 GMT",
       "modified": "Mon, 13 Jul 2026 09:41:35 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65602"
+      "url": "https://core.trac.wordpress.org/ticket/65602",
+      "classification": "dev-note",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"

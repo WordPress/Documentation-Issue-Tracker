@@ -13,7 +13,9 @@
       "owner": "audrasjb",
       "created": "Tue, 09 Jul 2019 18:49:02 GMT",
       "modified": "Wed, 22 Jul 2026 00:55:21 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/47670"
+      "url": "https://core.trac.wordpress.org/ticket/47670",
+      "classification": "field-guide",
+      "create_issue": true
     },
     {
       "id": 65116,
@@ -37,7 +39,9 @@
       "owner": "SergeyBiryukov",
       "created": "Wed, 24 Jun 2026 18:36:37 GMT",
       "modified": "Tue, 30 Jun 2026 10:13:38 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65536"
+      "url": "https://core.trac.wordpress.org/ticket/65536",
+      "classification": "field-guide",
+      "create_issue": true
     }
   ],
   "search_mode": "summary_query"
