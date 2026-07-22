@@ -1,30 +1,67 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 64569,
-        "summary": "Password protected content: password form styling and UX improvements",
-        "status": "closed",
-        "component": "Themes",
-        "type": "enhancement",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "",
-        "owner": "wildworks",
-        "reporter": "Nyiriland",
-        "created": "Sun, 08 Feb 2026 21:13:13 GMT",
-        "modified": "Wed, 15 Jul 2026 09:03:36 GMT",
-        "description": "This is specifically referring to the form seen when trying to view a password-protected page or post. \r\n\r\nThe current password protection form currently uses default browser html form styles, though it would be expected to inherit form styling from theme.\r\n\r\nSuggestions for improvements:\r\n\r\n- Refactor form to inherit input, label and submit button styles from theme.\r\n- Improve form accessibility by allowing users to toggle password visibility.",
-        "url": "https://core.trac.wordpress.org/ticket/64569",
-        "classification": "field-guide",
-        "create_issue": true,
-        "github_issue_number": 2430,
-        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 4,
+  "tickets": [
+    {
+      "id": 42513,
+      "summary": "WP_Theme::get_post_templates() is extremely inefficient for large themes",
+      "component": "Themes",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Sat, 11 Nov 2017 14:07:01 GMT",
+      "modified": "Tue, 21 Jul 2026 14:27:45 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/42513",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 64569,
+      "summary": "Password protected content: password form styling and UX improvements",
+      "component": "Themes",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "wildworks",
+      "created": "Sun, 08 Feb 2026 21:13:13 GMT",
+      "modified": "Wed, 15 Jul 2026 09:03:36 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64569",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 64848,
+      "summary": "WP_Theme_JSON: Prevent implicit coercion in to_ruleset",
+      "component": "Themes",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "ramonopoly",
+      "created": "Thu, 12 Mar 2026 07:06:39 GMT",
+      "modified": "Mon, 25 May 2026 01:18:20 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64848",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65541,
+      "summary": "Incorrect documented default for `$format` in `get_next_post_link()` and `next_post_link()`",
+      "component": "Themes",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Thu, 25 Jun 2026 14:05:44 GMT",
+      "modified": "Fri, 26 Jun 2026 22:49:13 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65541",
+      "classification": "exclude",
+      "create_issue": false
+    }
+  ],
+  "search_mode": "summary_query"
+}

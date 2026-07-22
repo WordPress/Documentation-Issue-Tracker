@@ -34,6 +34,22 @@ jq -e '
 
 covered_ids='[]'
 mapfile -t groups < <(jq -c '.[]' "$MISC_GROUPS_FILE")
+
+eligible_ids="$(jq -c '[.[] | select(.classification == "misc-dev-note" and .create_issue == true) | .id] | sort' <<<"$tickets")"
+
+ungrouped_ids="$(jq -cn --argjson eligible "$eligible_ids" --slurpfile groups "$MISC_GROUPS_FILE" '
+    $eligible - ([ $groups[0][] | .ticket_ids[] ] | unique)
+')"
+
+if [[ "$(jq 'length' <<<"$ungrouped_ids")" -gt 0 ]]; then
+    misc_group_index="$(jq -r 'map(.key == "miscelaneous-dev-notes") | index(true) // -1' "$MISC_GROUPS_FILE")"
+    if [[ "$misc_group_index" == "-1" ]]; then
+        groups+=("$(jq -cn --argjson ids "$ungrouped_ids" '{key:"miscelaneous-dev-notes",title:"Miscelaneous Dev Notes",ticket_ids:$ids}')")
+    else
+        groups[$misc_group_index]="$(jq -cn --argjson g "${groups[$misc_group_index]}" --argjson ids "$ungrouped_ids" '$g | .ticket_ids = ((.ticket_ids + $ids) | unique | sort)')"
+    fi
+fi
+
 for group in "${groups[@]}"; do
     key="$(jq -r '.key' <<<"$group")"
     group_title="$(jq -r '.title' <<<"$group")"
@@ -52,10 +68,9 @@ for group in "${groups[@]}"; do
     covered_ids="$(jq -cn --argjson old "$covered_ids" --argjson new "$ids_json" '$old + $new')"
     title="[7.1][Misc Dev Note] $group_title"
     component="$(jq -r '[.[].component] | unique | if length == 1 then .[0] else "Multiple Components" end' <<<"$group_tickets")"
-    create_or_reuse_issue "misc-dev-note-$key" "$title" "misc-dev-note" "Misc Dev Note" "$component" "$group_tickets"
+    upsert_issue_with_ticket_merge "misc-dev-note-$key" "$title" "misc-dev-note" "Misc Dev Note" "$component" "$group_tickets"
 done
 
-eligible_ids="$(jq -c '[.[] | select(.classification == "misc-dev-note" and .create_issue == true) | .id] | sort' <<<"$tickets")"
 covered_ids="$(jq -c 'sort' <<<"$covered_ids")"
 [[ "$covered_ids" == "$eligible_ids" ]] || {
     printf 'Error: misc group coverage is incomplete or contains duplicates.\nEligible: %s\nCovered: %s\n' "$eligible_ids" "$covered_ids" >&2

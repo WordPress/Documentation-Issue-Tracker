@@ -16,7 +16,7 @@ field_guide_tickets="$(jq -c '[.[] | select(.classification == "field-guide" and
     exit 0
 }
 
-create_or_reuse_issue \
+upsert_issue_with_ticket_merge \
     "field-guide-non-dev-notes" \
     "[7.1][Field Guide] Non-Dev-Notes updates" \
     "field-guide" \

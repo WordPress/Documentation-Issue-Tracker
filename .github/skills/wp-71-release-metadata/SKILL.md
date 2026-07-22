@@ -125,11 +125,13 @@ Set `metadata` as follows:
 - `schema_version`: `2`
 - `updated_at`: the actual write time as an ISO 8601 date-time with an explicit timezone offset
 - `source_query`: preserve it from an existing valid target; otherwise use the common non-empty `metadata.source_query` from reviewed component files; if neither exists, use the repository's canonical query below
-- `filtering.excluded_types`: `["defect (bug)"]`
+- `filtering.excluded_components`: `["Build/Test Tools", "Bundled Theme", "WordPress.org Site"]`
 - `filtering.excluded_focuses`: `["tests"]`
+- `filtering.resolution`: `["fixed"]`
+- `filtering.excluded_types`: `[]`
 
 ```text
-https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords
+https://core.trac.wordpress.org/query?component=!Build%2FTest+Tools&component=!Bundled+Theme&component=!WordPress.org+Site&focuses=!tests&milestone=7.1&resolution=fixed&type=!&group=component&max=300&order=priority&col=id&col=summary&col=type&col=focuses&col=owner&col=time&col=changetime&col=keywords
 ```
 
 If reviewed component files contain conflicting source queries, stop and report them. Do not fetch the query; it is provenance metadata only.
@@ -150,7 +152,7 @@ Calculate release statistics from the component entries and their tickets:
 
 A grouped issue may cover tickets in multiple components. Count it once in each affected component's `issues_created_count`, but only once in the release-level `github_issues_created_count`. Therefore, the release count is not required to equal the sum of component counts.
 
-The only allowed type keys are `enhancement`, `feature request`, and `task (blessed)`. Emit all three even when their count is zero. Stop on any other type.
+Accept any non-empty set of ticket type keys in `by_type`. Every key must map to a non-negative integer.
 
 ## Reconcile and validate
 

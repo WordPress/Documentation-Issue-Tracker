@@ -11,6 +11,7 @@ readonly NOTES_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 readonly TEMPLATE_FILE="$NOTES_DIR/issue-template.md"
 readonly COMPONENTS_DIR="$NOTES_DIR/components"
 readonly MISC_GROUPS_FILE="$NOTES_DIR/misc-dev-note-groups.json"
+readonly ACTIVITY_LOG_FILE="$NOTES_DIR/activity-log.jsonl"
 
 EXECUTE=false
 EXISTING_ISSUES_FILE=""
@@ -90,6 +91,30 @@ same_issue_url() {
         [.[] | select(.title == $title or ((.body // "") | contains($marker)))] |
         if length == 0 then "" elif length == 1 then .[0].url else error("multiple matching issues") end
     ' "$EXISTING_ISSUES_FILE"
+}
+
+same_issue_number() {
+    local title="$1"
+    local marker="$2"
+    jq -r --arg title "$title" --arg marker "$marker" '
+        [.[] | select(.title == $title or ((.body // "") | contains($marker)))] |
+        if length == 0 then "" elif length == 1 then (.[0].number|tostring) else error("multiple matching issues") end
+    ' "$EXISTING_ISSUES_FILE"
+}
+
+issue_number_from_url() {
+    local issue_url="$1"
+    jq -r --arg url "$issue_url" '[.[] | select(.url == $url) | .number][0] // empty' "$EXISTING_ISSUES_FILE"
+}
+
+issue_body_by_number() {
+    local issue_number="$1"
+    jq -r --argjson number "$issue_number" '[.[] | select(.number == $number) | .body][0] // ""' "$EXISTING_ISSUES_FILE"
+}
+
+extract_ticket_ids_from_body() {
+    local body="$1"
+    grep -Eo '#[0-9]+' <<<"$body" | sed 's/^#//' | sort -n | uniq || true
 }
 
 ticket_conflicts_json() {
@@ -182,6 +207,78 @@ add_issue_to_project() {
     item_id="$(gh project item-add "$PROJECT_NUMBER" --owner "$PROJECT_OWNER" --url "$issue_url" --format json --jq '.id')"
     project_field_value "$item_id" "Docs Type" "$docs_type"
     project_field_value "$item_id" "Component" "$component_value"
+}
+
+issue_sync_json() {
+    local existing_body="$1"
+    local new_tickets_json="$2"
+
+    local existing_ids_json merged_ids_json merged_tickets_json
+    existing_ids_json="$(extract_ticket_ids_from_body "$existing_body" | jq -Rsc 'split("\n") | map(select(length>0) | tonumber)')"
+    merged_ids_json="$(jq -cn --argjson a "$existing_ids_json" --argjson b "$(jq -c '[.[].id]' <<<"$new_tickets_json")" '($a + $b) | unique | sort')"
+    merged_tickets_json="$(jq -c --argjson ids "$merged_ids_json" '[.[] | select(.id as $id | $ids | index($id))] | sort_by(.component,.id)' <<<"$(all_tickets_json)")"
+
+    jq -cn --argjson ids "$merged_ids_json" --argjson tickets "$merged_tickets_json" '{ids:$ids,tickets:$tickets}'
+}
+
+upsert_issue_with_ticket_merge() {
+    local key="$1"
+    local title="$2"
+    local label="$3"
+    local docs_type="$4"
+    local component_value="$5"
+    local new_tickets_json="$6"
+    local assignee="${7:-}"
+    local marker="wp71-issue-key:$key"
+    local existing_url existing_number conflicts body_file issue_url existing_body sync_json merged_tickets_json rendered_body
+
+    existing_url="$(same_issue_url "$title" "$marker")"
+    if [[ -z "$existing_url" ]]; then
+        conflicts="$(ticket_conflicts_json "$new_tickets_json")"
+        if [[ "$(jq 'length' <<<"$conflicts")" -gt 0 ]]; then
+            if [[ "$(jq '[.[].issue_url] | unique | length' <<<"$conflicts")" == "1" ]]; then
+                existing_url="$(jq -r '.[0].issue_url' <<<"$conflicts")"
+            fi
+        fi
+    fi
+
+    if [[ -n "$existing_url" ]]; then
+        existing_number="$(issue_number_from_url "$existing_url")"
+        if [[ -z "$existing_number" ]]; then
+            printf 'Error: unable to resolve issue number for %s\n' "$existing_url" >&2
+            return 1
+        fi
+
+        existing_body="$(issue_body_by_number "$existing_number")"
+        sync_json="$(issue_sync_json "$existing_body" "$new_tickets_json")"
+        merged_tickets_json="$(jq -c '.tickets' <<<"$sync_json")"
+        body_file="$(mktemp)"
+        render_body "$body_file" "$marker" "$docs_type" "$title" "$merged_tickets_json"
+        rendered_body="$(cat "$body_file")"
+
+        if [[ "$rendered_body" == "$existing_body" ]]; then
+            printf 'EXISTS %s %s\n' "$existing_url" "$title"
+            rm -f "$body_file"
+            if [[ "$EXECUTE" == true ]]; then
+                add_issue_to_project "$existing_url" "$docs_type" "$component_value"
+            fi
+            return 0
+        fi
+
+        if [[ "$EXECUTE" == false ]]; then
+            printf 'WOULD UPDATE %s %s (tickets: %s)\n' "$existing_url" "$title" "$(jq 'length' <<<"$merged_tickets_json")"
+            rm -f "$body_file"
+            return 0
+        fi
+
+        gh issue edit "$existing_number" --repo "$REPOSITORY" --body-file "$body_file" >/dev/null
+        rm -f "$body_file"
+        printf 'UPDATED %s %s\n' "$existing_url" "$title"
+        add_issue_to_project "$existing_url" "$docs_type" "$component_value"
+        return 0
+    fi
+
+    create_or_reuse_issue "$key" "$title" "$label" "$docs_type" "$component_value" "$new_tickets_json" "$assignee"
 }
 
 create_or_reuse_issue() {

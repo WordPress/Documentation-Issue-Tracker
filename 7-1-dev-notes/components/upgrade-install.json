@@ -1,0 +1,52 @@
+{
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 3,
+  "tickets": [
+    {
+      "id": 65053,
+      "summary": "Media upload from the post edit screen shows an inaccurate number when uploading multiple media files",
+      "component": "Upgrade/Install",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Thu, 09 Apr 2026 16:27:15 GMT",
+      "modified": "Tue, 14 Jul 2026 21:35:43 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65053",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65454,
+      "summary": "Improve accessibility of the setup-config.php page (and install.php)",
+      "component": "Upgrade/Install",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "afercia",
+      "created": "Fri, 12 Jun 2026 09:26:49 GMT",
+      "modified": "Mon, 13 Jul 2026 14:59:42 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65454",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65492,
+      "summary": "Typo Error in wp-admin/includes/class-wp-upgrader.php",
+      "component": "Upgrade/Install",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Fri, 19 Jun 2026 09:53:23 GMT",
+      "modified": "Fri, 19 Jun 2026 12:46:00 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65492",
+      "classification": "exclude",
+      "create_issue": false
+    }
+  ],
+  "search_mode": "summary_query"
+}

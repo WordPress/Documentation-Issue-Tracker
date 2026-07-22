@@ -1,0 +1,54 @@
+{
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 3,
+  "tickets": [
+    {
+      "id": 58518,
+      "summary": "\"More info about performance optimization\" links in Site Health go to 404 error on WordPress.org",
+      "component": "Site Health",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Mon, 12 Jun 2023 14:03:56 GMT",
+      "modified": "Sun, 21 Jun 2026 23:33:53 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/58518",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65014,
+      "summary": "Site Health: Error icon missing due to missing dashicons class",
+      "component": "Site Health",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "wildworks",
+      "created": "Thu, 02 Apr 2026 17:18:03 GMT",
+      "modified": "Tue, 23 Jun 2026 15:52:39 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65014",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65477,
+      "summary": "Incorrect anchor in a link to the object cache documentation",
+      "component": "Site Health",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Wed, 17 Jun 2026 10:15:32 GMT",
+      "modified": "Sun, 21 Jun 2026 23:33:17 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65477",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    }
+  ],
+  "search_mode": "summary_query"
+}

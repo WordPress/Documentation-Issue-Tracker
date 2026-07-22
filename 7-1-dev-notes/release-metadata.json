@@ -2,15 +2,21 @@
   "metadata": {
     "release": "7.1",
     "schema_version": 2,
-    "updated_at": "2026-07-20T22:27:39+02:00",
-    "source_query": "https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords",
+    "updated_at": "2026-07-22T13:49:25.746Z",
+    "source_query": "https://core.trac.wordpress.org/query?component=!Build%2FTest+Tools&component=!Bundled+Theme&component=!WordPress.org+Site&focuses=!tests&milestone=7.1&resolution=fixed&type=!&group=component&max=300&order=priority&col=id&col=summary&col=type&col=focuses&col=owner&col=time&col=changetime&col=keywords",
     "filtering": {
-      "excluded_types": [
-        "defect (bug)"
+      "excluded_components": [
+        "Build/Test Tools",
+        "Bundled Theme",
+        "WordPress.org Site"
       ],
       "excluded_focuses": [
         "tests"
-      ]
+      ],
+      "resolution": [
+        "fixed"
+      ],
+      "excluded_types": []
     }
   },
   "components": [
@@ -18,16 +24,16 @@
       "name": "Abilities API",
       "slug": "abilities-api",
       "file": "components/abilities-api.json",
-      "ticket_count": 8,
-      "reviewed_count": 8,
+      "ticket_count": 13,
+      "reviewed_count": 13,
       "status": "complete",
-      "issue_candidates": 8,
-      "issues_created_count": 5,
+      "issue_candidates": 11,
+      "issues_created_count": 8,
       "statistics": {
-        "dev-note": 4,
+        "dev-note": 6,
         "misc-dev-note": 4,
-        "field-guide": 0,
-        "exclude": 0
+        "field-guide": 1,
+        "exclude": 2
       }
     },
     {
@@ -37,28 +43,28 @@
       "ticket_count": 15,
       "reviewed_count": 15,
       "status": "complete",
-      "issue_candidates": 2,
+      "issue_candidates": 11,
       "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 2,
-        "exclude": 13
+        "field-guide": 11,
+        "exclude": 4
       }
     },
     {
       "name": "AI",
       "slug": "ai",
       "file": "components/ai.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 2,
+      "reviewed_count": 2,
       "status": "complete",
-      "issue_candidates": 1,
-      "issues_created_count": 1,
+      "issue_candidates": 2,
+      "issues_created_count": 2,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
-        "field-guide": 0,
+        "field-guide": 1,
         "exclude": 0
       }
     },
@@ -66,14 +72,14 @@
       "name": "Charset",
       "slug": "charset",
       "file": "components/charset.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 2,
+      "reviewed_count": 2,
       "status": "complete",
-      "issue_candidates": 1,
-      "issues_created_count": 1,
+      "issue_candidates": 2,
+      "issues_created_count": 2,
       "statistics": {
         "dev-note": 1,
-        "misc-dev-note": 0,
+        "misc-dev-note": 1,
         "field-guide": 0,
         "exclude": 0
       }
@@ -82,15 +88,15 @@
       "name": "Comments",
       "slug": "comments",
       "file": "components/comments.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 6,
+      "reviewed_count": 6,
       "status": "complete",
-      "issue_candidates": 0,
-      "issues_created_count": 0,
+      "issue_candidates": 5,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 0,
+        "field-guide": 5,
         "exclude": 1
       }
     },
@@ -114,8 +120,8 @@
       "name": "Database",
       "slug": "database",
       "file": "components/database.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 5,
+      "reviewed_count": 5,
       "status": "complete",
       "issue_candidates": 1,
       "issues_created_count": 1,
@@ -123,23 +129,39 @@
         "dev-note": 0,
         "misc-dev-note": 0,
         "field-guide": 1,
-        "exclude": 0
+        "exclude": 4
       }
     },
     {
       "name": "Editor",
       "slug": "editor",
       "file": "components/editor.json",
-      "ticket_count": 20,
-      "reviewed_count": 20,
+      "ticket_count": 39,
+      "reviewed_count": 39,
       "status": "complete",
-      "issue_candidates": 17,
-      "issues_created_count": 9,
+      "issue_candidates": 34,
+      "issues_created_count": 20,
       "statistics": {
-        "dev-note": 4,
-        "misc-dev-note": 9,
-        "field-guide": 4,
-        "exclude": 3
+        "dev-note": 15,
+        "misc-dev-note": 12,
+        "field-guide": 7,
+        "exclude": 5
+      }
+    },
+    {
+      "name": "Embeds",
+      "slug": "embeds",
+      "file": "components/embeds.json",
+      "ticket_count": 3,
+      "reviewed_count": 3,
+      "status": "complete",
+      "issue_candidates": 3,
+      "issues_created_count": 2,
+      "statistics": {
+        "dev-note": 1,
+        "misc-dev-note": 2,
+        "field-guide": 0,
+        "exclude": 0
       }
     },
     {
@@ -162,8 +184,8 @@
       "name": "Filesystem API",
       "slug": "filesystem-api",
       "file": "components/filesystem-api.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 2,
+      "reviewed_count": 2,
       "status": "complete",
       "issue_candidates": 0,
       "issues_created_count": 0,
@@ -171,22 +193,22 @@
         "dev-note": 0,
         "misc-dev-note": 0,
         "field-guide": 0,
-        "exclude": 1
+        "exclude": 2
       }
     },
     {
       "name": "Formatting",
       "slug": "formatting",
       "file": "components/formatting.json",
-      "ticket_count": 2,
-      "reviewed_count": 2,
+      "ticket_count": 4,
+      "reviewed_count": 4,
       "status": "complete",
-      "issue_candidates": 1,
-      "issues_created_count": 1,
+      "issue_candidates": 3,
+      "issues_created_count": 2,
       "statistics": {
         "dev-note": 0,
-        "misc-dev-note": 1,
-        "field-guide": 0,
+        "misc-dev-note": 2,
+        "field-guide": 1,
         "exclude": 1
       }
     },
@@ -194,24 +216,24 @@
       "name": "General",
       "slug": "general",
       "file": "components/general.json",
-      "ticket_count": 22,
-      "reviewed_count": 22,
+      "ticket_count": 35,
+      "reviewed_count": 35,
       "status": "complete",
-      "issue_candidates": 10,
-      "issues_created_count": 8,
+      "issue_candidates": 17,
+      "issues_created_count": 9,
       "statistics": {
-        "dev-note": 5,
+        "dev-note": 6,
         "misc-dev-note": 3,
-        "field-guide": 2,
-        "exclude": 12
+        "field-guide": 8,
+        "exclude": 18
       }
     },
     {
       "name": "HTML API",
       "slug": "html-api",
       "file": "components/html-api.json",
-      "ticket_count": 4,
-      "reviewed_count": 4,
+      "ticket_count": 3,
+      "reviewed_count": 3,
       "status": "complete",
       "issue_candidates": 3,
       "issues_created_count": 1,
@@ -219,7 +241,7 @@
         "dev-note": 0,
         "misc-dev-note": 3,
         "field-guide": 0,
-        "exclude": 1
+        "exclude": 0
       }
     },
     {
@@ -242,15 +264,15 @@
       "name": "Login and Registration",
       "slug": "login-and-registration",
       "file": "components/login-and-registration.json",
-      "ticket_count": 2,
-      "reviewed_count": 2,
+      "ticket_count": 4,
+      "reviewed_count": 4,
       "status": "complete",
-      "issue_candidates": 0,
-      "issues_created_count": 0,
+      "issue_candidates": 2,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 0,
+        "field-guide": 2,
         "exclude": 2
       }
     },
@@ -258,16 +280,16 @@
       "name": "Media",
       "slug": "media",
       "file": "components/media.json",
-      "ticket_count": 4,
-      "reviewed_count": 4,
+      "ticket_count": 14,
+      "reviewed_count": 14,
       "status": "complete",
-      "issue_candidates": 3,
-      "issues_created_count": 3,
+      "issue_candidates": 12,
+      "issues_created_count": 5,
       "statistics": {
-        "dev-note": 1,
-        "misc-dev-note": 1,
-        "field-guide": 1,
-        "exclude": 1
+        "dev-note": 2,
+        "misc-dev-note": 7,
+        "field-guide": 3,
+        "exclude": 2
       }
     },
     {
@@ -290,15 +312,31 @@
       "name": "Pings/Trackbacks",
       "slug": "pings-trackbacks",
       "file": "components/pings-trackbacks.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 2,
+      "reviewed_count": 2,
       "status": "complete",
-      "issue_candidates": 1,
-      "issues_created_count": 1,
+      "issue_candidates": 2,
+      "issues_created_count": 2,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 1,
-        "field-guide": 0,
+        "field-guide": 1,
+        "exclude": 0
+      }
+    },
+    {
+      "name": "Plugins",
+      "slug": "plugins",
+      "file": "components/plugins.json",
+      "ticket_count": 5,
+      "reviewed_count": 5,
+      "status": "complete",
+      "issue_candidates": 5,
+      "issues_created_count": 2,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 1,
+        "field-guide": 4,
         "exclude": 0
       }
     },
@@ -322,32 +360,32 @@
       "name": "Privacy",
       "slug": "privacy",
       "file": "components/privacy.json",
-      "ticket_count": 2,
-      "reviewed_count": 2,
+      "ticket_count": 7,
+      "reviewed_count": 7,
       "status": "complete",
-      "issue_candidates": 1,
+      "issue_candidates": 4,
       "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 1,
-        "exclude": 1
+        "field-guide": 4,
+        "exclude": 3
       }
     },
     {
       "name": "REST API",
       "slug": "rest-api",
       "file": "components/rest-api.json",
-      "ticket_count": 4,
-      "reviewed_count": 4,
+      "ticket_count": 9,
+      "reviewed_count": 9,
       "status": "complete",
-      "issue_candidates": 4,
-      "issues_created_count": 2,
+      "issue_candidates": 8,
+      "issues_created_count": 4,
       "statistics": {
-        "dev-note": 0,
+        "dev-note": 2,
         "misc-dev-note": 3,
-        "field-guide": 1,
-        "exclude": 0
+        "field-guide": 3,
+        "exclude": 1
       }
     },
     {
@@ -367,43 +405,91 @@
       }
     },
     {
-      "name": "Sitemaps",
-      "slug": "sitemaps",
-      "file": "components/sitemaps.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "name": "Script Loader",
+      "slug": "script-loader",
+      "file": "components/script-loader.json",
+      "ticket_count": 3,
+      "reviewed_count": 3,
       "status": "complete",
-      "issue_candidates": 1,
+      "issue_candidates": 3,
+      "issues_created_count": 2,
+      "statistics": {
+        "dev-note": 1,
+        "misc-dev-note": 2,
+        "field-guide": 0,
+        "exclude": 0
+      }
+    },
+    {
+      "name": "Site Health",
+      "slug": "site-health",
+      "file": "components/site-health.json",
+      "ticket_count": 3,
+      "reviewed_count": 3,
+      "status": "complete",
+      "issue_candidates": 3,
       "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
-        "misc-dev-note": 1,
-        "field-guide": 0,
+        "misc-dev-note": 0,
+        "field-guide": 3,
         "exclude": 0
+      }
+    },
+    {
+      "name": "Sitemaps",
+      "slug": "sitemaps",
+      "file": "components/sitemaps.json",
+      "ticket_count": 3,
+      "reviewed_count": 3,
+      "status": "complete",
+      "issue_candidates": 2,
+      "issues_created_count": 2,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 1,
+        "field-guide": 1,
+        "exclude": 1
       }
     },
     {
       "name": "Themes",
       "slug": "themes",
       "file": "components/themes.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 4,
+      "reviewed_count": 4,
       "status": "complete",
-      "issue_candidates": 1,
+      "issue_candidates": 3,
       "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 1,
-        "exclude": 0
+        "field-guide": 3,
+        "exclude": 1
       }
     },
     {
       "name": "Toolbar",
       "slug": "toolbar",
       "file": "components/toolbar.json",
-      "ticket_count": 5,
-      "reviewed_count": 5,
+      "ticket_count": 7,
+      "reviewed_count": 7,
+      "status": "complete",
+      "issue_candidates": 4,
+      "issues_created_count": 1,
+      "statistics": {
+        "dev-note": 0,
+        "misc-dev-note": 0,
+        "field-guide": 4,
+        "exclude": 3
+      }
+    },
+    {
+      "name": "Upgrade/Install",
+      "slug": "upgrade-install",
+      "file": "components/upgrade-install.json",
+      "ticket_count": 3,
+      "reviewed_count": 3,
       "status": "complete",
       "issue_candidates": 2,
       "issues_created_count": 1,
@@ -411,7 +497,7 @@
         "dev-note": 0,
         "misc-dev-note": 0,
         "field-guide": 2,
-        "exclude": 3
+        "exclude": 1
       }
     },
     {
@@ -434,39 +520,40 @@
       "name": "Widgets",
       "slug": "widgets",
       "file": "components/widgets.json",
-      "ticket_count": 1,
-      "reviewed_count": 1,
+      "ticket_count": 3,
+      "reviewed_count": 3,
       "status": "complete",
-      "issue_candidates": 0,
-      "issues_created_count": 0,
+      "issue_candidates": 2,
+      "issues_created_count": 1,
       "statistics": {
         "dev-note": 0,
         "misc-dev-note": 0,
-        "field-guide": 0,
+        "field-guide": 2,
         "exclude": 1
       }
     }
   ],
   "statistics": {
-    "tickets_total_count_in_query": 105,
-    "tickets_indexed_in_component_files": 105,
-    "tickets_reviewed": 105,
+    "tickets_total_count_in_query": 204,
+    "tickets_indexed_in_component_files": 204,
+    "tickets_reviewed": 204,
     "tickets_pending_review": 0,
-    "components_total": 27,
-    "components_completed": 27,
+    "components_total": 32,
+    "components_completed": 32,
     "components_not_started": 0,
     "by_classification": {
-      "dev-note": 15,
-      "misc-dev-note": 28,
-      "field-guide": 16,
-      "exclude": 46
+      "dev-note": 34,
+      "misc-dev-note": 44,
+      "field-guide": 68,
+      "exclude": 58
     },
     "by_type": {
-      "enhancement": 90,
+      "enhancement": 82,
+      "defect (bug)": 106,
       "feature request": 4,
-      "task (blessed)": 11
+      "task (blessed)": 12
     },
-    "github_issue_candidates": 59,
-    "github_issues_created_count": 24
+    "github_issue_candidates": 146,
+    "github_issues_created_count": 43
   }
 }

@@ -1,0 +1,54 @@
+{
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 3,
+  "tickets": [
+    {
+      "id": 64683,
+      "summary": "_print_scripts should use the wp_inline_script_attributes filter",
+      "component": "Script Loader",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Fri, 20 Feb 2026 19:14:29 GMT",
+      "modified": "Tue, 14 Jul 2026 06:32:48 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64683",
+      "classification": "dev-note",
+      "create_issue": true,
+      "github_issue_number": 2433,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2433"
+    },
+    {
+      "id": 65260,
+      "summary": "Emoji detection script breaks the script modules import map in the Site Editor",
+      "component": "Script Loader",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "",
+      "created": "Mon, 18 May 2026 15:52:19 GMT",
+      "modified": "Thu, 25 Jun 2026 10:26:15 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65260",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2429,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
+    },
+    {
+      "id": 65317,
+      "summary": "Removal of HTML5 script theme support affects older theme gallery layout in frontend",
+      "component": "Script Loader",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Fri, 22 May 2026 08:08:02 GMT",
+      "modified": "Wed, 03 Jun 2026 11:33:12 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65317",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2429,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
+    }
+  ],
+  "search_mode": "summary_query"
+}

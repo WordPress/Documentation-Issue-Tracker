@@ -20,7 +20,7 @@ Triaging all of the tickets in order to determine which ticket should be mention
 
 Publishing Field Guide consists of following:
 
-- Triaging [closed Trac tickets for the milestone](https://core.trac.wordpress.org/query?focuses=!tests&milestone=7.1&status=closed&type=!defect+(bug)&group=component&max=200&order=priority&col=id&col=summary&col=type&col=status&col=focuses&col=keywords) to determine which ticket needs to be:
+- Triaging [fixed Trac tickets for the milestone](https://core.trac.wordpress.org/query?component=!Build%2FTest+Tools&component=!Bundled+Theme&component=!WordPress.org+Site&focuses=!tests&milestone=7.1&resolution=fixed&type=!&group=component&max=300&order=priority&col=id&col=summary&col=type&col=focuses&col=owner&col=time&col=changetime&col=keywords) to determine which ticket needs to be:
     - a dedicated Dev note,
     - a part of misc Dev note,
     - just mentioned in the Field Guide, or
