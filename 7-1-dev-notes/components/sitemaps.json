@@ -15,7 +15,9 @@
       "modified": "Wed, 08 Jul 2026 07:03:59 GMT",
       "url": "https://core.trac.wordpress.org/ticket/51542",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 51543,

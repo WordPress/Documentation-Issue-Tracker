@@ -30,7 +30,9 @@
       "modified": "Sun, 24 May 2026 21:45:31 GMT",
       "url": "https://core.trac.wordpress.org/ticket/65047",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     }
   ],
   "search_mode": "summary_query"

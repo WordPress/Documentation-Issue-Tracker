@@ -15,7 +15,9 @@
       "modified": "Fri, 22 May 2026 06:59:16 GMT",
       "url": "https://core.trac.wordpress.org/ticket/58291",
       "classification": "misc-dev-note",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2429,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
     },
     {
       "id": 64355,
@@ -28,7 +30,9 @@
       "modified": "Tue, 02 Jun 2026 11:09:39 GMT",
       "url": "https://core.trac.wordpress.org/ticket/64355",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 65026,
@@ -41,7 +45,9 @@
       "modified": "Tue, 02 Jun 2026 13:58:45 GMT",
       "url": "https://core.trac.wordpress.org/ticket/65026",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 65231,
@@ -54,7 +60,9 @@
       "modified": "Sun, 12 Jul 2026 20:55:20 GMT",
       "url": "https://core.trac.wordpress.org/ticket/65231",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 65334,
@@ -67,7 +75,9 @@
       "modified": "Fri, 10 Jul 2026 21:39:43 GMT",
       "url": "https://core.trac.wordpress.org/ticket/65334",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     }
   ],
   "search_mode": "summary_query"

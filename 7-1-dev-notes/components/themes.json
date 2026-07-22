@@ -15,7 +15,9 @@
       "modified": "Tue, 21 Jul 2026 14:27:45 GMT",
       "url": "https://core.trac.wordpress.org/ticket/42513",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 64569,
@@ -43,7 +45,9 @@
       "modified": "Mon, 25 May 2026 01:18:20 GMT",
       "url": "https://core.trac.wordpress.org/ticket/64848",
       "classification": "field-guide",
-      "create_issue": true
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
       "id": 65541,
