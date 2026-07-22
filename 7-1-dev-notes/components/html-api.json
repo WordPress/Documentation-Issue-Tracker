@@ -2,8 +2,23 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 4,
+  "count": 5,
   "tickets": [
+    {
+      "id": 63736,
+      "summary": "HTML API: Update parsing for customizable select elements",
+      "component": "HTML API",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "jonsurrell",
+      "created": "Tue, 22 Jul 2025 07:56:51 GMT",
+      "modified": "Wed, 15 Jul 2026 13:52:26 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/63736",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2426,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
+    },
     {
       "id": 64504,
       "summary": "HTML API: Update DOCTYPE parsing for spec changes",
@@ -18,6 +33,17 @@
       "create_issue": true,
       "github_issue_number": 2426,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
+    },
+    {
+      "id": 65404,
+      "summary": "Docs: Update parameter types to allow null for interactivity api functions",
+      "component": "HTML API",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "dmsnell",
+      "created": "Thu, 04 Jun 2026 08:49:22 GMT",
+      "modified": "Thu, 04 Jun 2026 09:10:16 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65404"
     },
     {
       "id": 65581,
@@ -42,21 +68,6 @@
       "created": "Mon, 06 Jul 2026 16:47:59 GMT",
       "modified": "Wed, 15 Jul 2026 13:53:09 GMT",
       "url": "https://core.trac.wordpress.org/ticket/65582",
-      "classification": "misc-dev-note",
-      "create_issue": true,
-      "github_issue_number": 2426,
-      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2426"
-    },
-    {
-      "id": 63736,
-      "summary": "HTML API: Update parsing for customizable select elements",
-      "component": "HTML API",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "jonsurrell",
-      "created": "Tue, 22 Jul 2025 07:56:51 GMT",
-      "modified": "Wed, 15 Jul 2026 13:52:26 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/63736",
       "classification": "misc-dev-note",
       "create_issue": true,
       "github_issue_number": 2426,

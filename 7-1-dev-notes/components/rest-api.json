@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 4,
+  "count": 10,
   "tickets": [
     {
       "id": 64798,
@@ -35,6 +35,28 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
+      "id": 65096,
+      "summary": "Add `is_user_member_of_blog` filter",
+      "component": "REST API",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Sat, 18 Apr 2026 04:42:33 GMT",
+      "modified": "Sat, 23 May 2026 18:16:46 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65096"
+    },
+    {
+      "id": 65119,
+      "summary": "Docs: Correct the grammar/spelling in api.js documentation",
+      "component": "REST API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 23 Apr 2026 18:13:11 GMT",
+      "modified": "Sat, 11 Jul 2026 01:21:50 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65119"
+    },
+    {
       "id": 65262,
       "summary": "REST API: expose size-aware encode quality on attachment responses",
       "component": "REST API",
@@ -50,6 +72,28 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2427"
     },
     {
+      "id": 65271,
+      "summary": "REST API Integer Type Check Fails on Large Ints",
+      "component": "REST API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Tue, 19 May 2026 14:31:40 GMT",
+      "modified": "Mon, 08 Jun 2026 21:24:18 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65271"
+    },
+    {
+      "id": 65367,
+      "summary": "REST API: expose per-attachment output format and progressive flags for client-side media processing",
+      "component": "REST API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Thu, 28 May 2026 17:58:49 GMT",
+      "modified": "Wed, 01 Jul 2026 20:10:02 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65367"
+    },
+    {
       "id": 65481,
       "summary": "REST API: Support registering one sideloaded file under multiple image sizes",
       "component": "REST API",
@@ -63,6 +107,28 @@
       "create_issue": true,
       "github_issue_number": 2427,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2427"
+    },
+    {
+      "id": 65517,
+      "summary": "Sideload external images on the server via a `url` REST parameter",
+      "component": "REST API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Mon, 22 Jun 2026 21:49:28 GMT",
+      "modified": "Wed, 15 Jul 2026 13:47:09 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65517"
+    },
+    {
+      "id": 65670,
+      "summary": "WP_REST_Attachments_Controller::get_attachment_filesize() fatals on non-integer filesize metadata",
+      "component": "REST API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Mon, 20 Jul 2026 11:32:37 GMT",
+      "modified": "Wed, 22 Jul 2026 07:12:43 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65670"
     }
   ],
   "search_mode": "summary_query"

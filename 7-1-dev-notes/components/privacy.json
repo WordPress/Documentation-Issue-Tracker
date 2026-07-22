@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 2,
+  "count": 7,
   "tickets": [
     {
       "id": 44498,
@@ -20,6 +20,39 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
+      "id": 44723,
+      "summary": "The user ID in a `WP_User_Request` is not an integer as stated",
+      "component": "Privacy",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Fri, 03 Aug 2018 21:00:02 GMT",
+      "modified": "Mon, 06 Jul 2026 04:12:53 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/44723"
+    },
+    {
+      "id": 58969,
+      "summary": "Privacy setting > The ''Copied'' text also shows, When double-clicking on the 'Copy suggested policy text to clipboard' option,",
+      "component": "Privacy",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "masteradhoc",
+      "created": "Thu, 03 Aug 2023 12:09:39 GMT",
+      "modified": "Wed, 08 Jul 2026 03:18:16 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/58969"
+    },
+    {
+      "id": 63467,
+      "summary": "function do_robots() should use admin_url()",
+      "component": "Privacy",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Tue, 20 May 2025 14:59:49 GMT",
+      "modified": "Sat, 04 Jul 2026 16:52:10 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/63467"
+    },
+    {
       "id": 65025,
       "summary": "Privacy Shield is declared invalid",
       "component": "Privacy",
@@ -31,6 +64,28 @@
       "url": "https://core.trac.wordpress.org/ticket/65025",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65113,
+      "summary": "Docs: Fix \"objecct\" typo in WP_Query post-loading comment",
+      "component": "Privacy",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Wed, 22 Apr 2026 13:54:48 GMT",
+      "modified": "Thu, 28 May 2026 22:43:06 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65113"
+    },
+    {
+      "id": 65132,
+      "summary": "Incorrect `@since` annotation for `wp_get_user_request()`",
+      "component": "Privacy",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "swissspidy",
+      "created": "Mon, 27 Apr 2026 07:55:17 GMT",
+      "modified": "Tue, 07 Jul 2026 08:34:49 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65132"
     }
   ],
   "search_mode": "summary_query"

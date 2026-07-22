@@ -2,8 +2,19 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 22,
+  "count": 35,
   "tickets": [
+    {
+      "id": 42517,
+      "summary": "get_file_data() doesn't support the single-line variant of post template headers",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Sun, 12 Nov 2017 13:05:45 GMT",
+      "modified": "Mon, 20 Jul 2026 10:24:11 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/42517"
+    },
     {
       "id": 51006,
       "summary": "Add a mechanism for accessible tooltips in core",
@@ -33,6 +44,39 @@
       "create_issue": false
     },
     {
+      "id": 64702,
+      "summary": "Code Modernization: Replace void in PHPDoc union return types with null in Administration",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Mon, 23 Feb 2026 09:30:57 GMT",
+      "modified": "Mon, 30 Mar 2026 06:01:59 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64702"
+    },
+    {
+      "id": 64838,
+      "summary": "Fix: Block pseudo-state styles incorrectly applied to default state",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "isabel_brison",
+      "created": "Wed, 11 Mar 2026 11:06:54 GMT",
+      "modified": "Mon, 06 Jul 2026 08:13:36 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64838"
+    },
+    {
+      "id": 64877,
+      "summary": "Default site icon fallback still uses blue logo",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "sabernhardt",
+      "created": "Tue, 17 Mar 2026 23:22:51 GMT",
+      "modified": "Thu, 18 Jun 2026 02:07:30 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64877"
+    },
+    {
       "id": 64892,
       "summary": "get_submit_button() should support \"compact\" button shorthand",
       "component": "General",
@@ -46,6 +90,28 @@
       "create_issue": true,
       "github_issue_number": 2430,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 64913,
+      "summary": "Code Quality: Replace is_integer() with is_int() for consistency",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Fri, 20 Mar 2026 14:45:30 GMT",
+      "modified": "Wed, 08 Jul 2026 18:42:42 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64913"
+    },
+    {
+      "id": 65112,
+      "summary": "Docs: Correct typos in JS inline comments and docblocks",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Wed, 22 Apr 2026 13:53:14 GMT",
+      "modified": "Fri, 10 Jul 2026 22:55:23 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65112"
     },
     {
       "id": 65143,
@@ -63,6 +129,17 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2414"
     },
     {
+      "id": 65384,
+      "summary": "Fix duplicate-word and spelling typos in docblocks and comments",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Mon, 01 Jun 2026 13:23:10 GMT",
+      "modified": "Sat, 13 Jun 2026 05:42:22 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65384"
+    },
+    {
       "id": 65408,
       "summary": "Code Modernization: Use str_contains() instead of strpos()",
       "component": "General",
@@ -74,6 +151,39 @@
       "url": "https://core.trac.wordpress.org/ticket/65408",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65419,
+      "summary": "In the Add Themes and Plugins page, active tabs are not visible in Windows High Contrast Mode",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Fri, 05 Jun 2026 09:11:00 GMT",
+      "modified": "Tue, 21 Jul 2026 21:09:07 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65419"
+    },
+    {
+      "id": 65423,
+      "summary": "Is it safe to remove function_exists( 'ini_get' ) checks?",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "siliconforks",
+      "created": "Fri, 05 Jun 2026 13:17:53 GMT",
+      "modified": "Sat, 04 Jul 2026 23:32:49 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65423"
+    },
+    {
+      "id": 65453,
+      "summary": "build_query() docblock incorrectly states it URL-encodes its data",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Fri, 12 Jun 2026 08:17:16 GMT",
+      "modified": "Fri, 12 Jun 2026 23:42:28 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65453"
     },
     {
       "id": 65467,
@@ -147,6 +257,19 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2419"
     },
     {
+      "id": 65529,
+      "summary": "Sync changes from Gutenberg 23.6",
+      "component": "General",
+      "type": "task (blessed)",
+      "resolution": "fixed",
+      "owner": "wildworks",
+      "created": "Tue, 14 Jul 2026 15:02:22 GMT",
+      "modified": "Wed, 15 Jul 2026 12:26:24 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65529",
+      "classification": "exclude",
+      "create_issue": false
+    },
+    {
       "id": 65552,
       "summary": "Update view config for DataViews/DataForm in the server",
       "component": "General",
@@ -160,77 +283,6 @@
       "create_issue": true,
       "github_issue_number": 2425,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2425"
-    },
-    {
-      "id": 65577,
-      "summary": "View Config: Add versioning handling",
-      "component": "General",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "ntsekouras",
-      "created": "Thu, 02 Jul 2026 10:10:32 GMT",
-      "modified": "Wed, 08 Jul 2026 14:43:29 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65577",
-      "classification": "misc-dev-note",
-      "create_issue": true,
-      "github_issue_number": 2425,
-      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2425"
-    },
-    {
-      "id": 65592,
-      "summary": "Block visibility: add theme json opt out",
-      "component": "General",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "ramonopoly",
-      "created": "Wed, 08 Jul 2026 05:15:59 GMT",
-      "modified": "Tue, 14 Jul 2026 06:48:44 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65592",
-      "classification": "misc-dev-note",
-      "create_issue": true,
-      "github_issue_number": 2429,
-      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
-    },
-    {
-      "id": 65624,
-      "summary": "Provide mechanism for host to change default Speculative Loading eagerness and mode",
-      "component": "General",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "westonruter",
-      "created": "Tue, 14 Jul 2026 07:49:45 GMT",
-      "modified": "Wed, 15 Jul 2026 07:22:37 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65624",
-      "classification": "dev-note",
-      "create_issue": true,
-      "github_issue_number": 2421,
-      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2421"
-    },
-    {
-      "id": 65604,
-      "summary": "Importer Remove unused WP_Importer::__construct() method",
-      "component": "General",
-      "type": "enhancement",
-      "resolution": "fixed",
-      "owner": "SergeyBiryukov",
-      "created": "Fri, 10 Jul 2026 05:57:12 GMT",
-      "modified": "Wed, 15 Jul 2026 13:50:01 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65604",
-      "classification": "exclude",
-      "create_issue": false
-    },
-    {
-      "id": 65529,
-      "summary": "Sync changes from Gutenberg 23.6",
-      "component": "General",
-      "type": "task (blessed)",
-      "resolution": "fixed",
-      "owner": "wildworks",
-      "created": "Tue, 14 Jul 2026 15:02:22 GMT",
-      "modified": "Wed, 15 Jul 2026 12:26:24 GMT",
-      "url": "https://core.trac.wordpress.org/ticket/65529",
-      "classification": "exclude",
-      "create_issue": false
     },
     {
       "id": 65555,
@@ -309,6 +361,97 @@
       "url": "https://core.trac.wordpress.org/ticket/65560",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65577,
+      "summary": "View Config: Add versioning handling",
+      "component": "General",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "ntsekouras",
+      "created": "Thu, 02 Jul 2026 10:10:32 GMT",
+      "modified": "Wed, 08 Jul 2026 14:43:29 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65577",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2425,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2425"
+    },
+    {
+      "id": 65592,
+      "summary": "Block visibility: add theme json opt out",
+      "component": "General",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "ramonopoly",
+      "created": "Wed, 08 Jul 2026 05:15:59 GMT",
+      "modified": "Tue, 14 Jul 2026 06:48:44 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65592",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2429,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
+    },
+    {
+      "id": 65604,
+      "summary": "Importer Remove unused WP_Importer::__construct() method",
+      "component": "General",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Fri, 10 Jul 2026 05:57:12 GMT",
+      "modified": "Wed, 15 Jul 2026 13:50:01 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65604",
+      "classification": "exclude",
+      "create_issue": false
+    },
+    {
+      "id": 65624,
+      "summary": "Provide mechanism for host to change default Speculative Loading eagerness and mode",
+      "component": "General",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Tue, 14 Jul 2026 07:49:45 GMT",
+      "modified": "Wed, 15 Jul 2026 07:22:37 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65624",
+      "classification": "dev-note",
+      "create_issue": true,
+      "github_issue_number": 2421,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2421"
+    },
+    {
+      "id": 65637,
+      "summary": "PHP 8.6: Returning a value from a constructor is deprecated",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "swissspidy",
+      "created": "Wed, 15 Jul 2026 10:35:17 GMT",
+      "modified": "Thu, 16 Jul 2026 09:30:02 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65637"
+    },
+    {
+      "id": 65640,
+      "summary": "Global Styles: Reject non-string custom CSS in the REST controller",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "ramonopoly",
+      "created": "Thu, 16 Jul 2026 01:35:24 GMT",
+      "modified": "Thu, 16 Jul 2026 02:35:01 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65640"
+    },
+    {
+      "id": 65660,
+      "summary": "Tooltip is in a `div`, but inserted inside a `p` on the login screen",
+      "component": "General",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Fri, 17 Jul 2026 20:20:25 GMT",
+      "modified": "Sun, 19 Jul 2026 23:27:57 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65660"
     }
   ],
   "search_mode": "summary_query"

@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 8,
+  "count": 13,
   "tickets": [
     {
       "id": 64311,
@@ -35,6 +35,17 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2410"
     },
     {
+      "id": 64977,
+      "summary": "The `core/get-site-info` ability returns wrong locale code in the admin",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "gziolo",
+      "created": "Sun, 29 Mar 2026 15:13:36 GMT",
+      "modified": "Thu, 21 May 2026 06:56:43 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64977"
+    },
+    {
       "id": 64989,
       "summary": "Add execution lifecycle filters to WP_Ability methods",
       "component": "Abilities API",
@@ -63,6 +74,17 @@
       "create_issue": true,
       "github_issue_number": 2413,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2413"
+    },
+    {
+      "id": 65109,
+      "summary": "Abilities API: Duplicated $args variable in WP_Ability_Category::prepare_properties() PHPDoc",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Wed, 22 Apr 2026 07:32:39 GMT",
+      "modified": "Mon, 25 May 2026 21:34:40 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65109"
     },
     {
       "id": 65234,
@@ -110,6 +132,28 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2422"
     },
     {
+      "id": 65504,
+      "summary": "WP_AI_Client_Ability_Function_Resolver::execute_abilities() answers non-ability function calls with a spurious error",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "gziolo",
+      "created": "Mon, 22 Jun 2026 05:58:27 GMT",
+      "modified": "Thu, 25 Jun 2026 07:57:56 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65504"
+    },
+    {
+      "id": 65512,
+      "summary": "Docs: Standardize capitalization in @throws InvalidArgumentException annotations in WP_Ability_Category",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "gziolo",
+      "created": "Mon, 22 Jun 2026 10:38:44 GMT",
+      "modified": "Thu, 25 Jun 2026 08:00:10 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65512"
+    },
+    {
       "id": 65568,
       "summary": "Add meta.public as a single flag to control ability exposure defaults",
       "component": "Abilities API",
@@ -123,6 +167,17 @@
       "create_issue": true,
       "github_issue_number": 2420,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2420"
+    },
+    {
+      "id": 65594,
+      "summary": "Abilities API: REST run requests pass untyped input to ability callbacks",
+      "component": "Abilities API",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "jorgefilipecosta",
+      "created": "Wed, 08 Jul 2026 13:05:39 GMT",
+      "modified": "Thu, 09 Jul 2026 11:10:10 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65594"
     }
   ],
   "search_mode": "summary_query"

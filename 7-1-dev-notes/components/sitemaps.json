@@ -2,8 +2,19 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 1,
+  "count": 3,
   "tickets": [
+    {
+      "id": 51542,
+      "summary": "is_home() returns true for any component of an XML Sitemap",
+      "component": "Sitemaps",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 15 Oct 2020 21:41:38 GMT",
+      "modified": "Wed, 08 Jul 2026 07:03:59 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/51542"
+    },
     {
       "id": 51543,
       "summary": "Create is_sitemap() conditional tag",
@@ -18,6 +29,17 @@
       "create_issue": true,
       "github_issue_number": 2428,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
+    },
+    {
+      "id": 65542,
+      "summary": "Contributor Handbook: Update `gh repo fork` example to work with the current GitHub CLI",
+      "component": "Sitemaps",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Thu, 25 Jun 2026 14:24:17 GMT",
+      "modified": "Sun, 28 Jun 2026 23:21:10 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65542"
     }
   ],
   "search_mode": "summary_query"

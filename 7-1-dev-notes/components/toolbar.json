@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 5,
+  "count": 7,
   "tickets": [
     {
       "id": 64667,
@@ -72,6 +72,28 @@
       "url": "https://core.trac.wordpress.org/ticket/65514",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65606,
+      "summary": "Updating site title in Settings -> General clears site icon in admin bar temporarily",
+      "component": "Toolbar",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "tyxla",
+      "created": "Fri, 10 Jul 2026 12:01:11 GMT",
+      "modified": "Fri, 10 Jul 2026 12:41:53 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65606"
+    },
+    {
+      "id": 65668,
+      "summary": "Toolbar: site icon serves too large 150x150 thumbnail on retina displays",
+      "component": "Toolbar",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "tyxla",
+      "created": "Mon, 20 Jul 2026 10:58:17 GMT",
+      "modified": "Wed, 22 Jul 2026 06:47:38 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65668"
     }
   ],
   "search_mode": "summary_query"

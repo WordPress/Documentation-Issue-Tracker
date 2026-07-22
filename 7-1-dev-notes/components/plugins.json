@@ -1,0 +1,75 @@
+{
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 6,
+  "tickets": [
+    {
+      "id": 58291,
+      "summary": "Speed up WordPress hooks addition/removal by ~20%",
+      "component": "Plugins",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 11 May 2023 01:02:20 GMT",
+      "modified": "Fri, 22 May 2026 06:59:16 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/58291"
+    },
+    {
+      "id": 64355,
+      "summary": "Plugin card width calculation and filter margin issues in install plugins screen",
+      "component": "Plugins",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 04 Dec 2025 12:15:07 GMT",
+      "modified": "Tue, 02 Jun 2026 11:09:39 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64355"
+    },
+    {
+      "id": 65022,
+      "summary": "Posts list: replace (no title) filler when a title isn''t set with something more useful.",
+      "component": "Plugins",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Fri, 03 Apr 2026 17:59:29 GMT",
+      "modified": "Fri, 10 Jul 2026 12:06:52 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65022"
+    },
+    {
+      "id": 65026,
+      "summary": "Hide plugin search form on Favorites tab",
+      "component": "Plugins",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Mon, 06 Apr 2026 10:23:58 GMT",
+      "modified": "Tue, 02 Jun 2026 13:58:45 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65026"
+    },
+    {
+      "id": 65231,
+      "summary": "Add Plugins > Favourites: Input field and Submit button are not properly horizontally aligned",
+      "component": "Plugins",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Wed, 13 May 2026 04:48:30 GMT",
+      "modified": "Sun, 12 Jul 2026 20:55:20 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65231"
+    },
+    {
+      "id": 65334,
+      "summary": "Plugin Installer modal: plugin-information-footer overlaps and hides bottom arrow of plugin-information-scrollable",
+      "component": "Plugins",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Sun, 24 May 2026 20:17:06 GMT",
+      "modified": "Fri, 10 Jul 2026 21:39:43 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65334"
+    }
+  ],
+  "search_mode": "summary_query"
+}

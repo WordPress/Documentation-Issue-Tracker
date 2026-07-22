@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 4,
+  "count": 15,
   "tickets": [
     {
       "id": 43178,
@@ -16,6 +16,17 @@
       "url": "https://core.trac.wordpress.org/ticket/43178",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 64915,
+      "summary": "Media: Enable HEIC/HEIF uploads when server lacks image editor support",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Fri, 20 Mar 2026 17:01:13 GMT",
+      "modified": "Wed, 01 Jul 2026 23:15:18 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64915"
     },
     {
       "id": 64919,
@@ -33,6 +44,28 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2409"
     },
     {
+      "id": 65118,
+      "summary": "Docs: Correct WP_Network_Query params comments",
+      "component": "Media",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 23 Apr 2026 17:34:48 GMT",
+      "modified": "Tue, 14 Jul 2026 05:41:50 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65118"
+    },
+    {
+      "id": 65315,
+      "summary": "Inserting the same image with different captions on the same page results in figcaptions with duplicate `id` elements.",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Fri, 22 May 2026 07:54:18 GMT",
+      "modified": "Sun, 12 Jul 2026 21:04:59 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65315"
+    },
+    {
       "id": 65329,
       "summary": "Move sideload metadata writes to the finalize endpoint",
       "component": "Media",
@@ -48,6 +81,50 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2427"
     },
     {
+      "id": 65397,
+      "summary": "Use esc_url() instead of esc_attr() for download link href in attachment_submitbox_metadata()",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Tue, 02 Jun 2026 23:00:58 GMT",
+      "modified": "Fri, 12 Jun 2026 01:44:51 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65397"
+    },
+    {
+      "id": 65399,
+      "summary": "Skip Document-Isolation-Policy on the classic-theme site preview",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Wed, 03 Jun 2026 08:14:56 GMT",
+      "modified": "Wed, 01 Jul 2026 18:12:56 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65399"
+    },
+    {
+      "id": 65468,
+      "summary": "Fix a typo (\"convet\" → \"convert\") in wp_create_image_subsizes() comment",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Tue, 16 Jun 2026 06:59:10 GMT",
+      "modified": "Sat, 20 Jun 2026 23:33:36 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65468"
+    },
+    {
+      "id": 65549,
+      "summary": "Media: Sideload animated GIF → video companions and clean them up on delete",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Sat, 27 Jun 2026 23:23:05 GMT",
+      "modified": "Sat, 04 Jul 2026 04:13:01 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65549"
+    },
+    {
       "id": 65564,
       "summary": "Enable infinite scrolling in the Media Library grid view by default",
       "component": "Media",
@@ -61,6 +138,50 @@
       "create_issue": true,
       "github_issue_number": 2430,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65623,
+      "summary": "Media: expose image_strip_meta and image_max_bit_depth in the REST API index for client-side media processing",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Mon, 13 Jul 2026 21:57:34 GMT",
+      "modified": "Mon, 20 Jul 2026 15:29:48 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65623"
+    },
+    {
+      "id": 65643,
+      "summary": "Media: Fix sideload and finalize for EXIF rotated images",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Thu, 16 Jul 2026 05:43:39 GMT",
+      "modified": "Mon, 20 Jul 2026 15:25:36 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65643"
+    },
+    {
+      "id": 65664,
+      "summary": "Media: GIF to video conversion fails because the video-conversion worker is missing from the import map",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Mon, 20 Jul 2026 01:47:20 GMT",
+      "modified": "Mon, 20 Jul 2026 15:38:24 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65664"
+    },
+    {
+      "id": 65673,
+      "summary": "Media: Previews for offloaded media broken by crossorigin=\"anonymous\"",
+      "component": "Media",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "adamsilverstein",
+      "created": "Mon, 20 Jul 2026 15:23:06 GMT",
+      "modified": "Wed, 22 Jul 2026 01:02:20 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65673"
     }
   ],
   "search_mode": "summary_query"

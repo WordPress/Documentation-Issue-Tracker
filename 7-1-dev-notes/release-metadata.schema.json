@@ -19,19 +19,31 @@
         "filtering": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["excluded_types", "excluded_focuses"],
+          "required": ["excluded_components", "excluded_focuses", "resolution", "excluded_types"],
           "properties": {
+            "excluded_components": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "const": ["Build/Test Tools", "Bundled Theme", "WordPress.org Site"]
+            },
             "excluded_types": {
               "type": "array",
               "items": { "type": "string" },
               "uniqueItems": true,
-              "const": ["defect (bug)"]
+              "const": []
             },
             "excluded_focuses": {
               "type": "array",
               "items": { "type": "string" },
               "uniqueItems": true,
               "const": ["tests"]
+            },
+            "resolution": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "const": ["fixed"]
             }
           }
         }
@@ -68,13 +80,8 @@
         "by_classification": { "$ref": "#/$defs/classificationStatistics" },
         "by_type": {
           "type": "object",
-          "additionalProperties": false,
-          "required": ["enhancement", "feature request", "task (blessed)"],
-          "properties": {
-            "enhancement": { "$ref": "#/$defs/nonNegativeInteger" },
-            "feature request": { "$ref": "#/$defs/nonNegativeInteger" },
-            "task (blessed)": { "$ref": "#/$defs/nonNegativeInteger" }
-          }
+          "additionalProperties": { "$ref": "#/$defs/nonNegativeInteger" },
+          "minProperties": 1
         },
         "github_issue_candidates": { "$ref": "#/$defs/nonNegativeInteger" },
         "github_issues_created_count": { "$ref": "#/$defs/nonNegativeInteger" }

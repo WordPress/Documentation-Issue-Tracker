@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 1,
+  "count": 2,
   "tickets": [
     {
       "id": 65342,
@@ -18,6 +18,17 @@
       "create_issue": true,
       "github_issue_number": 2416,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2416"
+    },
+    {
+      "id": 65483,
+      "summary": "Improve UTF-8 scanning performance with codepoint limits",
+      "component": "Charset",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "jonsurrell",
+      "created": "Thu, 18 Jun 2026 13:21:24 GMT",
+      "modified": "Sat, 04 Jul 2026 04:14:27 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65483"
     }
   ],
   "search_mode": "summary_query"

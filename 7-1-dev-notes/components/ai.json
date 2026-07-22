@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 1,
+  "count": 2,
   "tickets": [
     {
       "id": 65127,
@@ -18,6 +18,17 @@
       "create_issue": true,
       "github_issue_number": 2428,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
+    },
+    {
+      "id": 65421,
+      "summary": "AI Client: sendRequestWithOptions omits HTTP method from NetworkException message",
+      "component": "AI",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "gziolo",
+      "created": "Fri, 05 Jun 2026 11:17:00 GMT",
+      "modified": "Wed, 15 Jul 2026 08:33:40 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65421"
     }
   ],
   "search_mode": "summary_query"

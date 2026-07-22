@@ -2,7 +2,7 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 15,
+  "count": 25,
   "tickets": [
     {
       "id": 34753,
@@ -18,6 +18,17 @@
       "create_issue": false
     },
     {
+      "id": 58189,
+      "summary": "post_type parameter in update_post_caches() accepts more than a single post type",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "spacedmonkey",
+      "created": "Tue, 25 Apr 2023 09:16:03 GMT",
+      "modified": "Sun, 19 Jul 2026 23:18:01 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/58189"
+    },
+    {
       "id": 64792,
       "summary": "Consider changing code tags to regular text for dimension values in \"Site Icon\" help text",
       "component": "Administration",
@@ -29,6 +40,28 @@
       "url": "https://core.trac.wordpress.org/ticket/64792",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 64932,
+      "summary": "WP admin - Subpages in the list of pages are not indicated as subpages for blind people",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Mon, 23 Mar 2026 10:19:28 GMT",
+      "modified": "Tue, 21 Jul 2026 22:59:30 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64932"
+    },
+    {
+      "id": 64952,
+      "summary": "Dashboard Quick Draft allows creating an empty draft without title or content",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "afercia",
+      "created": "Thu, 26 Mar 2026 05:41:32 GMT",
+      "modified": "Wed, 22 Jul 2026 10:20:05 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64952"
     },
     {
       "id": 65027,
@@ -46,6 +79,17 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
+      "id": 65153,
+      "summary": "Identify selected buttons (.active in button groups) in Windows High Contrast Mode",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Wed, 29 Apr 2026 20:40:48 GMT",
+      "modified": "Wed, 01 Jul 2026 06:03:31 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65153"
+    },
+    {
       "id": 65175,
       "summary": "Tests: Add unit tests for wp_make_theme_file_tree()",
       "component": "Administration",
@@ -57,6 +101,17 @@
       "url": "https://core.trac.wordpress.org/ticket/65175",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65177,
+      "summary": "Adminbar: Unnatural focus outline in frontend",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "wildworks",
+      "created": "Wed, 06 May 2026 01:41:46 GMT",
+      "modified": "Thu, 04 Jun 2026 09:44:29 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65177"
     },
     {
       "id": 65182,
@@ -176,6 +231,28 @@
       "create_issue": false
     },
     {
+      "id": 65250,
+      "summary": "Mouse cursor interaction inconsistency for the first submenu item when “Collapse Menu” is enabled in the WP-Admin",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Fri, 15 May 2026 12:09:14 GMT",
+      "modified": "Sun, 28 Jun 2026 21:41:23 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65250"
+    },
+    {
+      "id": 65298,
+      "summary": "Searched text is not cleared from the Library search bar after refresh",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Thu, 21 May 2026 09:54:57 GMT",
+      "modified": "Sat, 06 Jun 2026 12:13:47 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65298"
+    },
+    {
       "id": 65382,
       "summary": "Admin color schemes: improve contrast to make sidebar compatible with Gutenberg editor chrome",
       "component": "Administration",
@@ -191,6 +268,17 @@
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
     },
     {
+      "id": 65401,
+      "summary": "Docs: Correct replacement links for deprecated contextual help filters",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Wed, 03 Jun 2026 17:40:50 GMT",
+      "modified": "Tue, 09 Jun 2026 03:52:46 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65401"
+    },
+    {
       "id": 65629,
       "summary": "Remove unused font-weight tokens from admin color scheme Sass",
       "component": "Administration",
@@ -202,6 +290,28 @@
       "url": "https://core.trac.wordpress.org/ticket/65629",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65630,
+      "summary": "Add user page should not set initial focus on the password field.",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "afercia",
+      "created": "Tue, 14 Jul 2026 14:34:35 GMT",
+      "modified": "Thu, 16 Jul 2026 09:12:32 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65630"
+    },
+    {
+      "id": 65646,
+      "summary": "Register `wp-theme` design tokens stylesheet",
+      "component": "Administration",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "0mirka00",
+      "created": "Thu, 16 Jul 2026 15:24:45 GMT",
+      "modified": "Fri, 17 Jul 2026 09:08:43 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65646"
     }
   ],
   "search_mode": "summary_query"

@@ -2,8 +2,19 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 2,
+  "count": 4,
   "tickets": [
+    {
+      "id": 24487,
+      "summary": "is_email() does not recognize IDN domains",
+      "component": "Formatting",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "",
+      "created": "Mon, 03 Jun 2013 08:24:36 GMT",
+      "modified": "Sat, 13 Jun 2026 05:43:49 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/24487"
+    },
     {
       "id": 64576,
       "summary": "Add support for invoker command attributes",
@@ -18,6 +29,17 @@
       "create_issue": true,
       "github_issue_number": 2429,
       "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2429"
+    },
+    {
+      "id": 65457,
+      "summary": "KSES: Inline styles related to SVG will be removed",
+      "component": "Formatting",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "wildworks",
+      "created": "Sat, 13 Jun 2026 13:53:09 GMT",
+      "modified": "Fri, 19 Jun 2026 06:41:14 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65457"
     },
     {
       "id": 65619,

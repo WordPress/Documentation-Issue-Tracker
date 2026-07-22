@@ -2,8 +2,19 @@
   "trac_instance": "core",
   "trac_label": "WordPress Core Trac",
   "trac_base_url": "https://core.trac.wordpress.org",
-  "count": 1,
+  "count": 3,
   "tickets": [
+    {
+      "id": 47670,
+      "summary": "RSS widget creates an accessibility problem when used more than once",
+      "component": "Widgets",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "audrasjb",
+      "created": "Tue, 09 Jul 2019 18:49:02 GMT",
+      "modified": "Wed, 22 Jul 2026 00:55:21 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/47670"
+    },
     {
       "id": 65116,
       "summary": "Feature request: On This Day dashboard widget",
@@ -16,6 +27,17 @@
       "url": "https://core.trac.wordpress.org/ticket/65116",
       "classification": "exclude",
       "create_issue": false
+    },
+    {
+      "id": 65536,
+      "summary": "XML-RPC: Argument mismatch in _multisite_getUsersBlogs",
+      "component": "Widgets",
+      "type": "defect (bug)",
+      "resolution": "fixed",
+      "owner": "SergeyBiryukov",
+      "created": "Wed, 24 Jun 2026 18:36:37 GMT",
+      "modified": "Tue, 30 Jun 2026 10:13:38 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65536"
     }
   ],
   "search_mode": "summary_query"
