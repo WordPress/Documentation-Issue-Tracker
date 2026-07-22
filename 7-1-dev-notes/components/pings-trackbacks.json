@@ -1,30 +1,24 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 64837,
-        "summary": "Disable pings/trackbacks for local, development, and staging environments",
-        "status": "closed",
-        "component": "Pings/Trackbacks",
-        "type": "enhancement",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "",
-        "owner": "ramonopoly",
-        "reporter": "cagrimmett",
-        "created": "Wed, 11 Mar 2026 05:12:32 GMT",
-        "modified": "Tue, 26 May 2026 00:41:59 GMT",
-        "description": "When WP_ENVIRONMENT_TYPE is local, development, or staging, pingbacks and trackbacks should be disabled. \r\n\r\nUnless one remembers to go in and disable pingbacks/trackbacks on a non-production environment, pings will be sent out when posts are added or updated, which is a common workflow when testing. This is not ideal and creates confusion on the receiving end. Disabling them on non-production environments default would be a better experience.\r\n\r\n- Both outgoing and incoming should be disabled. \r\n- If the environment type is not set, or is set to production, pings and trackbacks should be left as default (open/enabled). \r\n- A filter should be added so developers can override this change if pingbacks or trackbacks are needed in a non-production environment.",
-        "url": "https://core.trac.wordpress.org/ticket/64837",
-        "classification": "misc-dev-note",
-        "create_issue": true,
-        "github_issue_number": 2428,
-        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 1,
+  "tickets": [
+    {
+      "id": 64837,
+      "summary": "Disable pings/trackbacks for local, development, and staging environments",
+      "component": "Pings/Trackbacks",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "ramonopoly",
+      "created": "Wed, 11 Mar 2026 05:12:32 GMT",
+      "modified": "Tue, 26 May 2026 00:41:59 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/64837",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2428,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
+    }
+  ],
+  "search_mode": "summary_query"
+}

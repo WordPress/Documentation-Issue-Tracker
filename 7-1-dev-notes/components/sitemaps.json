@@ -1,30 +1,24 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 51543,
-        "summary": "Create is_sitemap() conditional tag",
-        "status": "closed",
-        "component": "Sitemaps",
-        "type": "feature request",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "5.5",
-        "owner": "westonruter",
-        "reporter": "MadtownLems",
-        "created": "Fri, 01 Jul 2022 22:34:32 GMT",
-        "modified": "Wed, 08 Jul 2026 07:09:15 GMT",
-        "description": "As people continue expanding and customizing Core's XML sitemaps, I believe an is_sitemap() conditional tag would be very helpful.\r\n\r\nIn the short term, its existence would be very useful for getting around the bug explained in #51542 (https://core.trac.wordpress.org/ticket/51542), but surely developers will find other ways to make use of it and it seems like a natural fit to be a conditional tag.",
-        "url": "https://core.trac.wordpress.org/ticket/51543",
-        "classification": "misc-dev-note",
-        "create_issue": true,
-        "github_issue_number": 2428,
-        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 1,
+  "tickets": [
+    {
+      "id": 51543,
+      "summary": "Create is_sitemap() conditional tag",
+      "component": "Sitemaps",
+      "type": "feature request",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Fri, 01 Jul 2022 22:34:32 GMT",
+      "modified": "Wed, 08 Jul 2026 07:09:15 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/51543",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2428,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
+    }
+  ],
+  "search_mode": "summary_query"
+}

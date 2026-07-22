@@ -1,30 +1,24 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 65127,
-        "summary": "Introduce 'wp_ai_client_cache_group' filter to allow customization of the object cache group",
-        "status": "closed",
-        "component": "AI",
-        "type": "enhancement",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "",
-        "owner": "gziolo",
-        "reporter": "baikare.sandeep007",
-        "created": "Sat, 25 Apr 2026 04:38:58 GMT",
-        "modified": "Thu, 25 Jun 2026 09:08:15 GMT",
-        "description": "= Introduce 'wp_ai_client_cache_group' filter to allow customization of the object cache group =\r\n\r\n== Description\r\n\r\nThis patch introduces a new filter, `wp_ai_client_cache_group`, to the `WP_AI_Client_Cache` class. This allows developers and integrators to change the object-cache group under which the AI client stores its keys.\r\n\r\nPreviously, the cache group was hardcoded as the class constant `self::CACHE_GROUP` (`'wp_ai_client'`). This patch replaces all direct references to the constant with a call to a new private method `get_cache_group()`, which applies the new filter.\r\n\r\n== Purpose\r\n\r\nThe `wp_ai_client_cache_group` filter provides integrators with greater control over cache placement and invalidation. Key benefits include:\r\n\r\n=== 1. Avoid Key Collisions\r\nPlugins or themes can choose a distinct group to avoid clashing with other code that might use similar cache keys on the same site.\r\n\r\n=== 2. Environment-Specific Caches\r\nOn multisite or hosting platforms that namespace caches per-site, integrators can map AI client keys into a per-site or per-environment group (e.g., include the blog ID or environment name) to prevent cross-site data leakage.\r\n\r\n=== 3. Backend Constraints / Compatibility\r\nSome persistent object cache implementations treat groups differently (or do not support group flushing). Allowing the group to be replaced lets integrators adapt—for example, to use a group the host supports or to fall back to transient-based storage.\r\n\r\n=== 4. Testing and Isolation\r\nUnit and integration tests can switch the cache group to an ephemeral one (or a mock group) so test runs do not interfere with real cached data.\r\n\r\n=== 5. Targeted Invalidation / Performance\r\nIntegrators who want to implement custom invalidation strategies—such as namespacing by model/version or sharding keys—can change the group to a name that their backend can efficiently flush or monitor.\r\n\r\n== Implementation Notes\r\n\r\n* A new private method `get_cache_group(): string` is introduced. This method applies the `wp_ai_client_cache_group` filter to the default `self::CACHE_GROUP` constant.\r\n* All cache operations (`wp_cache_get`, `wp_cache_set`, `wp_cache_delete`, etc.) now use `$this->get_cache_group()` instead of the hardcoded constant.\r\n* The filter is expected to return a **string** cache group name. For predictable behavior, the returned value is explicitly cast to a string.\r\n* Two new unit tests are added to `Tests_AI_Client_Cache`:\r\n    1. `test_cache_group_filter_is_respected`: Verifies the filter changes the group used for cache operations.\r\n    2. `test_cache_group_filter_returns_non_string`: Confirms non-string filter return values are properly cast to strings.\r\n\r\n== Example Usage\r\n\r\n=== Basic: Change to a custom group\r\n{{{#!php\r\n<?php\r\nadd_filter( 'wp_ai_client_cache_group', function( $group ) {\r\n    return 'my_plugin_ai_cache';\r\n} );\r\n}}}\r\nThis stores all AI client cache items under the `'my_plugin_ai_cache'` group.\r\n\r\n=== Multisite: Per-site isolation\r\n{{{#!php\r\n<?php\r\nadd_filter( 'wp_ai_client_cache_group', function( $group ) {\r\n    return $group . '_site_' . get_current_blog_id();\r\n} );\r\n}}}\r\nThis appends the current site ID to the cache group, preventing cross-site cache sharing.\r\n\r\n=== Testing: Use an ephemeral group\r\n{{{#!php\r\n<?php\r\nadd_filter( 'wp_ai_client_cache_group', function( $group ) {\r\n    return 'tests_' . uniqid();\r\n} );\r\n}}}\r\nThis generates a unique, temporary cache group for the duration of a test run.\r\n\r\n== Backward Compatibility\r\n\r\n* **Fully backward compatible** – When the filter is not used, the cache group defaults to the original `'wp_ai_client'` constant, preserving existing behavior.\r\n* **No functional changes** to existing code that relies on the hardcoded cache group.\r\n\r\n== Impact\r\n\r\n* **Performance:** Negligible overhead – the filter only executes on cache operations and the method is lightweight.\r\n* **Security:** None – this is an additive change that provides more control without introducing new attack surfaces.\r\n\r\n== Testing\r\n\r\nThe attached patch includes comprehensive unit test coverage:\r\n1. Verifies that applying the filter changes the cache group used for `set()` and `get()` operations.\r\n2. Ensures that non-string return values (e.g., integers) are gracefully cast to strings.\r\n\r\nManual testing has confirmed that existing cache functionality remains unchanged when the filter is not applied.\r\n\r\n== Props\r\n\r\nProps @baikare.sandeep007.",
-        "url": "https://core.trac.wordpress.org/ticket/65127",
-        "classification": "misc-dev-note",
-        "create_issue": true,
-        "github_issue_number": 2428,
-        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 1,
+  "tickets": [
+    {
+      "id": 65127,
+      "summary": "Introduce 'wp_ai_client_cache_group' filter to allow customization of the object cache group",
+      "component": "AI",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "gziolo",
+      "created": "Sat, 25 Apr 2026 04:38:58 GMT",
+      "modified": "Thu, 25 Jun 2026 09:08:15 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65127",
+      "classification": "misc-dev-note",
+      "create_issue": true,
+      "github_issue_number": 2428,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2428"
+    }
+  ],
+  "search_mode": "summary_query"
+}

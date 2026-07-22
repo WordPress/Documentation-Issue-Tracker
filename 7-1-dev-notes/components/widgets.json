@@ -1,28 +1,22 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 65116,
-        "summary": "Feature request: On This Day dashboard widget",
-        "status": "closed",
-        "component": "Widgets",
-        "type": "feature request",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "minor",
-        "version": "",
-        "owner": "joedolson",
-        "reporter": "alshakero",
-        "created": "Wed, 22 Apr 2026 22:18:57 GMT",
-        "modified": "Fri, 10 Jul 2026 03:20:48 GMT",
-        "description": "When an author lands on their Dashboard, the widget would show posts they published on the same month and day in previous years, grouped by year with the most recent first. Each entry links to the post for quick edit or view. **This is especially cool for drafts and unfinished posts**.\r\n\r\nThis gives long-time authors a gentle nudge to revisit old work, spot patterns in what they write about on certain days, or republish/refresh content that has aged well. For new authors or on days with no history, the widget shows a friendly empty state.\r\n\r\nThis would hopefully delight users and encourage them to comment on their post pasts with new posts.",
-        "url": "https://core.trac.wordpress.org/ticket/65116",
-        "classification": "exclude",
-        "create_issue": false
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 1,
+  "tickets": [
+    {
+      "id": 65116,
+      "summary": "Feature request: On This Day dashboard widget",
+      "component": "Widgets",
+      "type": "feature request",
+      "resolution": "fixed",
+      "owner": "joedolson",
+      "created": "Wed, 22 Apr 2026 22:18:57 GMT",
+      "modified": "Fri, 10 Jul 2026 03:20:48 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65116",
+      "classification": "exclude",
+      "create_issue": false
+    }
+  ],
+  "search_mode": "summary_query"
+}

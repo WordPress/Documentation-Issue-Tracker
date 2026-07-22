@@ -1,28 +1,22 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 1,
-    "tickets": [
-      {
-        "id": 65570,
-        "summary": "Allow changing a comment's parent from the Edit Comment screen",
-        "status": "closed",
-        "component": "Comments",
-        "type": "feature request",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "",
-        "owner": "youknowriad",
-        "reporter": "youknowriad",
-        "created": "Wed, 01 Jul 2026 17:28:37 GMT",
-        "modified": "Thu, 09 Jul 2026 17:22:33 GMT",
-        "description": "There is currently no way to re-parent a comment (change comment_parent) through the admin UI. The only options are editing the database directly or calling the API programmatically.\r\n\r\nOn the Edit Comment screen (wp-admin/edit-form-comment.php), the parent relationship is shown as read-only text (\"In reply to: …\") with no way to change it. edit_comment() in wp-admin/includes/comment.php doesn't process comment_parent from the submitted form.\r\n\r\nThe data layer already fully supports this:\r\n\r\nwp_update_comment() lists comment_parent among its updatable fields (wp-includes/comment.php).\r\nThe REST API accepts parent on a comment update, with no readonly flag (class-wp-rest-comments-controller.php).\r\nSo this is purely a missing UI control, not a data-model change.\r\n\r\n**Potential approach:**\r\n\r\nAdd an \"In reply to\" control on the Edit Comment screen that lets the user set or clear the parent comment — a picker (or comment-ID field) scoped to other comments on the same post. An empty value means top-level.\r\nHave edit_comment() read comment_parent from $_POST and pass it through to wp_update_comment().\r\nValidate that the chosen parent belongs to the same post and is not the comment itself or one of its descendants, to avoid threading loops.\r\n\r\n**Notes:**\r\n\r\n - Guard against cycles (parent can't be a descendant).\r\n - Consider thread_comments_depth implications for how the re-parented thread displays on the front end.",
-        "url": "https://core.trac.wordpress.org/ticket/65570",
-        "classification": "exclude",
-        "create_issue": false
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 1,
+  "tickets": [
+    {
+      "id": 65570,
+      "summary": "Allow changing a comment's parent from the Edit Comment screen",
+      "component": "Comments",
+      "type": "feature request",
+      "resolution": "fixed",
+      "owner": "youknowriad",
+      "created": "Wed, 01 Jul 2026 17:28:37 GMT",
+      "modified": "Thu, 09 Jul 2026 17:22:33 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65570",
+      "classification": "exclude",
+      "create_issue": false
+    }
+  ],
+  "search_mode": "summary_query"
+}

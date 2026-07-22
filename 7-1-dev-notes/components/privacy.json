@@ -1,49 +1,37 @@
 {
-    "trac_instance": "core",
-    "trac_label": "WordPress Core Trac",
-    "trac_base_url": "https://core.trac.wordpress.org",
-    "count": 2,
-    "tickets": [
-      {
-        "id": 44498,
-        "summary": "Make `_wp_personal_data_cleanup_requests()` run on cron",
-        "status": "closed",
-        "component": "Privacy",
-        "type": "enhancement",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "4.9.6",
-        "owner": "westonruter",
-        "reporter": "desrosj",
-        "created": "Tue, 03 Jul 2018 15:20:40 GMT",
-        "modified": "Wed, 08 Jul 2026 02:58:31 GMT",
-        "description": "When a data export or removal request is created, a user must confirm that request within x days. By default, this is 1 day (24 hours), but it can be changed using the `user_request_key_expiration` filter. If a user does not confirm the request within that time, it is marked as failed, and the request needs to be re-initiated.\r\n\r\nCurrently, requests are only marked as failed when the Export/Erase Personal Data screens are accessed. By default, only administrators can access this page, and will most likely do so very infrequently. Because of this, a cron may be more appropriate for marking requests as failed.\r\n\r\nA `posts_per_page => -1` query arg is also used to fetch expired requests, which could cause issues when a large number of requests have failed. Moving this action to a cron should cut down on the number of requests that need to be transitioned at a time.",
-        "url": "https://core.trac.wordpress.org/ticket/44498",
-        "classification": "field-guide",
-        "create_issue": true,
-        "github_issue_number": 2430,
-        "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
-      },
-      {
-        "id": 65025,
-        "summary": "Privacy Shield is declared invalid",
-        "status": "closed",
-        "component": "Privacy",
-        "type": "enhancement",
-        "priority": "normal",
-        "resolution": "fixed",
-        "severity": "normal",
-        "version": "7.0",
-        "owner": "westonruter",
-        "reporter": "timse201",
-        "created": "Sun, 05 Apr 2026 05:56:32 GMT",
-        "modified": "Wed, 08 Jul 2026 00:12:39 GMT",
-        "description": "This string is outdated:\r\nhttps://build.trac.wordpress.org/browser/trunk/wp-admin/includes/class-wp-privacy-policy-content.php?marks=604#L604\r\n\r\nThe EU-U.S. Privacy Shield was declared invalid by the European Court of Justice years ago. The current agreement is the Data Privacy Framework (DPF).",
-        "url": "https://core.trac.wordpress.org/ticket/65025",
-        "classification": "exclude",
-        "create_issue": false
-      }
-    ],
-    "search_mode": "summary_query"
-  }
+  "trac_instance": "core",
+  "trac_label": "WordPress Core Trac",
+  "trac_base_url": "https://core.trac.wordpress.org",
+  "count": 2,
+  "tickets": [
+    {
+      "id": 44498,
+      "summary": "Make `_wp_personal_data_cleanup_requests()` run on cron",
+      "component": "Privacy",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Tue, 03 Jul 2018 15:20:40 GMT",
+      "modified": "Wed, 08 Jul 2026 02:58:31 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/44498",
+      "classification": "field-guide",
+      "create_issue": true,
+      "github_issue_number": 2430,
+      "github_issue_url": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2430"
+    },
+    {
+      "id": 65025,
+      "summary": "Privacy Shield is declared invalid",
+      "component": "Privacy",
+      "type": "enhancement",
+      "resolution": "fixed",
+      "owner": "westonruter",
+      "created": "Sun, 05 Apr 2026 05:56:32 GMT",
+      "modified": "Wed, 08 Jul 2026 00:12:39 GMT",
+      "url": "https://core.trac.wordpress.org/ticket/65025",
+      "classification": "exclude",
+      "create_issue": false
+    }
+  ],
+  "search_mode": "summary_query"
+}
