@@ -16,7 +16,7 @@ Please report issues here if your suggestion is related to the following
 
 If you would like to contribute to Gutenberg specific documentation, please proceed [here](https://github.com/WordPress/gutenberg)
 
-All other Make / WordPress team handbooks are maintained by internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
+All other Make / WordPress team handbooks are maintained internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
 
 ## How to report an issue?
 

@@ -22,6 +22,5 @@ Check if all images have ALT attributes.
 1. Watch the video on how to check if the image has ALT attributes - [Checking image ALT attributes](https://make.wordpress.org/docs/files/2023/10/check-image-ALT.mp4)
 
 ## Automation
-- If you want, you can assign yourself to the issue and change the label for review by posting specific keywords in a comment. Read about our repo's automatisation [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/#label-issues).
-
+- If you want, you can assign yourself to the issue and change the label for review by posting specific keywords in a comment. Read about our repo's automation [here](https://make.wordpress.org/docs/handbook/github-repository-and-projects/documentation-issue-tracker/#label-issues).
 Thank you for contributing, have a cookie :cookie:  
