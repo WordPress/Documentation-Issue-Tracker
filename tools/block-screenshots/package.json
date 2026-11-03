@@ -1,0 +1,15 @@
+{
+	"name": "wp-docs-screenshots",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Retake HelpHub block screenshots in a disposable WordPress Playground instance.",
+	"license": "GPL-2.0-or-later",
+	"type": "module",
+	"scripts": {
+		"capture": "node capture.mjs"
+	},
+	"dependencies": {
+		"@wp-playground/cli": "3.1.58",
+		"playwright": "1.49.1"
+	}
+}

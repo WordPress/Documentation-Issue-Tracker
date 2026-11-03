@@ -1,0 +1,10 @@
+{
+	"article": "https://wordpress.org/documentation/article/post-comments-form-block/",
+	"issue": "https://github.com/WordPress/Documentation-Issue-Tracker/issues/2541",
+	"wp": "latest",
+	"theme": "twentytwentyfive",
+	"block": "core/post-comments-form",
+	"search": "Comments Form",
+	"content": "<!-- wp:paragraph --><p>This is a sample post for the Comments Form block screenshots.</p><!-- /wp:paragraph --><!-- wp:spacer {\"height\":\"90px\"} --><div style=\"height:90px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer --><!-- wp:comments --><div class=\"wp-block-comments\"><!-- wp:post-comments-form /--></div><!-- /wp:comments -->",
+	"shots": [ "block", "inserter", "comments-closed", "toolbar", "transform", "movers", "align", "options" ]
+}
