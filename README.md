@@ -18,6 +18,11 @@ If you would like to contribute to Gutenberg specific documentation, please proc
 
 All other Make / WordPress team handbooks are maintained by internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
 
+### Documentation linked from WordPress Editor
+Some HelpHub documentation pages are directly linked from the WordPress editor UI to provide in-context assistance. Please exercise caution when updating these pages to avoid breaking in-editor help links, especially if altering page titles, anchors, or permalinks.
+
+* [Math Block](https://wordpress.org/documentation/article/math-block/): Block insert includes a link to "Learn more about LaTeX syntax" (introduced in WP 7.2)
+
 ## How to report an issue?
 
 **Before opening a new issue**, please search the **[existing issues](https://github.com/WordPress/Documentation-Issue-Tracker/issues)** to check whether the problem has already been reported.
