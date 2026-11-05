@@ -22,4 +22,4 @@ If you do not have the permission to assign issues to yourself, please ask in th
 
 We want to make sure people know that you've contributed. We would be happy to acknowledge your contribution.
 
-Please submit your contribution details using the form in the right sidebar of the Documentation Team page at https://make.wordpress.org/docs/. The required information is your WordPress.org username, GitHub username, and the GitHub issue number.
+Please submit your contribution details using the form in the right sidebar of the Documentation Team page at https://make.wordpress.org/docs/. The required information is your WordPress.org username, GitHub username, and the GitHub issue number or a link to the issue in the Documentation Issue Tracker.
