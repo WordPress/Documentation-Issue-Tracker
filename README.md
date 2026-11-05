@@ -16,7 +16,7 @@ Please report issues here if your suggestion is related to the following
 
 If you would like to contribute to Gutenberg specific documentation, please proceed [here](https://github.com/WordPress/gutenberg)
 
-All other Make / WordPress team handbooks are maintained by internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
+All other Make / WordPress team handbooks are maintained internally by said respective teams. Please contact them on Make / WordPress Slack to suggest changes.
 
 ### Documentation linked from WordPress Editor
 Some HelpHub documentation pages are directly linked from the WordPress editor UI to provide in-context assistance. Please exercise caution when updating these pages to avoid breaking in-editor help links, especially if altering page titles, anchors, or permalinks.
@@ -57,9 +57,7 @@ You can join the documentation team on Slack in **#docs** channel. See the [Docu
 
 ## Getting Recognition
 
-We want to make sure people know that you’ve contributed, and we would be happy to acknowledge your contribution. To keep track of all contributors to the Docs team, we maintain a document called CONTRIBUTORS.md. Everyone who has reported an issue, fixed an issue, and/or participated in a discussion should create a PR to add their information to this document. The required information is the wp.org username, GitHub username, and GitHub issue number.
-
-Please add your details to our [CONTRIBUTORS.md](https://github.com/WordPress/Documentation-Issue-Tracker/blob/main/CONTRIBUTORS.md) - we assign badges monthly.
+We want to make sure your contributions are recognized, and we would be glad to acknowledge them. If you reported an issue or fixed an issue, please submit your contribution details using the form in the right sidebar of the Documentation Team page at https://make.wordpress.org/docs/. The required information is your WordPress.org username, GitHub username, and the GitHub issue number.
 
 After we verify that your contributions are valid, we will award you the Documentation Contributor badge on your WordPress.org profile.
 
