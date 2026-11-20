@@ -21,6 +21,7 @@ All other Make / WordPress team handbooks are maintained by internally by said r
 ### Documentation linked from WordPress Editor
 Some HelpHub documentation pages are directly linked from the WordPress editor UI to provide in-context assistance. Please exercise caution when updating these pages to avoid breaking in-editor help links, especially if altering page titles, anchors, or permalinks.
 
+* [WordPress Block Editor]([url](https://wordpress.org/documentation/article/wordpress-block-editor/)): Linked from "Help" in the editor's three-dot options menu.
 * [Math Block](https://wordpress.org/documentation/article/math-block/): Block insert includes a link to "Learn more about LaTeX syntax" (introduced in WP 7.2)
 
 ## How to report an issue?
